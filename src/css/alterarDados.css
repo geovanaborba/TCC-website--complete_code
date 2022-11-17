@@ -1,0 +1,184 @@
+:root {
+    --lilas: #8888EA;
+    --laranja: #FCA82F;
+    --roxo: #6066D0;
+    --cinza-escuro: #535050;
+}
+
+body {
+    margin: 2%;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav li {
+    display: inline-block;
+    padding: 0px 0px 15px 20px;
+    font-size: 15px;
+    color: #000;
+}
+
+nav li:hover {
+    color: var(--lilas);
+    cursor: pointer;
+}
+
+/* ----- Menu Dropdown para as Configurações ----- */
+
+.dropdown {
+    position: absolute;
+    background-color: #fff;
+    display: none;
+}
+
+nav li:hover ul,
+.menu li:hover ul {
+    display: block;
+    right: 0;
+    width: 200px;
+}
+
+.li-dropdown {
+    padding-top: 20px;
+}
+
+.li-dropdown:hover {
+    background-color: var(--roxo);
+    color: #fff;
+    width: 200px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* ----- Fim do Menu Dropdown ----- */
+
+header {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 25px;
+    text-shadow: 2px 3px var(--lilas);
+}
+
+header a {
+    color: #000;
+}
+
+main .container {
+    background-color: var(--lilas);
+    padding: 30px;
+    margin: 10%;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+main .container h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--laranja);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.infos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.infos img {
+    width: 40%;
+}
+
+
+/* Início de formulário */
+
+form {
+    font-family: 'Poppins', sans-serif;
+    width: 31.25rem;
+    position: relative;
+    margin-top: 1rem;
+    padding: 1rem 0;
+}
+
+fieldset {
+    border: 0;
+}
+
+input {
+    border-radius: 2px;
+    width: 20vw;
+    display: block;
+}
+
+label {
+    padding-top: 1em;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.campo {
+    padding-bottom: 2px;
+}
+
+.campo label {
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+fieldset .campo {
+    float: left;
+    margin-right: 1em;
+}
+
+.campo input[type="text"] {
+    background: #d8d8d8;
+    border: none;
+    padding: 0.5rem 0;
+    margin-bottom: 0.5rem;
+    outline: none;
+}
+
+.campo input::placeholder {
+    padding-left: 10px;
+}
+
+.campo input:focus {
+    background-color: #e9e9e9;
+}
+
+.campo p {
+    color: var(--laranja);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+}
+
+.campo p:hover {
+    color: var(--cinza-escuro);
+    cursor: pointer;
+}
+
+.btn-enviar {
+    display: block;
+    border-radius: 2px;
+    font-size: 1.2em;
+    background: var(--laranja);
+    border: 0;
+    margin-bottom: 1em;
+    padding: 0.3em 1.7em;
+    margin-left: 65px;
+    margin-top: 50px;
+
+    transform: translate(-50%, -50%);
+}
+
+.btn-enviar:hover {
+    background: var(--roxo);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: none;
+    cursor: pointer;
+}
+
+/*Fim do formulário */

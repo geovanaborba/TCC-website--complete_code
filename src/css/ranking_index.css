@@ -1,0 +1,176 @@
+:root {
+    --lilas: #8888EA;
+    --laranja: #FCA82F;
+    --roxo: #6066D0;
+    --cinza-escuro: #535050;
+}
+
+body {
+    margin: 2%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    text-align: right;
+}
+
+nav li {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 15px;
+    background-color: rgb(170, 170, 170);
+    border-radius: 50px;
+    width: 110px;
+    padding: 3px 0px;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+nav li:hover {
+    background-color: var(--roxo);
+    cursor: pointer;
+}
+
+header {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 25px;
+    text-shadow: 2px 3px var(--lilas);
+    color: #000;
+}
+
+.margem {
+    margin: 0% 15%;
+}
+
+.top-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    padding: 60px 0 80px 0;
+    margin-top: 100px;
+  }
+
+.nome h3 {
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--laranja);
+}
+      
+.card {
+    width: 180px;
+    display: block;
+    text-align: center;
+    background-color: var(--lilas);
+    border-radius: 5%;
+    padding: 50px;
+}
+
+.card-meio {
+    width: 250px;
+    height: 280px;
+    display: block;
+    text-align: center;
+    background-color: var(--lilas);
+    border-radius: 5%;
+    padding: 50px;
+}
+      
+.card:hover,
+.card-meio:hover {
+    background: var(--roxo);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.card img,
+.card-meio img {
+    width: 60%;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.card i,
+.card-meio i {
+    position: absolute;
+    font-size: 25px;
+}
+
+.card-meio .ouro {
+    color: var(--laranja);
+    font-size: 40px;
+}
+
+.card .prata {
+    color: var(#ddd);
+}
+
+.card .bronze {
+    color: rgb(184, 93, 9);
+}
+
+.lista-container{
+    margin-bottom: 5rem;
+}
+
+.lista{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 40px;
+    background-color: rgb(243, 243, 243);
+    border-radius: 3px;
+    margin-bottom: 1rem;
+}
+
+.lista:last-child{
+    border-bottom: none;
+}
+
+.lista img {
+    width: 7%;
+}
+
+.lista-posicao {
+    color: rgba(75, 75, 75);
+    font-weight: bolder;
+}
+
+.lista-quiz{
+    color: rgba(75, 75, 75);
+    width: 40%;
+}
+
+.lista-botao{
+    padding: 1rem;
+    background-color: var(--laranja);
+    color: #fff;
+    border-style: none;
+    border-radius: 3px;
+    max-width: 20%;
+    font-weight: bold;
+}
+
+.lista-botao:hover{
+    color: #000;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+}
+
+footer {
+    font-size: 12px;
+    font-style: italic;
+    padding-top: 60px;
+    bottom: 2%;
+}

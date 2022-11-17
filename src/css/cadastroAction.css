@@ -1,0 +1,15 @@
+.btnSalvo {
+    background: #00a200;
+    border-radius: 20px;
+    color: white;
+    font-size: 60px;
+    text-align: center;
+}
+
+.btnNsalvo {
+    background: #a20000;
+    border-radius: 20px;
+    color: white;
+    font-size: 60px;
+    text-align: center;
+}

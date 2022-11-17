@@ -1,0 +1,90 @@
+:root {
+    --lilas: #8888EA;
+    --laranja: #FCA82F;
+    --roxo: #6066D0;
+    --cinza-escuro: #535050;
+}
+
+body {
+    margin: 2%;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    text-align: right;
+}
+
+nav li {
+    display: inline-block;
+    padding: 0px 0px 15px 20px;
+    font-size: 15px;
+    color: #000;
+}
+
+nav li:hover {
+    color: var(--lilas);
+    cursor: pointer;
+}
+
+header {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    text-shadow: 2px 3px var(--lilas);
+}
+
+.card-perfil {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+  
+  img.avatar {
+    border-radius: 50%;
+    width: 120px;
+    padding: 3.7px;
+    border: var(--roxo) solid 4px;
+  }
+  
+  h1 {
+    font-size: 32px;
+  }
+  
+  .username {
+    font-family: 'Roboto Mono', monospace;
+    opacity: 0.8;
+    font-size: 18px;
+  }
+  
+  ul {
+    margin: 48px 0;
+  }
+  
+  ul li a {
+    width: 280px;
+    height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--lilas); /* hex: 0 - F */
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+  
+    margin-bottom: 16px;
+    border-radius: 6px;
+  
+    transition: 400ms;
+  }
+
+
+ul li a:hover {
+    background: var(--laranja);
+  }
+
+footer {
+    font-size: 12px;
+    font-style: italic;
+    bottom: 2%;
+}

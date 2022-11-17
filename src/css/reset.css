@@ -1,0 +1,17 @@
+html, * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../assets/imgs/background-img.png');
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
