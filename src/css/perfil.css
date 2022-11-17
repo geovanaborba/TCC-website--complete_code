@@ -147,9 +147,12 @@ header {
     color: #fff;
 }
 
+.contatos-detalhes {
+    padding-top: 25px;
+}
+
 .frase {
     font-style: italic;
-    padding-top: 20px;
     font-size: 14px;
 }
 

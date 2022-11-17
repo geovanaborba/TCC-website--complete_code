@@ -82,13 +82,16 @@
                     <i class="fa-solid fa-location-pin"></i>
                     São Paulo, SP
                 </li>
+
+                <li><i class="fa-solid fa-cake-candles"></i>01/01/2001</li>
             </ul>
+
             <div class="contatos-detalhes">
                 <ul>
                     <li>
                         <i class="fa-solid fa-briefcase"></i> Desenvolvedora de software
                     </li>
-                    <li><i class="fa-regular fa-heart"></i> Pronouns: Ela/Dela</li>
+                    
                     <li class="frase">"Primeiro resolva o problema. Depois escreva o código"</li>
                 </ul>
             </div>

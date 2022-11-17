@@ -23,7 +23,7 @@
 
     <nav>
         <header>
-            <a href="../../../index.php">
+            <a href="./home.php">
                 <h1>ProgQuiz</h1>
             </a>
         </header>
