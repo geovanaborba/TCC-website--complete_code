@@ -1,8 +1,12 @@
-# Trabalho de Conclusão de Curso | ETEC - Projeto completo
+# Trabalho de Conclusão de Curso | ETEC - Projeto completo 
 
 <br>
 
-Também foi criado um repositório para mostrar a parte visual do site no GitHub Pages, tornando possível que o professor acompanhasse o progresso do trabalho mais facilmente, durante as entregas das documentações do TCC no penúltimo semestre do curso, enquanto era criada a parte de front-end da página.
+<center><img src="./src/assets/imgs/readme/green.svg"></center>
+
+<br><br>
+
+Além desse repositório, também foi criado um para mostrar a parte visual do site no GitHub Pages, tornando possível que o professor acompanhasse o progresso do trabalho mais facilmente, durante as entregas das documentações do TCC no penúltimo semestre do curso, enquanto era criada a parte de front-end do site.
 
 Você pode ver a página no link abaixo: 
 
@@ -14,40 +18,42 @@ Você pode ver a página no link abaixo:
 
 <hr>
 
-<br>
+<br><br>
 
 
 Para esse projeto, foi utilizada a ferramenta **USBWebServer** para o banco de dados. 
 
 Ela é gratuita e é possível realizar o download por meio do link: <https://usbwebserver.yura.mk.ua/>
 
-<br>
+<br><br>
 
 <hr>
 
 <br><br>
-# Documentação
+
+# 📂 Documentação 
+
 
 <br>
 
-## Fontes: 
+## ✔️ Fontes: 
 
 * [Poppins](https://fonts.google.com/specimen/Poppins?query=poppins)
 
 * [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P?query=press+start)
 
-<br>
+<br><br>
 
-## Cores: 
+## ✔️ Cores: 
 
     --lilas: #8888EA;
     --laranja: #FCA82F;
     --roxo: #6066D0;
     --cinza-escuro: #535050;
 
-<br>
+<br><br>
 
-## Banco de Dados
+## ✔️ Banco de Dados
 <br>
 
 ### Variáveis de conexão
@@ -77,14 +83,14 @@ Ela é gratuita e é possível realizar o download por meio do link: <https://us
     );
 
 
-<br>
+<br><br>
 » As chaves únicas criadas (username e email), farão com que o usuário não consiga fazer um novo cadastro caso o username ou email já estejam no banco de dados. 
 
 <br>
 
 » Além disso, para cada usuário cadastrado é gerado um ID de usuário dentro do banco de dados, através do Auto_Increment. 
 
-<br>
+<br><br>
 
 **Obs.:** O CHARACTER SET utf8 COLLATE utf8_general_ci irá alterar o agrupamento dos elementos. 
 
@@ -93,6 +99,31 @@ Ela é gratuita e é possível realizar o download por meio do link: <https://us
 <br>
 
 <center><img src="./src/assets/imgs/readme/estrutura_BD.png"></center>
+
+<br>
+
+<hr>
+
+<br>
+
+## ✔️ Banco de Dados em funcionamento 
+
+<br>
+
+<img src="./src/assets/imgs/readme/funcionamento-cadastro.png">
+
+<br>
+
+*Img 1 e 2: O usuário preenche seus dados e é direcionado para a tela de confirmação. Ao clicar no botão, é encaminhado à tela de início do site.*
+
+<br>
+
+*Img 3: Print do banco de dados, logo após o registro do usuário teste1.*
+
+<br>
+
+<hr>
+
 
 
 
