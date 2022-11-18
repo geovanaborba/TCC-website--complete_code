@@ -28,7 +28,7 @@
 
     <main>
 
-        <form action="./cadastroAction.php" method='post'>
+        <form action="./cadastroAction.php" method="post">
 
             <h1 class="cadastro_titulo">Cadastro</h1>
 
@@ -37,7 +37,7 @@
 
                 <div class="password-container">
                     <i class="fa-solid fa-circle-user"></i>
-                    <input name="txtNome" type="text" placeholder="Nome" required>
+                    <input name="txtNome" type="text" placeholder="Nome Completo" required>
                 </div>
 
                 <div class="password-container">
@@ -47,23 +47,18 @@
 
                 <div class="password-container">
                     <i class="fa fa-user"></i>
-                    <input name="txtUsername" type="text" placeholder="usuario123" required>
+                    <input name="txtUsername" type="text" placeholder="Nome de usuário" required>
                 </div>
 
                 <div class="password-container">
-                    <input name="txtSenha" type="password" id="field-password" class="field-password" placeholder="******" required>
+                    <input name="txtSenha" type="password" id="field-password" class="field-password" placeholder="*********" required>
                     <i class="fa fa-lock"></i>
                 </div>
 
+
             </section>
 
-
-            <a href="./cadastroAction.php">
-                <button class="btn-login">
-                    Cadastrar
-                </button>
-            </a>
-
+            <button class="btn-login" type="submit">Cadastrar</button>
 
             <section class="links-container">
                 <span>Ou entre com:</span>

@@ -1,15 +1,24 @@
-.btnSalvo {
-    background: #00a200;
+:root {
+    --lilas: #8888EA;
+    --laranja: #FCA82F;
+    --roxo: #6066D0;
+    --cinza-escuro: #535050;
+}
+
+.btnSucesso {
+    background-color: var(--laranja);
     border-radius: 20px;
     color: white;
-    font-size: 60px;
+    font-size: 50px;
+    text-align: center;
+    padding: 30px;
+}
+
+.btnErro {
+    background: var(--cinza-escuro);
+    border-radius: 20px;
+    color: white;
+    font-size: 50px;
     text-align: center;
 }
 
-.btnNsalvo {
-    background: #a20000;
-    border-radius: 20px;
-    color: white;
-    font-size: 60px;
-    text-align: center;
-}

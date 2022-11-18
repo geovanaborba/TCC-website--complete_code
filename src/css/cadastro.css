@@ -14,7 +14,7 @@ body {
     color: #fff;
 }
 
-header{
+header {
     min-height: 15vh;
     display: flex;
     align-items: center;
@@ -34,7 +34,7 @@ header{
     padding-top: 30px;
 }
 
-main{
+main {
     width: 100%;
     min-height: 110vh;
     background: linear-gradient(#8888EA, #6066D0);
@@ -82,7 +82,7 @@ main form .inputs-container input {
 }
 
 main form .inputs-container input:focus {
-    
+
     box-shadow: inset 1px 4px 7px rgba(0, 0, 0, 0.5);
 
 }
@@ -111,8 +111,7 @@ main form .password-container #eye {
     display: none;
 }
 
-main form .btn-login {
-
+.btn-login {
     width: 90%;
     height: 50px;
     border: 0;
@@ -131,7 +130,7 @@ main form .btn-login {
     text-align: center;
 }
 
-main form .btn-login:hover {
+main form .btn-cadastro:hover {
     background: var(--laranja);
     color: #fff;
 }
@@ -229,4 +228,3 @@ main form footer a {
 main form footer a:hover {
     color: #fff;
 }
-
