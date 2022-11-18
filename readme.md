@@ -18,21 +18,20 @@ Você pode ver a página no link abaixo:
 
 <hr>
 
-<br><br>
+<br>
 
 
 Para esse projeto, foi utilizada a ferramenta **USBWebServer** para o banco de dados. 
 
 Ela é gratuita e é possível realizar o download por meio do link: <https://usbwebserver.yura.mk.ua/>
 
-<br><br>
+<br>
 
 <hr>
 
-<br><br>
+<br>
 
 # 📂 Documentação 
-
 
 <br>
 
@@ -42,7 +41,7 @@ Ela é gratuita e é possível realizar o download por meio do link: <https://us
 
 * [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P?query=press+start)
 
-<br><br>
+<br>
 
 ## ✔️ Cores: 
 
@@ -51,9 +50,10 @@ Ela é gratuita e é possível realizar o download por meio do link: <https://us
     --roxo: #6066D0;
     --cinza-escuro: #535050;
 
-<br><br>
+<br>
 
 ## ✔️ Banco de Dados
+
 <br>
 
 ### Variáveis de conexão

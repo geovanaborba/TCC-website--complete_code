@@ -97,7 +97,7 @@ main .container h1 {
 
 form {
     font-family: 'Poppins', sans-serif;
-    width: 31.25rem;
+    width: 31rem;
     position: relative;
     margin-top: 1rem;
     padding: 1rem 0;
@@ -134,10 +134,10 @@ fieldset .campo {
 }
 
 .campo input[type="text"] {
-    background: #d8d8d8;
+    background: #f3f3f3;
     border: none;
     padding: 0.5rem 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     outline: none;
 }
 
@@ -147,6 +147,7 @@ fieldset .campo {
 
 .campo input:focus {
     background-color: #e9e9e9;
+    padding-left: 10px;
 }
 
 .campo p {
@@ -160,25 +161,53 @@ fieldset .campo {
     cursor: pointer;
 }
 
-.btn-enviar {
+.btn-alterar {
     display: block;
     border-radius: 2px;
     font-size: 1.2em;
-    background: var(--laranja);
+    background: var(--roxo);
+    color: #fff;
     border: 0;
     margin-bottom: 1em;
     padding: 0.3em 1.7em;
-    margin-left: 65px;
-    margin-top: 50px;
+    margin: 50px 0 0 65px;
+    outline: none;
 
     transform: translate(-50%, -50%);
 }
 
-.btn-enviar:hover {
-    background: var(--roxo);
+.btn-alterar:hover {
+    background: var(--laranja);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
     text-shadow: none;
     cursor: pointer;
 }
 
 /*Fim do formulário */
+
+
+.btn-deletar {
+    display: block;
+    border-radius: 2px;
+    font-size: 1.2em;
+    background: rgb(226, 0, 0);
+    color: #fff;
+    border: 0;
+    padding: 0.7em 1.7em;
+    margin: 50px 0 0 20%;
+    align-items: center;
+    transform: translate(-50%, -50%);
+}
+
+.btn-deletar:hover {
+        background: var(--cinza-escuro);
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+        text-shadow: none;
+        cursor: pointer;
+}
+
+.frase-deletar {
+    color: #fff;
+    font-size: 12px;
+    margin-left: 30px;
+}
