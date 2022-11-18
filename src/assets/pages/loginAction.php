@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../../css/login.css">
+    <link rel="stylesheet" href="../../css/loginAction.css">
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/scroll.css">
 
@@ -29,7 +29,7 @@
         $senha = $_POST['txtSenha'];
         require_once './conexao.php';
 
-        $sql = "SELECT * FROM `login` WHERE username = '" . $nome . "';";
+        $sql = "SELECT * FROM `cadastro` WHERE username = '" . $nome . "';";
         $resultado = $conexao->query($sql);
         //echo $sql;
         $linha = mysqli_fetch_array($resultado);
@@ -42,7 +42,7 @@
                                 <a href="./login.php">
                                     <h1>Login Inválido! 
                                     <br>
-                                    Clique aqui e tente novamente. </h1>
+                                    Clique aqui e tente novamente ou faça cadastro. </h1>
                                     </a> ';
             }
         } else {
@@ -50,7 +50,7 @@
                             <a href="./login.php">
                                 <h1>Login Inválido! 
                                 <br>
-                                Clique aqui e tente novamente.</h1>
+                                Clique aqui e tente novamente ou faça cadastro.</h1>
                                 </a> ';
         }
 
