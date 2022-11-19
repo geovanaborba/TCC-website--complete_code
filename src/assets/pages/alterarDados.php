@@ -61,6 +61,7 @@
 
         <div class="container">
             <h1>Alterar dados</h1>
+            <hr>
 
             <div class="infos">
                 <img src="../imgs/undraw_programming_re_kg9v.svg" alt="desenho de homem usando um notebook com outro monitor à esquerda e com uma xícara de café ao lado direito">
@@ -94,17 +95,36 @@
 
             </div>
 
-            <a href="./deletarConta.php">
-                <button class="btn-deletar">
-                    <i class="w3-xxlarge fa fa-check"></i> Deletar conta
-                </button>
-            </a>
+
+            <!-- Trigger/Open The Modal -->
+            <button id="btn-modal">Deletar conta</button>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h1>Tem certeza que quer deletar sua conta?</h1>
+                    <br>
+                    <p>Depois de excluir sua conta, não há como voltar atrás. Por favor, tenha certeza ao fazer isso.</p>
+                    <p>Sentiremos sua falta! :( </p>
+                    <br>
+
+                    <a href="./deletarContaAction.php">
+                    <button class="custom-btn btn-Sim"><span>Adeus :( </span><span>Sim, tenho certeza.</span></button>
+                    </a>
+                </div>
+            </div>
+
+
             <p class="frase-deletar">Depois de excluir sua conta, não há como voltar atrás. Por favor, tenha certeza ao fazer isso.</p>
         </div>
 
     </main>
 
     <script src="https://kit.fontawesome.com/5f56dfe06a.js" crossorigin="anonymous"></script>
+    <script src="../../js/modal.js"></script>
 
 </body>
 
