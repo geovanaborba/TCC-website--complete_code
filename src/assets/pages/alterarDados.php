@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,23 +66,29 @@
             <h1>Alterar dados</h1>
             <hr>
 
+            <?php
+            require_once './conexao.php';
+            ?>
+
             <div class="infos">
                 <img src="../imgs/undraw_programming_re_kg9v.svg" alt="desenho de homem usando um notebook com outro monitor à esquerda e com uma xícara de café ao lado direito">
 
-                <form method="POST">
+
+
+                <form action="./alterarDadosAction.php" method="post">
                     <fieldset class="campo">
 
                         <label>Alterar Nome </label>
-                        <input type="text" name="nome" id="nome">
+                        <input type="text" name="txtNome" value="<?php echo $_GET['nome'] ?>">
 
                         <label>Alterar E-mail</label>
-                        <input type="text" name="email" id="email">
+                        <input type="text" name="txtEmail" value="<?php echo $_GET['email'] ?>">
 
                         <label>Alterar Nome de Usuário</label>
-                        <input type="text" name="username" id="username">
+                        <input type="text" name="txtUsername" value="<?php echo $_GET['username'] ?>">
 
                         <label>Alterar senha</label>
-                        <input type="text" name="senha-antiga" id="senha-antiga" placeholder="Insira a Senha Atual">
+                        <input type="text" name="txtSenha" placeholder="Insira a Senha Atual">
 
                         <input type="text" name="senha-atual" id="senha-atual" placeholder="Insira a Nova Senha">
 
@@ -96,7 +105,9 @@
             </div>
 
 
+
             <!-- Trigger/Open The Modal -->
+
             <button id="btn-modal">Deletar conta</button>
 
             <!-- The Modal -->
@@ -111,15 +122,13 @@
                     <p>Sentiremos sua falta! :( </p>
                     <br>
 
-                    <a href="./deletarContaAction.php">
-                    <button class="custom-btn btn-Sim"><span>Adeus :( </span><span>Sim, tenho certeza.</span></button>
+                    <a href="./deletarConta.php">
+                        <button class="custom-btn btn-Sim"><span>Adeus :( </span><span>Sim, tenho certeza.</span></button>
                     </a>
                 </div>
             </div>
 
-
             <p class="frase-deletar">Depois de excluir sua conta, não há como voltar atrás. Por favor, tenha certeza ao fazer isso.</p>
-        </div>
 
     </main>
 

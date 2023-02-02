@@ -34,6 +34,9 @@
 
             <section class="inputs-container">
 
+                <div class="password-container"> 
+                    <input name="txtID" type="text" placeholder="ID de usuário" hidden><br>
+                </div>
 
                 <div class="password-container">
                     <i class="fa-solid fa-circle-user"></i>

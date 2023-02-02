@@ -186,11 +186,11 @@
                                         Currículo</a>
                                 </li>
                                 <li>
-                                    <a href="#" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin"></i>
+                                    <a href="https://www.linkedin.com/" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin"></i>
                                         LinkedIn</a>
                                 </li>
                                 <li>
-                                    <a href="#" target="_blank" class="github"><i class="fa-brands fa-github"></i>
+                                    <a href="https://www.github.com/" target="_blank" class="github"><i class="fa-brands fa-github"></i>
                                         GitHub</a>
                                 </li>
                                 <li>
