@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../../css/perfil.css">
+    <link rel="stylesheet" href="../../css/nav.css">
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/scroll.css">
 
@@ -20,47 +21,13 @@
 
 <body>
 <?php require_once ('./verificarAcesso.php');?>
-    <nav>
-        <ul>
-            <a href="./home.php">
-                <li>Início</li>
-            </a>
-            <a href="./ranking.php">
-                <li>Ranking</li>
-            </a>
-            <a href="./estudos.php">
-                <li>Estudos</li>
-            </a>
-            <a href="./perfil.php">
-                <li>Perfil</li>
-            </a>
-        </ul>
-    </nav>
-
-    <header>
-        <h1>ProgQuiz</h1>
-    </header>
+<?php require_once ('./nav.php');?>
 
     <section class="card-perfil">
         <img class="avatar" src="../imgs/undraw_female_avatar_re_uk8y.svg">
         <h1>Fulana da Silva</h1>
         <p class="username">@usuario123</p>
 
-
-            <ul>
-                <li>
-                    <a href="#">Alterar foto de perfil</a>
-                </li>
-                <li>
-                    <a href="#">Alterar dados pessoais</a>
-                </li>
-                <li>
-                    <a href="#">Ver certificados</a>
-                </li>
-                <li>
-                    <a href="#">Maior ranking</a>
-                </li>
-            </ul>
     </section>
 
 

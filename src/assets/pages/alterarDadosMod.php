@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../../css/alterarDados.css">
+    <link rel="stylesheet" href="../../css/nav.css">
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/scroll.css">
 
@@ -21,42 +22,7 @@
 
 <body>
 
-    <nav>
-        <header>
-            <a href="./home.php">
-                <h1>ProgQuiz</h1>
-            </a>
-        </header>
-
-        <div class="menu">
-            <ul>
-                <a href="./home.php">
-                    <li>Início</li>
-                </a>
-                <a href="./ranking.php">
-                    <li>Ranking</li>
-                </a>
-                <a href="./estudos.php">
-                    <li>Estudos</li>
-                </a>
-                <a href="./perfil.php">
-                    <li>Perfil</li>
-                </a>
-
-                <li><i class="fa-solid fa-gear"></i>
-                    <ul class="dropdown">
-                        <li class="li-dropdown">Alterar foto de perfil</li>
-                        <a href="./alterarDados.php">
-                            <li class="li-dropdown">Alterar dados</li>
-                        </a>
-                        <li class="li-dropdown">Ver certificados</li>
-                        <a href="./logoutAction.php">
-                            <li class="li-dropdown">Deslogar</li>
-                        </a>
-                    </ul>
-                </li>
-        </div>
-    </nav>
+<?php require_once ('./nav.php');?>
 
     <main>
 
