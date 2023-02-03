@@ -19,7 +19,7 @@
 </head>
 
 <body>
-<?php require_once ('./verificarAcesso.php');?>
+
     <a href="../../../index.php">
         <header>
             <h1>ProgQuiz</h1>
