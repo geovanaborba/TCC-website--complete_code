@@ -52,7 +52,7 @@
                             <li class="li-dropdown">Alterar dados</li>
                         </a>
                         <li class="li-dropdown">Ver certificados</li>
-                        <a href="../../../index.php">
+                        <a href="./logoutAction.php">
                             <li class="li-dropdown">Deslogar</li>
                         </a>
                     </ul>

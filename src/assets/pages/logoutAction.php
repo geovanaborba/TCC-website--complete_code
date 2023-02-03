@@ -1,6 +1,6 @@
 
     <?php 
-        require_once('verificarAcesso.php'); 
+        require_once('./verificarAcesso.php'); 
     ?>
 
     <?php
