@@ -32,7 +32,7 @@
 
             <section class="inputs-container">
 
-                <input type="text" placeholder="Insira seu nome de usuário" name="txtNome" required>
+                <input type="text" placeholder="Insira seu nome de usuário" name="txtUsername" required>
 
                 <div class="password-container">
                     <input type="password" id="field-password" class="field-password" placeholder="******" name="txtSenha" required>

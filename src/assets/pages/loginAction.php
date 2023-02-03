@@ -25,18 +25,20 @@
     <div class="container">
 
         <?php
-        $nome = $_POST['txtNome'];
+        session_start();
+        
+        $nomeusuario = $_POST['txtUsername'];
         $senha = $_POST['txtSenha'];
         require_once './conexao.php';
 
-        $sql = "SELECT * FROM `cadastro` WHERE username = '" . $nome . "';";
+        $sql = "SELECT * FROM `cadastro` WHERE username = '" . $nomeusuario . "';";
         $resultado = $conexao->query($sql);
         //echo $sql;
         $linha = mysqli_fetch_array($resultado);
         if ($linha != null) {
             if ($linha['senha'] == $senha) {
                 header('location: ./home.php'); 
-                            $_SESSION['logado'] = $nome;
+                            $_SESSION['logado'] = $nomeusuario;
             } else {
                 echo '
                                 <a href="./login.php">

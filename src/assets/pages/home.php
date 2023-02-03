@@ -18,6 +18,7 @@
 </head>
 
 <body>
+<?php require_once ('./verificarAcesso.php');?>
     <nav>
         <header>
             <h1>ProgQuiz</h1>

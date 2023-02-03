@@ -18,19 +18,19 @@
         <?php
         require_once './conexao.php';
 
-        $sql = "UPDATE cadastro SET nome = '" . $_POST['txtNome'] . "', username = '" . $_POST['txtUsername'] . "',
-        email='" . $_POST['txtEmail'] . "' WHERE usuario_id =" . 1 . ";";
+        $sql = "UPDATE `cadastro` SET nome = '" . $_POST['txtNome'] . "', username = '" . $_POST['txtUsername'] . "',
+        email='" . $_POST['txtEmail'] . "' WHERE usuario_id =" . $_POST['txtID'] . ";";
 
         if ($conexao->query($sql) === TRUE) {
             echo '
-            <a href="./alterarDados.php">
+            <a href="./listar.php">
                 <h1 class="w3-button w3-teal">Cadastro atualizado com sucesso! </h1>
             </a> 
             ';
             $id = mysqli_insert_id($conexao);
         } else {
             echo '
-            <a href="./alterarDados.php">
+            <a href="./listar.php">
                 <h1 class="w3-button w3-teal">ERRO! Tente novamente.</h1>
             </a> 
             ';

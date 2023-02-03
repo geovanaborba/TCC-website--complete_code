@@ -22,7 +22,7 @@
 </head>
 
 <body>
-
+<?php require_once ('./verificarAcesso.php');?>
     <nav>
         <header>
             <a href="./home.php">

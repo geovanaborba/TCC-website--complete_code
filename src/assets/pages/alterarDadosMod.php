@@ -20,7 +20,7 @@
 </head>
 
 <body>
-<?php require_once ('./verificarAcesso.php');?>
+
     <nav>
         <header>
             <a href="./home.php">
@@ -61,7 +61,7 @@
     <main>
 
         <div class="container">
-            <h1>Alterar dados</h1>
+            <h1>Alterar dados - MODERAÇÃO</h1>
             <hr>
 
             <div class="infos">
@@ -71,22 +71,20 @@
                     <fieldset class="campo">
 
                         <label>Alterar Nome </label>
-                        <input type="text" name="txtNome">
+                        <input type="text" name="txtNome" value="<?php echo $_GET['nome'] ?>">
 
                         <label>Alterar E-mail</label>
-                        <input type="text" name="txtEmail">
+                        <input type="text" name="txtEmail" value="<?php echo $_GET['email'] ?>">
 
                         <label>Alterar Nome de Usuário</label>
-                        <input type="text" name="txtUsername">
+                        <input type="text" name="txtUsername" value="<?php echo $_GET['username'] ?>">
 
                         <label>Alterar senha</label>
-                        <input type="text" name="txtSenha" placeholder="Insira a Senha Atual">
 
                         <input type="text" name="senha-atual" id="senha-atual" placeholder="Insira a Nova Senha">
 
                         <input type="text" name="senha-atual" id="senha-atual" placeholder="Digite Novamente a Nova Senha">
 
-                        <p>Esqueceu sua senha?</p>
 
                         <button class="btn-alterar">Alterar</button>
 
@@ -96,36 +94,10 @@
 
             </div>
 
-
-
-            <!-- Trigger/Open The Modal -->
-
-            <button id="btn-modal">Deletar conta</button>
-
-            <!-- The Modal -->
-            <div id="myModal" class="modal">
-
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h1>Tem certeza que quer deletar sua conta?</h1>
-                    <br>
-                    <p>Depois de excluir sua conta, não há como voltar atrás. Por favor, tenha certeza ao fazer isso.</p>
-                    <p>Sentiremos sua falta! :( </p>
-                    <br>
-
-                    <a href="./deletarContaAction.php">
-                        <button class="custom-btn btn-Sim"><span>Adeus :( </span><span>Sim, tenho certeza.</span></button>
-                    </a>
-                </div>
-            </div>
-
-            <p class="frase-deletar">Depois de excluir sua conta, não há como voltar atrás. Por favor, tenha certeza ao fazer isso.</p>
-
     </main>
 
     <script src="https://kit.fontawesome.com/5f56dfe06a.js" crossorigin="anonymous"></script>
-    <script src="../../js/modal.js"></script>
+    
 
 </body>
 

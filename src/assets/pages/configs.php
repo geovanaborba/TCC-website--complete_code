@@ -19,7 +19,7 @@
 </head>
 
 <body>
-
+<?php require_once ('./verificarAcesso.php');?>
     <nav>
         <ul>
             <a href="./home.php">
