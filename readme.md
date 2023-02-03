@@ -124,9 +124,48 @@ Ela é gratuita e é possível realizar o download por meio do link: <https://us
 
 <hr>
 
+<br>
+
+<br>
+
+## ✔️ Verificação de Acesso
+
+<br>
+
+Em todas as páginas dentro do site após o login, há um require_once para verificar Acesso do usuário. 
+
+<br>
+
+<img src="./src/assets/imgs/readme/verificarAcesso.jpg">
+
+<br>
+
+Caso o usuário tente acessar o site sem efetuar login, ele é redirecionado para a tela de 'Acesso Negado', solicitando o login e/ou cadastro do mesmo.
+
+<img src="./src/assets/imgs/readme/acessoNegado.jpg">
+
+Ao clicar no alerta, retorna-se à tela inicial do site. 
+
+<br><br>
+
+<hr>
+
+<br><br>
+## ✔️ Acesso Administrativo
 
 
+<br><br>
 
+<hr>
+
+<br><br>
+## ✔️ Adição de perguntas para o quizz
+
+<br><br>
+
+<hr>
+
+<br><br>
 
 
 
