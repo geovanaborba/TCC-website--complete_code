@@ -32,7 +32,7 @@
                     </div>
                     <div class="infos">
                         <div class="nome-lvl">
-                            <h3>Fulana da Silva</h3>
+                            <h3><?php echo $_SESSION['logado']; ?> </h3>
                             <p>Level 11</p>
                         </div>
                         <label for="file">Experiência: 3200/10000</label>

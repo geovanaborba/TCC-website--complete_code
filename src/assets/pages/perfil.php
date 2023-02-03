@@ -24,14 +24,13 @@
 <?php require_once ('./verificarAcesso.php');?>
 <?php require_once ('./nav.php');?>
 
-
     <div class="banner">
 
         <div class="card-perfil">
             <img class="avatar" src="../imgs/undraw_female_avatar_re_uk8y.svg">
             <div class="usuario">
                 <h1>Fulana da Silva</h1>
-                <p class="username">@usuario123</p>
+                <p class="username">@<?php echo $_SESSION['logado']; ?></p>
                 <p class="nivel">Nível 11</p>
                 <label for="file">Experiência: 3200/10000</label><br>
                 <progress id="file" value="32" max="100"> 32% </progress>

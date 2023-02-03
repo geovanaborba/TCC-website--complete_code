@@ -16,7 +16,7 @@
         <?php
             require_once './conexao.php';
 
-            $sql = "DELETE FROM cadastro WHERE usuario_id = '" . $_POST['txtID'] . "';";
+            $sql = "DELETE FROM cadastro WHERE usuario_id = '" . 1 . "';";
                 if ($conexao->query($sql) === TRUE) {
                     echo ' 
                         <a href="../../../index.php"> 
