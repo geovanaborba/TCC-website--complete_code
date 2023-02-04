@@ -1,5 +1,4 @@
-
-    <nav>
+<nav>
     <header>
         <h1>ProgQuiz</h1>
     </header>
