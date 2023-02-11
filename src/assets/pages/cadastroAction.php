@@ -25,8 +25,8 @@
 
         if($conexao->query($sql) === TRUE) {
             echo '
-                <a href="./home.php">
-                <h1 class="w3-button w3-green">Cadastro Concluído! <br> Clique aqui para continuar.</h1>
+                <a href="./login.php">
+                <h1 class="w3-button w3-green">Cadastro Concluído! <br> Clique aqui para efetuar o seu login.</h1>
                 </a>
                 ';
         } else {

@@ -22,7 +22,7 @@
                 <h1 class="w3-button w3-teal">Acesso NEGADO! </h1>
                 <br>
                 <h2 class="w3-button w3-
-                teal">É necessária a Realização do Login! </h2>
+                teal">É necessária a Realização do Login ou Cadastro! </h2>
                 </a> ';
         ?>
     </div>

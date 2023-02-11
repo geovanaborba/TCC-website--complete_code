@@ -94,7 +94,7 @@
                     Sistemas da
                     ETEC. </p>
                 <br>
-                <p>Desenvolvido com <i class="fa-solid fa-heart fa-beat"></i> pelo Grupo 02. </p>
+                <p>Desenvolvido com <i class="fa-solid fa-heart fa-beat"></i> por Geovana Borba. </p>
             </div>
 
             <div class="integrantes">
