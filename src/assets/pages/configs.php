@@ -7,9 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../../css/perfil.css">
+    <link rel="stylesheet" href="../../css/configs.css">
     <link rel="stylesheet" href="../../css/nav.css">
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/scroll.css">
+
+    <link rel="stylesheet" href="../../css/responsivo/menu_celular.css"
+    media="screen and (min-width: 0) and (max-width: 767px)">
+    <link rel="stylesheet" href="../../css/responsivo/menu_tablet.css"
+    media="screen and (min-width: 768px) and (max-width: 1000px)">
+
+    <link rel="stylesheet" href="../../css/responsivo/footer.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
