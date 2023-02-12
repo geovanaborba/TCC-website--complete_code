@@ -316,3 +316,92 @@ footer {
     font-style: italic;
     bottom: 2%;
 }
+
+/* Para telas menores: celulares até 767px */
+@media screen and (min-width: 0) and (max-width: 767px) {
+    .banner {
+        flex-direction: column;
+        margin: 50px 10% 0 10%;
+    }
+
+    .card-perfil {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .avatar {
+        width: 50%;
+    }
+
+    .nivel {
+        margin: 30px 0 10px 0px;
+    }
+
+    .contatos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        line-height: 30px;
+        margin-left: 15px;
+        margin-right: 0;
+        text-align: left;
+    }
+
+    .frase {
+        margin-left: -15px;
+        text-align: center;
+    }
+
+    .abas {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cartao .informacoes-abas {
+        margin: 0;
+    }
+
+    .informacoes-abas .informacao {
+        padding: 20px;
+    }
+
+    .conquistas {
+        flex-wrap: wrap;
+        gap: 20%;
+    }
+
+    .img-selo {
+        padding-top: 15%;
+        width: 25%;
+    }
+}
+
+/* Para telas maiores: computadores/tablets 768px para cima */
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+    .banner {
+        margin: 50px 10% 0 10%;
+    }
+
+    .card-perfil {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .avatar {
+        width: 40%;
+    }
+
+    .nivel {
+        margin: 30px 0 10px 0px;
+    }
+
+    .contatos {
+        line-height: 35px;
+        margin-right: 0;
+        text-align: left;
+    }
+    
+    .conquistas {
+        flex-wrap: wrap;
+        gap: 35%;
+    }
+}

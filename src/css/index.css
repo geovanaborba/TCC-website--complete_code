@@ -178,3 +178,50 @@ footer {
     animation-duration: 1.5s; 
     color: var(--laranja);
 }
+
+/* Para telas menores: celulares até 767px */
+@media screen and (min-width: 0) and (max-width: 767px) {
+    .modal-content {
+        width: 80vw;
+    }
+
+    div#text {
+        font-size: 11vw;
+    }
+
+    .acesso {
+        align-items: center;
+        flex-direction: column-reverse;
+        gap: 0px;
+        padding-bottom: 50px;
+        margin-top: 40px;
+    }
+
+    footer {
+        padding: 10% 10% 10% 10%;
+    }
+
+    .rodape {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .integrantes {
+        margin-top: 1rem;
+    }  
+}
+
+/* Para telas maiores: computadores/tablets 768px para cima */
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+    footer {
+        padding: 10% 10% 10% 10%;
+    }
+
+    .rodape {
+        justify-content: space-between;
+    }
+
+    .credito {
+        width: 60%;
+    }
+}

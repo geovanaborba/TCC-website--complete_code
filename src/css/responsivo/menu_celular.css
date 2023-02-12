@@ -1,0 +1,13 @@
+/* Altera as páginas home, ranking, estudos, perfil, configs. */
+nav {
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.menu {
+    margin: 35px 0px 25px;
+}
+
+.dropdown {
+    z-index: 7;
+}

@@ -174,3 +174,28 @@ footer {
     padding-top: 60px;
     bottom: 2%;
 }
+
+/* Para telas menores: celulares até 767px */
+@media screen and (min-width: 0) and (max-width: 767px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .topo {
+        flex-direction: column-reverse;
+    }
+    
+    .topo a header h1 {
+        font-size: 40px;
+        margin: 20px;
+        text-align: center;
+    }
+}
+
+/* Para telas maiores: computadores/tablets 768px para cima */
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+    .topo {
+        align-items: center;
+    }
+}

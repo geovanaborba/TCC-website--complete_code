@@ -1,0 +1,74 @@
+.margem {
+    margin: 0;
+}
+
+.top-3 {
+    align-items: flex-end;
+    gap: 0;
+    justify-content: space-evenly;
+    margin: 50px 0 50px;
+    padding: 0;
+}
+
+.card {
+    height: auto;
+    padding: 5px;
+    padding-top: 35px;
+    width: 105px;
+}
+
+.card-meio {
+    height: auto;
+    padding: 5px;
+    padding-top: 50px;
+    width: 105px;
+}
+
+.card img,
+.card-meio img {
+    position: relative;
+    top: 20px;
+}
+
+.card i {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 90px;
+}
+
+.card-meio .ouro {
+    bottom: 100px;
+    display: flex;
+    font-size: 40px;
+    justify-content: center;
+    position: relative;
+}
+
+.ranking {
+    display: flex;
+    justify-content: center;
+}
+
+.lista-container {
+    max-width: 360px;
+    margin: 0;
+}
+
+.lista {
+    justify-content: space-around;
+    padding: 10px 10px;
+}
+
+.lista img {
+    width: 45px;
+}
+
+.lista-quiz {
+    width: auto;
+}
+
+.lista-botao {
+    max-width: none;
+}
