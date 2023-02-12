@@ -331,3 +331,61 @@ footer {
     padding-top: 60px;
     bottom: 2%;
 }
+
+/* Para telas menores: celulares até 767px */
+@media screen and (min-width: 0) and (max-width: 767px) {
+  .estudos {
+      align-items: center;
+      flex-direction: column;
+      margin-top: 50px;
+  }
+
+  .barras {
+      gap: 25%;
+      justify-content: space-around;
+      padding-bottom: 50px;
+  }
+
+  .card {
+      height: auto;
+      position: relative;
+      width: 90%;
+  }
+
+  .estudar-titulo {
+      position: absolute;
+  }
+
+  footer {
+      position: relative;
+  }
+}
+
+/* Para telas maiores: computadores/tablets 768px para cima */
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .estudos {
+      align-items: center;
+      flex-direction: column;
+      margin-top: 50px;
+  }
+
+  .barras {
+      gap: none;
+      justify-content: space-around;
+      padding-bottom: 50px;
+  }
+
+  .card {
+      height: auto;
+      position: relative;
+      width: 90%;
+  }
+
+  .estudar-titulo {
+      position: absolute;
+  }
+  
+  footer {
+      position: relative;
+  }
+}

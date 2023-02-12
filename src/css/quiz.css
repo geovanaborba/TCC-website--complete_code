@@ -421,3 +421,65 @@ footer button.show {
     margin: 0 10px;
     display: flex;
 }
+
+/* Para telas menores: celulares até 767px */
+@media screen and (min-width: 0) and (max-width: 767px) {
+    .info_box {
+        width: 95%;
+    }
+
+    .info_box .info-list {
+        padding: 10px 20px;
+    }
+
+    .quiz_box {
+        width: 320px;
+    }
+
+    .quiz_box header {
+        flex-direction: column;
+        height: 100px;
+    }
+
+    .quiz_box header .title-box {
+        margin-top: 12px;
+    }
+
+    .quiz_box header .title-box img {
+        width: 260px;
+    }
+
+    .quiz_box header .timer {
+        height: 36px;
+        justify-content: space-around;
+        margin-bottom: 5px;
+        width: 220px;
+    }
+
+    .quiz_box header .timer .time_left_txt {
+        font-size: 15px;
+    }
+
+    section {
+        padding: 15px 15px 10px 15px;
+    }
+
+    section .que_text {
+        font-size: 20px;
+    }
+
+    section .option_list .option.disabled {
+        font-size: 15px;
+    }
+
+    .result_box {
+        padding: 10px 20px;
+        width: 320px;
+    }
+    
+    .result_box .score_text span {
+        flex-wrap: wrap;
+        font-size: 16px;
+        justify-content: center;
+    }
+}
