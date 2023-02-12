@@ -1,0 +1,13 @@
+main form {
+    margin-bottom: 5%;
+    height: 100%;
+    width: 90%;
+}
+
+.password-infos {
+    flex-direction: column;
+}
+
+.password-infos a {
+    margin-top: 2%;
+}

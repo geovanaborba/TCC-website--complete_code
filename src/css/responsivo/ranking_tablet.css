@@ -1,0 +1,28 @@
+.margem {
+    margin: 0;
+}
+
+.top-3 {
+    padding: 0;
+    margin: 50px 0 50px;
+}
+
+.card {
+    padding: 15px;
+}
+
+.card-meio {
+    height: 220px;
+    padding: 20px;
+    width: 200px;
+}
+
+.ranking {
+    display: flex;
+    justify-content: center;
+}
+
+.lista-container {
+    max-width: 80%;
+    margin: 0;
+}
