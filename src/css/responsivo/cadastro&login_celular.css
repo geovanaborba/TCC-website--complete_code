@@ -4,6 +4,10 @@ main form {
     width: 90%;
 }
 
+main form .inputs-container {
+    margin-top: 1%;
+}
+
 .password-infos {
     flex-direction: column;
 }
