@@ -34,8 +34,7 @@
 <body>
 <?php require_once ('./verificarAcesso.php');?>
 <?php require_once ('./nav.php');?>
-
-
+<?php require_once './conexao.php';?>
 
     <body>
 
@@ -47,9 +46,39 @@
                         <div class="card">
                             <img src="../imgs/undraw_male_avatar_re_hguk.svg">
                             <i class="fa-solid fa-crown prata"></i>
-                            <h3>Pessoa de Araújo</h3>
+                            <h3>
+                            <?php
+                                    $sql = "SELECT username, pontuacao
+                                    FROM score
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 1 ";
+                                    $resultado = $conexao->query($sql);
+                                    if ($resultado != null)
+                                        foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['username']  . '</td>';
+                                        echo '<td>
+                                        <p ='. '&username=' . $linha['username'] . '">
+                                        </td>';
+                            }
+                            ?>
+                            </h3>
                             <p>Melhor pontuação: <br>
-                                870
+                            <?php
+                                    $sql = "SELECT username, pontuacao
+                                    FROM score
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 1 ";
+                                    $resultado = $conexao->query($sql);
+                                    if ($resultado != null)
+                                        foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['pontuacao']  . '</td>';
+                                        echo '<td>
+                                        <p ='. '&pontuacao=' . $linha['pontuacao'] . '">
+                                        </td>';
+                            }
+                            ?>
                             </p>
                         </div>
                     </div>
@@ -61,9 +90,35 @@
                         <div class="card-meio">
                             <img src="../imgs/undraw_female_avatar_re_uk8y.svg">
                             <i class="fa-solid fa-crown ouro"></i>
-                            <h3>Fulana da Silva</h3>
+                            <h3>
+                            <?php
+                                    $sql = "SELECT * FROM score WHERE pontuacao = (SELECT MAX(pontuacao) FROM score)";
+                                    $resultado = $conexao->query($sql);
+                                    if ($resultado != null)
+                                        foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['username']  . '</td>';
+                                        echo '<td>
+                                        <p ='. '&username=' . $linha['username'] . '">
+                                        </td>';
+                            }
+                            ?>
+                            </h3>
                             <p>Melhor pontuação: <br>
-                                999
+                            <?php
+                                    $sql = "SELECT username, pontuacao
+                                    FROM score
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 0 ";
+                                    $resultado = $conexao->query($sql);
+                                    if ($resultado != null)
+                                        foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['pontuacao']  . '</td>';
+                                        echo '<td>
+                                        <p ='. '&pontuacao=' . $linha['pontuacao'] . '">
+                                        </td>';
+                            }
+                            ?>
                             </p>
                         </div>
                     </div>
@@ -75,9 +130,39 @@
                         <div class="card">
                             <img src="../imgs/undraw_profile_pic_re_upir.svg">
                             <i class="fa-solid fa-crown bronze"></i>
-                            <h3>Menina Santos</h3>
+                            <h3>
+                            <?php
+                                    $sql = "SELECT username, pontuacao
+                                    FROM score
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 2 ";
+                                    $resultado = $conexao->query($sql);
+                                    if ($resultado != null)
+                                        foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['username']  . '</td>';
+                                        echo '<td>
+                                        <p ='. '&username=' . $linha['username'] . '">
+                                        </td>';
+                            }
+                            ?>
+                            </h3>
                             <p>Melhor pontuação: <br>
-                                830
+                            <?php
+                                    $sql = "SELECT username, pontuacao
+                                    FROM score
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 2 ";
+                                    $resultado = $conexao->query($sql);
+                                    if ($resultado != null)
+                                        foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['pontuacao']  . '</td>';
+                                        echo '<td>
+                                        <p ='. '&pontuacao=' . $linha['pontuacao'] . '">
+                                        </td>';
+                            }
+                            ?>
                             </p>
                         </div>
                     </div>
@@ -90,35 +175,179 @@
 
                 <div class="lista-container">
 
-                    <div class="lista">
+                <div class="lista">
                         <span class="lista-posicao">4th</span>
-                        <img src="../imgs/undraw_profile_pic_re_upir.svg">
-                        <span class="lista-posicao">Joana Gonçalves</span>
-                        <span class="lista-quiz">Melhor pontuação: 800</span>
+                        <img src="../imgs/undraw_male_avatar_re_hguk.svg">
+                        <span class="lista-posicao">
+                            <h3>
+                            <?php
+                                    $sql = "SELECT username, pontuacao
+                                    FROM score
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 3 ";
+                                    $resultado = $conexao->query($sql);
+                                    if ($resultado != null)
+                                        foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['username']  . '</td>';
+                                        echo '<td>
+                                        <p ='. '&username=' . $linha['username'] . '">
+                                        </td>';
+                            }
+                            ?>
+                            </h3>
+                        </span>
+                        <span class="lista-quiz">Melhor pontuação: 
+                            <h3>
+                            <?php
+                                    $sql = "SELECT username, pontuacao
+                                    FROM score
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 3 ";
+                                    $resultado = $conexao->query($sql);
+                                    if ($resultado != null)
+                                        foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['pontuacao']  . '</td>';
+                                        echo '<td>
+                                        <p ='. '&pontuacao=' . $linha['pontuacao'] . '">
+                                        </td>';
+                            }
+                            ?>
+                            </h3>
+                        </span>
                         <button class="lista-botao">Ver perfil</button>
                     </div>
 
                     <div class="lista">
                         <span class="lista-posicao">5th</span>
                         <img src="../imgs/undraw_male_avatar_re_hguk.svg">
-                        <span class="lista-posicao">Felipe Santana</span>
-                        <span class="lista-quiz">Melhor pontuação: 784</span>
+                        <span class="lista-posicao">
+                        <h3>
+                            <?php
+                                    $sql = "SELECT username, pontuacao
+                                    FROM score
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 4 ";
+                                    $resultado = $conexao->query($sql);
+                                    if ($resultado != null)
+                                        foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['username']  . '</td>';
+                                        echo '<td>
+                                        <p ='. '&username=' . $linha['username'] . '">
+                                        </td>';
+                            }
+                            ?>
+                            </h3>
+                        </span>
+                        <span class="lista-quiz">Melhor pontuação:
+                            <h3>
+                            <?php
+                                    $sql = "SELECT username, pontuacao
+                                    FROM score
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 4 ";
+                                    $resultado = $conexao->query($sql);
+                                    if ($resultado != null)
+                                        foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['pontuacao']  . '</td>';
+                                        echo '<td>
+                                        <p ='. '&pontuacao=' . $linha['pontuacao'] . '">
+                                        </td>';
+                            }
+                            ?>
+                            </h3>
+                            </span>
                         <button class="lista-botao">Ver perfil</button>
                     </div>
 
                     <div class="lista">
                         <span class="lista-posicao">6th</span>
                         <img src="../imgs/undraw_female_avatar_re_uk8y.svg">
-                        <span class="lista-posicao">Marina Sena</span>
-                        <span class="lista-quiz">Melhor pontuação: 725</span>
+                        <span class="lista-posicao">
+                        <h3>
+                            <?php
+                                    $sql = "SELECT username, pontuacao
+                                    FROM score
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 5 ";
+                                    $resultado = $conexao->query($sql);
+                                    if ($resultado != null)
+                                        foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['username']  . '</td>';
+                                        echo '<td>
+                                        <p ='. '&username=' . $linha['username'] . '">
+                                        </td>';
+                            }
+                            ?>
+                            </h3>
+                        </span>
+                        <span class="lista-quiz">Melhor pontuação:
+                            <h3>
+                            <?php
+                                    $sql = "SELECT username, pontuacao
+                                    FROM score
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 5 ";
+                                    $resultado = $conexao->query($sql);
+                                    if ($resultado != null)
+                                        foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['pontuacao']  . '</td>';
+                                        echo '<td>
+                                        <p ='. '&pontuacao=' . $linha['pontuacao'] . '">
+                                        </td>';
+                            }
+                            ?>
+                            </h3>
+                        </span>
                         <button class="lista-botao">Ver perfil</button>
                     </div>
 
                     <div class="lista">
                         <span class="lista-posicao">7th</span>
                         <img src="../imgs/undraw_male_avatar_re_hguk.svg">
-                        <span class="lista-posicao">Caio Dacielo</span>
-                        <span class="lista-quiz">Melhor pontuação: 679</span>
+                        <span class="lista-posicao">
+                        <h3>
+                            <?php
+                                    $sql = "SELECT username, pontuacao
+                                    FROM score
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 6 ";
+                                    $resultado = $conexao->query($sql);
+                                    if ($resultado != null)
+                                        foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['username']  . '</td>';
+                                        echo '<td>
+                                        <p ='. '&username=' . $linha['username'] . '">
+                                        </td>';
+                            }
+                            ?>
+                            </h3>
+                        </span>
+                        <span class="lista-quiz">Melhor pontuação:
+                            <h3>
+                            <?php
+                                    $sql = "SELECT username, pontuacao
+                                    FROM score
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 6 ";
+                                    $resultado = $conexao->query($sql);
+                                    if ($resultado != null)
+                                        foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['pontuacao']  . '</td>';
+                                        echo '<td>
+                                        <p ='. '&pontuacao=' . $linha['pontuacao'] . '">
+                                        </td>';
+                            }
+                            ?>
+                        </h3>
+                        </span>
                         <button class="lista-botao">Ver perfil</button>
                     </div>
 
@@ -127,6 +356,8 @@
             </section>
 
         </div>
+
+    
 
 
 
