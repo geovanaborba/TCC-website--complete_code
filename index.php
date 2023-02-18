@@ -68,7 +68,7 @@
 
 
                 <a href="./src/assets/pages/ranking_index.php">
-                    <button class="btn-pontos">Mostrar Ranking</button>
+                    <button class="btn-pontuacao">Mostrar Ranking</button>
                 </a>
             </div>
         </main>

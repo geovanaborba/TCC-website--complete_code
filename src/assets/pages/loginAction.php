@@ -10,9 +10,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../../css/loginAction.css">
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/scroll.css">
+    <link rel="stylesheet" href="../../css/loginAction.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,21 +41,28 @@
                             $_SESSION['logado'] = $nomeusuario;
             } else {
                 echo '
-                                <a href="./login.php">
-                                    <h1>Login Inválido! 
-                                    <br>
-                                    Clique aqui e tente novamente ou faça cadastro. </h1>
-                                    </a> ';
+                    <h1>Login Inválido!</h1>
+                    <br>
+                    <h2>
+                        Clique 
+                        <a href="./login.php">aqui</a>
+                         e tente novamente ou faça 
+                        <a href="../../../src/assets/pages/cadastro.php">cadastro.</a>
+                    </h2>
+                ';
             }
         } else {
             echo '
-                            <a href="./login.php">
-                                <h1>Login Inválido! 
-                                <br>
-                                Clique aqui e tente novamente ou faça cadastro.</h1>
-                                </a> ';
+                <h1>Login Inválido!</h1>
+                <br>
+                <h2>
+                    Clique 
+                    <a href="./login.php">aqui</a>
+                     e tente novamente ou faça 
+                    <a href="../../../src/assets/pages/cadastro.php">cadastro.</a>
+                </h2>
+            ';
         }
-
         $conexao->close();
         ?>
 
@@ -63,3 +70,8 @@
 </body>
 
 </html>
+<style>
+    .container {
+    text-align: center;
+}
+</style>

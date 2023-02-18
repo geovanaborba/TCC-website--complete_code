@@ -1,0 +1,13 @@
+.container {
+    text-align: center;
+}
+
+h2 {
+    background-color: #ccc;
+    color: #000000c4;
+    padding: 10px;
+}
+
+h2 a {
+    color: blue;
+}

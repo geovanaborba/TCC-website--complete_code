@@ -70,7 +70,7 @@ main {
 }
 
 #btn-modal,
-.btn-pontos {
+.btn-pontuacao {
     width: 220px;
     height: 50px;
     background-color: var(--roxo);
@@ -81,7 +81,7 @@ main {
 }
 
 #btn-modal:hover,
-.btn-pontos:hover {
+.btn-pontuacao:hover {
     background-color: var(--laranja);
     color: #fff;
     cursor: pointer;
