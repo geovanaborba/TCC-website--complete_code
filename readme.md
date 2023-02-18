@@ -82,6 +82,12 @@ Ela é gratuita e é possível realizar o download por meio do link: <https://us
         constraint uk_cad_email unique key (email)
     );
 
+    create table score (
+        pontuacao INT(11),
+        username VARCHAR(20) NOT NULL,
+        FOREIGN KEY (username) REFERENCES cadastro(username)
+    );
+
 
 <br><br>
 » As chaves únicas criadas (username e email), farão com que o usuário não consiga fazer um novo cadastro caso o username ou email já estejam no banco de dados. 
