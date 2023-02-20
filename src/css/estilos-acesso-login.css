@@ -1,0 +1,25 @@
+body {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    margin: 0px 20px;
+    text-align: center;
+}
+
+h1 {
+    background-color: indianred;
+    color: black;
+    padding: 10px;
+}
+
+h2 {
+    background-color: #ccc;
+    color: #000000c4;
+    padding: 10px;
+}
+
+h2 a {
+    color: blue;
+    text-decoration: none;
+}
