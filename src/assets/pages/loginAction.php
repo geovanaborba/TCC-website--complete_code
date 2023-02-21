@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/scroll.css">
-    <link rel="stylesheet" href="../../css/loginAction.css">
+    <link rel="stylesheet" href="../../css/estilos-acesso-login.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +41,9 @@
                             $_SESSION['logado'] = $nomeusuario;
             } else {
                 echo '
-                    <h1>Login Inválido!</h1>
+                    <a href="../../../index.php">
+                        <h1>Login Inválido!</h1>
+                    </a>
                     <br>
                     <h2>
                         Clique 
@@ -53,7 +55,9 @@
             }
         } else {
             echo '
-                <h1>Login Inválido!</h1>
+                <a href="../../../index.php">
+                    <h1>Login Inválido!</h1>
+                </a>
                 <br>
                 <h2>
                     Clique 
@@ -70,8 +74,3 @@
 </body>
 
 </html>
-<style>
-    .container {
-    text-align: center;
-}
-</style>
