@@ -16,6 +16,11 @@
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/scroll.css">
 
+    <link rel="stylesheet" href="../../css/responsivo/menu_celular.css"
+    media="screen and (min-width: 0) and (max-width: 767px)">
+    <link rel="stylesheet" href="../../css/responsivo/menu_tablet.css"
+    media="screen and (min-width: 768px) and (max-width: 1000px)">
+
     <title>ProgQuiz | Alterar Dados</title>
 
 </head>
