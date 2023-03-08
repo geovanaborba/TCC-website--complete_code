@@ -35,7 +35,8 @@ Ela é gratuita e é possível realizar o download por meio do link: <https://us
 
 <br>
 
-## ✔️ Fontes: 
+<details>
+<summary><h2> ✔️ Fontes e Cores: </h2></summary>
 
 * [Poppins](https://fonts.google.com/specimen/Poppins?query=poppins)
 
@@ -43,16 +44,19 @@ Ela é gratuita e é possível realizar o download por meio do link: <https://us
 
 <br>
 
-## ✔️ Cores: 
-
     --lilas: #8888EA;
     --laranja: #FCA82F;
     --roxo: #6066D0;
     --cinza-escuro: #535050;
 
-<br>
+<hr>
 
-## ✔️ Banco de Dados
+</details>
+
+
+
+<details>
+<summary><h2> ✔️ Banco de Dados </h2></summary>
 
 <br>
 
@@ -130,7 +134,7 @@ Ela é gratuita e é possível realizar o download por meio do link: <https://us
 
 <br>
 
-## ✔️ Tabelas para as demais funcionalidades do site
+## ✔️ Tabela de Pontuação e Adição de perguntas e alternativas no BD
 <br>
 
 <br>
@@ -168,11 +172,13 @@ Ela é gratuita e é possível realizar o download por meio do link: <https://us
 
 <br>
 
-<br>
-
 <hr>
 
-## ✔️ Verificação de Acesso
+</details>
+
+
+<details>
+<summary><h2>✔️ Verificação de Acesso </h2></summary>
 
 <br>
 
@@ -192,26 +198,37 @@ Caso o usuário tente acessar o site sem efetuar login, ele é redirecionado par
 
 Ao clicar no alerta, retorna-se à tela inicial do site. 
 
-<br><br>
+<br>
 
 <hr>
 
-<br><br>
-## ✔️ Acesso Administrativo
+</details>
 
 
-<br><br>
-
-<hr>
-
-<br><br>
-## ✔️ Adição de perguntas para o quizz
+<details> 
+<summary><h2> ✔️ Acesso Administrativo </h2></summary>
 
 <br><br>
 
 <hr>
 
+<br>
+
+</details>
+
+
+
+<details>
+<summary><h2> ✔️  </h2></summary>
+
 <br><br>
+
+<hr>
+
+<br>
+
+</details>
+
 
 
 
