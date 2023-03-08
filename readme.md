@@ -65,7 +65,9 @@ Ela é gratuita e é possível realizar o download por meio do link: <https://us
 
 <br>
 
-### Utilize os seguintes comandos para criação do banco de dados: 
+### Criação do Database e tabela para o cadastro e login no site: 
+
+<br>
 
     create database tcc
     CHARACTER SET utf8
@@ -82,12 +84,6 @@ Ela é gratuita e é possível realizar o download por meio do link: <https://us
         constraint uk_cad_email unique key (email)
     );
 
-    create table score (
-        pontuacao INT(11),
-        username VARCHAR(20) NOT NULL,
-        FOREIGN KEY (username) REFERENCES cadastro(username)
-    );
-
 
 <br><br>
 » As chaves únicas criadas (username e email), farão com que o usuário não consiga fazer um novo cadastro caso o username ou email já estejam no banco de dados. 
@@ -96,7 +92,7 @@ Ela é gratuita e é possível realizar o download por meio do link: <https://us
 
 » Além disso, para cada usuário cadastrado é gerado um ID de usuário dentro do banco de dados, através do Auto_Increment. 
 
-<br><br>
+<br>
 
 **Obs.:** O CHARACTER SET utf8 COLLATE utf8_general_ci irá alterar o agrupamento dos elementos. 
 
@@ -112,7 +108,7 @@ Ela é gratuita e é possível realizar o download por meio do link: <https://us
 
 <br>
 
-## ✔️ Banco de Dados em funcionamento 
+### Banco de Dados em funcionamento 
 
 <br>
 
@@ -134,7 +130,51 @@ Ela é gratuita e é possível realizar o download por meio do link: <https://us
 
 <br>
 
+## ✔️ Tabelas para as demais funcionalidades do site
+<br>
+
+<br>
+---- Tabela para mostrar a pontuação do usuário após responder o quiz, tornando possível mostrá-la no ranking.
+
+    create table score (
+        pontuacao INT(11),
+        username VARCHAR(20) NOT NULL,
+        FOREIGN KEY (username) REFERENCES cadastro(username)
+    );
+
+<br>
+
+<br>
+---- Criação da Tabela Questions. Nela as questões do quiz ficarão salvas e seguras para que o usuário não as acesse antes de responder o quiz. 
+
+    create table questions ( 
+	id_question int(3) not null auto_increment, 
+	question varchar(256) not null, 
+	primary key (id_question) 
+    );
+<br>
+
+<br>
+----- Criação da tabela Alternativas. Assim como a Questions, deixará as alternativas seguras no BD para o usuário não visualizá-las.
+
+    create table alternativas (
+	id_question int(3) not null auto_increment, 
+	alternativa_a varchar(256) not null, 
+	alternativa_b varchar(256) not null, 
+	alternativa_c varchar(256) not null, 
+	alternativa_d varchar(256) not null, 
+	FOREIGN KEY (id_question) REFERENCES questions (id_question) 
+    );
+
+<br>
+
+<br>
+
+<hr>
+
 ## ✔️ Verificação de Acesso
+
+<br>
 
 <br>
 
