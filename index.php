@@ -92,9 +92,9 @@
             <div class="credito">
                 <p>Página criada como parte do Trabalho de Conclusão de Curso do curso técnico de Desenvolvimento de
                     Sistemas da
-                    ETEC. </p>
+                    ETEC de 2023. </p>
                 <br>
-                <p>Desenvolvido com <i class="fa-solid fa-heart fa-beat"></i> por Geovana Borba. </p>
+                <p>Desenvolvido com <i class="fa-solid fa-heart fa-beat"></i> pelo Grupo 05. </p>
             </div>
 
             <div class="integrantes">
