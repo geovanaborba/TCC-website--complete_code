@@ -1,9 +1,10 @@
 <?php
 
-$servername = 'localhost';
-$username = 'root';
-$password = 'usbw';
-$database = 'tcc';
+
+$servername = getenv('envServername');
+$username = getenv('envUsername');
+$password = getenv('envPassword');
+$database = getenv('envDatabase');
 $conexao = new mysqli($servername, $username, $password, $database);
 
 
