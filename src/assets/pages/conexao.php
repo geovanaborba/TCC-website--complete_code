@@ -1,10 +1,13 @@
 <?php
 
+require_once ('../../../global.php');
 
-$servername = getenv('envServername');
-$username = getenv('envUsername');
-$password = getenv('envPassword');
-$database = getenv('envDatabase');
+$servername = $_ENV['BANCO_LINK'];
+$username = $_ENV['BANCO_USUARIO'];
+$password = $_ENV['BANCO_SENHA'];
+$database = $_ENV['BANCO_NOME'];
+//>> $variavel = getenv('variavel_da_env'); << também funciona, porém utilizar a variável superglobal $_ENV['']; OU $_SERVER['']; são mais recomendadas. 
+
 $conexao = new mysqli($servername, $username, $password, $database);
 
 

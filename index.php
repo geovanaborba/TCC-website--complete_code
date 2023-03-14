@@ -88,7 +88,7 @@
     </div>
     <footer>
 
-        <div class="rodape">
+    <div class="rodape">
             <div class="credito">
                 <p>Página criada como parte do Trabalho de Conclusão de Curso do curso técnico de Desenvolvimento de
                     Sistemas da
