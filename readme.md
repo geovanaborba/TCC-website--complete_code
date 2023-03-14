@@ -18,25 +18,14 @@ Você pode ver a página no link abaixo:
 
 <hr>
 
-<br>
-
-
-Para esse projeto, foi utilizada a ferramenta **USBWebServer** para o banco de dados. 
-
-Ela é gratuita e é possível realizar o download por meio do link: <https://usbwebserver.yura.mk.ua/>
-
-<br>
-
-<hr>
-
-<br>
+<br><br>
 
 # 📂 Documentação 
 
 <br>
 
 <details>
-<summary><h2> ✔️ Fontes e Cores: </h2></summary>
+<summary><h2> ✔️ Fontes e Cores </h2></summary>
 
 * [Poppins](https://fonts.google.com/specimen/Poppins?query=poppins)
 
@@ -56,11 +45,30 @@ Ela é gratuita e é possível realizar o download por meio do link: <https://us
 
 
 <details>
-<summary><h2> ✔️ Banco de Dados </h2></summary>
+<summary><h2> ✔️ Criação do Banco de Dados </h2></summary>
 
 <br>
 
-### Variáveis de conexão
+<hr>
+
+<br>
+
+
+Inicialmente, para a fase de testes do banco de dados, foi utilizada a ferramenta **USBWebServer** para a criação do banco de dados. 
+
+Ela é gratuita e é possível realizar o download por meio do link: <https://usbwebserver.yura.mk.ua/>
+
+<br>
+
+Entretanto, ao decorrer do projeto, o banco de dados foi implantado em mecanismo mySQL no [Amazon RDS](https://aws.amazon.com/pt/rds/): Um serviço da web que facilita a configuração e operação de banco de dados em nuvem AWS, tornando possível que todos do grupo do TCC utilizassem o mesmo BD. 
+
+Dessa forma, as variáveis de conexão ficarão invisíveis por questões de segurança.
+
+<br>
+
+<hr>
+
+### Variáveis de conexão se utilizado USBWebServer
 
     $servername = 'localhost';
     $username = 'root';
@@ -173,6 +181,86 @@ Ela é gratuita e é possível realizar o download por meio do link: <https://us
 <br>
 
 <hr>
+
+</details>
+
+
+<details>
+<summary><h2>✔️ Banco de Dados em nuvem - Amazon RDS </h2></summary>
+
+<br>
+
+<br>
+
+Foi criada uma conta de nível gratuito na Amazon AWS (Amazon Web Services) para utilizarmos o banco de dados através do [Amazon RDS](https://aws.amazon.com/pt/rds/) (Relational Database Service). Com ele foi possível que todos do grupo tivessem acesso ao mesmo banco de dados ao mesmo tempo, para que fizessem alterações e complementos sem necessidade de criar um local em cada máquina dos integrantes. 
+
+O Amazon RDS é um serviço de banco de dados relacional gerenciado para MySQL, PostgreSQL, MariaDB ou SQL Server. O nível gratuito fica disponível para o usuário por 12 meses e é possível ter 750 horas de uso de instâncias executando banco de dados mySQL, Postgre, SQL Server e MariaDB por mês.  Além disso, são disponibilizados 20GB de armazenamento de banco de dados (SSD) e 20GB de armazenamento de backup. 
+
+Conforme o próprio site diz em sua descrição sobre a plataforma, a AWS ajuda novos usuários a usar um serviço de banco de dados gerenciado na nuvem sem custos. É possível usar o nível gratuito para desenvolver aplicações, realizar testes ou simplesmente para aprender e ganhar experiência com o RDS. 
+
+
+<br>
+
+<hr>
+
+</details>
+
+
+<details>
+<summary><h2>✔️ PHP DotEnv</h2></summary>
+
+<br>
+
+Para a proteção de usuário e senha do banco de dados em nuvem, foi utilizado o [PHP dotenv](https://github.com/vlucas/phpdotenv). 
+Com ele, os dados sensíveis são armazenados dentro de variáveis, mas não uma variável qualquer como as criadas com ‘$’(cifrão) no início delas. Com o dotenv, ela se torna uma variável de ambiente, ou seja, ela será criada no ambiente onde o PHP está.
+Para isso, foi utilizado o [Composer](https://getcomposer.org/), um gerenciador de dependências. Dessa forma, criamos um arquivo global.php para chamar as dependências do Composer, dentro da pasta vendor. 
+O arquivo .env não ficará visível para todos no site e dentro dele colocamos as variáveis com os dados que devem ser escondidos. 
+
+<br>
+
+<img src="./src/assets/imgs/readme/dotenv1.png">
+
+<br>
+
+<br>
+
+<img src="./src/assets/imgs/readme/dotenv2.png">
+
+<br>
+
+No arquivo conexão.php, foram utilizadas as variáveis criadas dentro do arquivo .env, chamadas através da variável superglobal $_ENV[‘ ’];
+
+<br>
+
+<img src="./src/assets/imgs/readme/dotenv3.png">
+
+<br>
+
+Por fim, foi criado um arquivo .gitignore, para que, como o próprio nome diz, o versionamento Git ignore os arquivos que constam dentro dele e não os subam para a plataforma. 
+ 
+
+
+**Instalação do Composer em sistema Linux**
+Para a instalação dele em Mac ou Linux, é necessário a utilização de alguma interface de linha de comando. Também é necessário que a interface de linha de comando esteja no diretório-raiz da aplicação, antes de ser aplicado o comando: 
+composer require vlucas/phpdotenv
+
+<br>
+
+**Instalação do Composer em Sistema Windows**
+Para instalação em sistemas Windows, baixe o instalador clicando aqui. Depois execute a aplicação e siga os passos necessários. O instalador vai colocar o Composer no PATH do Windows, assim será possível executar o comando de qualquer diretório. 
+ 
+<br>
+
+<img src="./src/assets/imgs/readme/dotenv4.png">
+
+<br>
+Obs.: O projeto estava sendo realizado através do USBWServer. Devido essa aplicação não manter o PHP localmente, foi utilizada a ferramenta Xampp para que a instalação do Composer pudesse ser finalizada.
+
+<br>
+
+<hr>
+
+<br>
 
 </details>
 
