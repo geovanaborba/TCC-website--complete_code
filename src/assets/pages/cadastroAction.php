@@ -29,6 +29,7 @@
                 <h1 class="w3-button w3-green">Cadastro Concluído! <br> Clique aqui para efetuar o seu login.</h1>
                 </a>
                 ';
+
         } else {
             echo '
                 <a href="./cadastro.php">

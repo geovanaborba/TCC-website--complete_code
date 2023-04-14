@@ -26,19 +26,25 @@
 
         <?php
         session_start();
+        require_once ('./conexao.php');
         
-        $nomeusuario = $_POST['txtUsername'];
+        $nomeUsuario = $_POST['txtUsername'];
         $senha = $_POST['txtSenha'];
-        require_once './conexao.php';
+        $nome = $sql = "SELECT nome FROM `cadastro` WHERE username = '$nomeUsuario' AND senha = '$senha';";
+        $email = $sql = "SELECT email FROM `cadastro` WHERE username = '$nomeUsuario' AND senha = '$senha';";
 
-        $sql = "SELECT * FROM `cadastro` WHERE username = '" . $nomeusuario . "';";
+
+        $sql = "SELECT * FROM `cadastro` WHERE username = '$nomeUsuario' AND senha = '$senha';";
         $resultado = $conexao->query($sql);
         //echo $sql;
         $linha = mysqli_fetch_array($resultado);
         if ($linha != null) {
             if ($linha['senha'] == $senha) {
                 header('location: ./home.php'); 
-                            $_SESSION['logado'] = $nomeusuario;
+                    $_SESSION['logado'] = $nomeUsuario;
+                    $_SESSION['senha'] = $senha;
+                    $_SESSION['nome'] = $nome;
+                    $_SESSION['email'] = $email;
             } else {
                 echo '
                     <a href="../../../index.php">

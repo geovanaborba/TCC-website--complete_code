@@ -26,8 +26,16 @@
 </head>
 
 <body>
+    <?php 
+if(!isset($_SESSION))
+{
+	session_start();
+} 
+    ?>
+    
 <?php require_once ('./verificarAcesso.php');?>
 <?php require_once ('./nav.php');?>
+<?php require_once ('./conexao.php');?>
 
     <main>
 
@@ -39,16 +47,41 @@
                 <img src="../imgs/undraw_programming_re_kg9v.svg" alt="desenho de homem usando um notebook com outro monitor à esquerda e com uma xícara de café ao lado direito">
 
                 <form action="./alterarDadosAction.php" method="post">
-                    <fieldset class="campo">
-
-                        <label>Alterar Nome </label>
-                        <input type="text" name="txtNome">
+                    <fieldset class="campo"> 
+                    
+                    <label>Alterar Nome </label>
+                        <input type="text" required name="txtNome" 
+                        value="<?php $sql = "SELECT nome FROM cadastro LIMIT 1";
+                                $resultado = $conexao->query($sql);
+                                    if ($resultado != null) {
+                                    foreach ($resultado as $linha) {
+                                        echo $linha['nome'];
+                                    }
+                                    }
+                                ?>"
+                        >
 
                         <label>Alterar E-mail</label>
-                        <input type="text" name="txtEmail">
+                        <input type="text" required name="txtEmail" 
+                        value="<?php $sql = "SELECT email FROM cadastro LIMIT 1"; 
+                                $resultado = $conexao->query($sql);
+                                    if ($resultado != null) {
+                                    foreach ($resultado as $linha) {
+                                        echo $linha['email'];
+                                    }
+                                    }
+                                ?>">
 
                         <label>Alterar Nome de Usuário</label>
-                        <input type="text" name="txtUsername">
+                        <input type="text" required name="txtUsername"
+                        value="<?php $sql = "SELECT username FROM cadastro LIMIT 1 OFFSET 1"; 
+                                $resultado = $conexao->query($sql);
+                                    if ($resultado != null) {
+                                    foreach ($resultado as $linha) {
+                                        echo $linha['username'];
+                                    }
+                                    }
+                                ?>">
 
                         <label>Alterar senha</label>
                         <input type="text" name="txtSenha" placeholder="Insira a Senha Atual">

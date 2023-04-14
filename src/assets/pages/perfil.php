@@ -11,32 +11,44 @@
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/scroll.css">
 
-    <link rel="stylesheet" href="../../css/responsivo/menu_celular.css"
-    media="screen and (min-width: 0) and (max-width: 767px)">
-    <link rel="stylesheet" href="../../css/responsivo/menu_tablet.css"
-    media="screen and (min-width: 768px) and (max-width: 1000px)">
+    <link rel="stylesheet" href="../../css/responsivo/menu_celular.css" media="screen and (min-width: 0) and (max-width: 767px)">
+    <link rel="stylesheet" href="../../css/responsivo/menu_tablet.css" media="screen and (min-width: 768px) and (max-width: 1000px)">
 
     <link rel="stylesheet" href="../../css/responsivo/footer.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Press+Start+2P&family=Roboto+Mono&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Press+Start+2P&family=Roboto+Mono&display=swap" rel="stylesheet">
 
     <title>ProgQuiz - Perfil</title>
 </head>
 
 <body>
-<?php require_once ('./verificarAcesso.php');?>
-<?php require_once ('./nav.php');?>
+    <?php require_once('./verificarAcesso.php');
+    session_start() ?>
+    <?php require_once('./nav.php'); ?>
+    <?php require_once('./conexao.php'); ?>
 
     <div class="banner">
 
         <div class="card-perfil">
             <img class="avatar" src="../imgs/undraw_female_avatar_re_uk8y.svg">
             <div class="usuario">
-                <h1>Fulana da Silva</h1>
+                <h1><?php
+
+
+                    $sql = "SELECT nome FROM cadastro LIMIT 1";
+                    $resultado = $conexao->query($sql);
+                    if ($resultado != null) {
+                        foreach ($resultado as $linha) {
+                            echo '<td>' . $linha['nome']  . '</td>';
+                            echo '<td>
+                                <p =' . '&nome=' . $linha['nome'] . '">
+                                </td>';
+                        }
+                    }
+                    ?>
+                </h1>
                 <p class="username">@<?php echo $_SESSION['logado']; ?></p>
                 <p class="nivel">Nível 11</p>
                 <label for="file">Experiência: 3200/10000</label><br>
@@ -65,7 +77,7 @@
                     <li>
                         <i class="fa-solid fa-briefcase"></i> Desenvolvedora de software
                     </li>
-                    
+
                     <li class="frase">"Primeiro resolva o problema. Depois escreva o código"</li>
                 </ul>
             </div>

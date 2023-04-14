@@ -60,7 +60,7 @@ Ela é gratuita e é possível realizar o download por meio do link: <https://us
 
 <br>
 
-Entretanto, ao decorrer do projeto, o banco de dados foi implantado em mecanismo mySQL no [Amazon RDS](https://aws.amazon.com/pt/rds/): Um serviço da web que facilita a configuração e operação de banco de dados em nuvem AWS, tornando possível que todos do grupo do TCC utilizassem o mesmo BD. 
+Entretanto, ao decorrer do projeto, passamos a utilizar o Workbench, visto que o banco de dados foi implantado em mecanismo mySQL no [Amazon RDS](https://aws.amazon.com/pt/rds/): Um serviço da web que facilita a configuração e operação de banco de dados em nuvem AWS, tornando possível que todos do grupo do TCC utilizassem o mesmo BD.  
 
 Dessa forma, as variáveis de conexão ficarão invisíveis por questões de segurança.
 
@@ -238,15 +238,17 @@ No arquivo conexão.php, foram utilizadas as variáveis criadas dentro do arquiv
 
 Por fim, foi criado um arquivo .gitignore, para que, como o próprio nome diz, o versionamento Git ignore os arquivos que constam dentro dele e não os subam para a plataforma. 
  
-
+<br><br>
 
 **Instalação do Composer em sistema Linux**
+
 Para a instalação dele em Mac ou Linux, é necessário a utilização de alguma interface de linha de comando. Também é necessário que a interface de linha de comando esteja no diretório-raiz da aplicação, antes de ser aplicado o comando: 
 composer require vlucas/phpdotenv
 
 <br>
 
 **Instalação do Composer em Sistema Windows**
+
 Para instalação em sistemas Windows, baixe o instalador clicando aqui. Depois execute a aplicação e siga os passos necessários. O instalador vai colocar o Composer no PATH do Windows, assim será possível executar o comando de qualquer diretório. 
  
 <br>
