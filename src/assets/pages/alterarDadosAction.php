@@ -19,17 +19,15 @@
         require_once './conexao.php';
         require_once './verificarAcesso.php';
 
-        $sql = "UPDATE cadastro SET nome = '" . $_POST['txtNome'] . "', username = '" . $_POST['txtUsername'] . "',
-        email='" . $_POST['txtEmail'] . "' WHERE usuario_id =" . 1 . ";";
+        $sql = "UPDATE cadastro SET nome = '" . $_POST['txtNome'] . "', email='" . $_POST['txtEmail'] . "' WHERE usuario_id =" . $_SESSION['id'] . ";";
 
 
         if ($conexao->query($sql) === TRUE) {
             echo '
-            <a href="./alterarDados.php">
-                <h1 class="w3-button w3-teal">Cadastro atualizado com sucesso! </h1>
+            <a href="./logoutAction.php">
+                <h1 class="w3-button w3-teal">Cadastro atualizado com sucesso! <br> Faça login novamente para validar sua alteração. </h1>
             </a> 
             ';
-            $id = mysqli_insert_id($conexao);
         } else {
             echo '
             <a href="./alterarDados.php">

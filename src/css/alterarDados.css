@@ -36,6 +36,11 @@ main .container h1 {
     width: 40%;
 }
 
+.infos #username {
+    color: var(--laranja);
+    text-shadow: 0.5px 1px rgba(0, 0, 0, 0.6);
+    font-size: 11px;
+}
 
 /* Início de formulário */
 
@@ -96,7 +101,7 @@ fieldset .campo {
 
 .campo p {
     color: var(--laranja);
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
     font-size: 12px;
 }
 
@@ -127,6 +132,39 @@ fieldset .campo {
     cursor: pointer;
 }
 
+form .campo .username {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.username i {
+    position: relative;
+    font-size: 15px;
+    color: white;
+}
+
+[data-tooltip] {
+    position: relative;
+    font-weight: bold;
+  }
+  
+  [data-tooltip]:after {
+    display: none;
+    position: absolute;
+    top: -5px;
+    padding: 5px;
+    border-radius: 3px;
+    left: calc(100% + 2px);
+    content: attr(data-tooltip);
+    width: 200px;
+    background-color: var(--roxo);
+    color: White;
+  }
+  
+  [data-tooltip]:hover:after {
+    display: block;
+  }
 /*Fim do formulário */
 
 

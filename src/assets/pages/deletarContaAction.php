@@ -14,9 +14,9 @@
     <div class="w3-padding w3-content w3-text-grey w3-third w3-display-middle" id="eProfissional"> 
         
         <?php
-            require_once './conexao.php';
+            require_once ('./conexao.php');
 
-            $sql = "DELETE FROM cadastro WHERE usuario_id = '" . 1 . "';";
+            $sql = "DELETE FROM cadastro WHERE usuario_id = '" . $_SESSION['id'] . "';";
                 if ($conexao->query($sql) === TRUE) {
                     echo ' 
                         <a href="../../../index.php"> 

@@ -149,9 +149,11 @@ Dessa forma, as variáveis de conexão ficarão invisíveis por questões de seg
 ---- Tabela para mostrar a pontuação do usuário após responder o quiz, tornando possível mostrá-la no ranking.
 
     create table score (
-        pontuacao INT(11),
-        username VARCHAR(20) NOT NULL,
-        FOREIGN KEY (username) REFERENCES cadastro(username)
+    pontuacao INT(11),
+    username VARCHAR(20) NOT NULL,
+    usuario_id int (10) NOT NULL AUTO_INCREMENT,
+    FOREIGN KEY (username) REFERENCES cadastro(username),
+    FOREIGN KEY (usuario_id) REFERENCES cadastro(usuario_id)
     );
 
 <br>

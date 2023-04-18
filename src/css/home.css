@@ -67,7 +67,7 @@ body {
 
 .nome-lvl {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 5px;
     align-items: center;
     font-weight: bold;

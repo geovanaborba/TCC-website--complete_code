@@ -33,12 +33,21 @@
 
         $sql = "SELECT * FROM `cadastro` WHERE username = '" . $nomeusuario . "';";
         $resultado = $conexao->query($sql);
+
         //echo $sql;
         $linha = mysqli_fetch_array($resultado);
         if ($linha != null) {
             if ($linha['senha'] == $senha) {
                 header('location: ./home.php'); 
                             $_SESSION['logado'] = $nomeusuario;
+                            $_SESSION['senha'] = $senha;
+
+                $_SESSION['id'] = $linha['usuario_id'];
+                $_SESSION['email'] = $linha['email'];
+                $_SESSION['nome'] = $linha['nome'];
+                $_SESSION['senha'] = $linha['senha'];
+
+
             } else {
                 echo '
                     <a href="../../../index.php">

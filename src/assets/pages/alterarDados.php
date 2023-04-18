@@ -42,39 +42,32 @@
                 <form action="./alterarDadosAction.php" method="post">
                     <fieldset class="campo">
 
+                    
+                    <label>Nome de Usuário</label>
+                    <div class="username">
+                        <input type="text" disabled name="txtUsername"
+                        value="<?php 
+                                        echo $_SESSION['logado'];
+                                ?>" ><span data-tooltip="Seu nome de usuário não pode ser alterado, a menos que faça uma solicitação ao suporte."><i class="fa-solid fa-question"></i></span>
+                    </div>
+
+                
+                        
+
                         <label>Alterar Nome </label>
                         <input type="text" required name="txtNome" 
-                        value="<?php $sql = "SELECT nome FROM cadastro LIMIT 1";
-                                $resultado = $conexao->query($sql);
-                                    if ($resultado != null) {
-                                    foreach ($resultado as $linha) {
-                                        echo $linha['nome'];
-                                    }
-                                    }
+                        value="<?php 
+                                    echo $_SESSION['nome'];
+
                                 ?>"
                         >
 
                         <label>Alterar E-mail</label>
                         <input type="text" required name="txtEmail" 
-                        value="<?php $sql = "SELECT email FROM cadastro LIMIT 1"; 
-                                $resultado = $conexao->query($sql);
-                                    if ($resultado != null) {
-                                    foreach ($resultado as $linha) {
-                                        echo $linha['email'];
-                                    }
-                                    }
+                        value="<?php 
+                                    echo $_SESSION['email'];
                                 ?>">
 
-                        <label>Alterar Nome de Usuário</label>
-                        <input type="text" required name="txtUsername"
-                        value="<?php $sql = "SELECT username FROM cadastro LIMIT 1"; 
-                                $resultado = $conexao->query($sql);
-                                    if ($resultado != null) {
-                                    foreach ($resultado as $linha) {
-                                        echo $linha['username'];
-                                    }
-                                    }
-                                ?>">
 
                         <label>Alterar senha</label>
                         <input type="text" name="txtSenha" placeholder="Insira a Senha Atual">
@@ -123,6 +116,7 @@
 
     <script src="https://kit.fontawesome.com/5f56dfe06a.js" crossorigin="anonymous"></script>
     <script src="../../js/modal.js"></script>
+    <script src="../../js/mouse-over.js"></script>
 
 </body>
 

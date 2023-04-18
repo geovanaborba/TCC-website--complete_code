@@ -28,7 +28,7 @@
 </head>
 
 <body>
-<?php require_once ('./verificarAcesso.php');?>
+<?php require_once ('./verificarAcesso.php'); ?>
 <?php require_once ('./nav.php');?>
 <?php require_once ('./conexao.php');?>
 
@@ -38,13 +38,7 @@
             <img class="avatar" src="../imgs/undraw_female_avatar_re_uk8y.svg">
             <div class="usuario">
                 <h1><?php 
-                        $sql = "SELECT nome FROM cadastro LIMIT 1"; 
-                        $resultado = $conexao->query($sql);
-                        if ($resultado != null) {
-                            foreach ($resultado as $linha) {
-                                echo '<td>' . $linha['nome']  . '</td>';
-                        }
-                    }
+                        echo ($_SESSION['nome']);
                     ?>
                 </h1>
                 <p class="username">@<?php echo $_SESSION['logado']; ?></p>
