@@ -15,6 +15,7 @@
         
         <?php
             require_once ('./conexao.php');
+            require_once ('./verificarAcesso.php');
 
             $sql = "DELETE FROM cadastro WHERE usuario_id = '" . $_SESSION['id'] . "';";
                 if ($conexao->query($sql) === TRUE) {
