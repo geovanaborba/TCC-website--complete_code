@@ -9,6 +9,56 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+nav {
+    margin: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav li {
+    display: inline-block;
+    padding: 0px 0px 15px 20px;
+    font-size: 15px;
+    color: #000;
+}
+
+nav li:hover {
+    color: var(--lilas);
+    cursor: pointer;
+}
+
+/* ----- Menu Dropdown para as Configurações ----- */
+
+.dropdown {
+    position: absolute;
+    background-color: #fff;
+    display: none;
+}
+
+nav li:hover ul,
+.menu li:hover ul {
+    display: block;
+    right: 0;
+    width: 200px;
+    z-index: 1;
+}
+
+.li-dropdown {
+    padding-top: 20px;
+}
+
+.li-dropdown:hover {
+    background-color: var(--roxo);
+    color: #fff;
+    width: 200px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* ----- Fim do Menu Dropdown ----- */
+
+
+
 header {
     font-family: 'Press Start 2P', cursive;
     font-size: 25px;

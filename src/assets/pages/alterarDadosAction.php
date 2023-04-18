@@ -20,7 +20,7 @@
         require_once './verificarAcesso.php';
 
         $sql = "UPDATE cadastro SET nome = '" . $_POST['txtNome'] . "', username = '" . $_POST['txtUsername'] . "',
-        email='" . $_POST['txtEmail'] . "' WHERE $id =" . $_SESSION . ";";
+        email='" . $_POST['txtEmail'] . "' WHERE usuario_id =" . 1 . ";";
 
 
         if ($conexao->query($sql) === TRUE) {
