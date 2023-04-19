@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../../css/cadastroAction.css">
-    <link rel="stylesheet" href="../../css/reset.css">
-    <link rel="stylesheet" href="../../css/scroll.css">
+    <link rel="stylesheet" href="../../css/action.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Press+Start+2P&display=swap" rel="stylesheet">
+
     <title>Cadastro - mySQLi</title>
 </head>
 
@@ -25,14 +27,15 @@
 
         if($conexao->query($sql) === TRUE) {
             echo '
+                <h1 class="titulo-ok">Cadastro Realizado! <br> Por favor, efetue o login para validar seus dados.</h1>
                 <a href="./login.php">
-                <h1 class="w3-button w3-green">Cadastro Concluído! <br> Clique aqui para efetuar o seu login.</h1>
+                <button> OK </button>
                 </a>
                 ';
         } else {
             echo '
                 <a href="./cadastro.php">
-                <h1 class="w3-button w3-red">ERRO! <br>Tente novamente. </h1>
+                <h1 class="titulo-erro">ERRO! <br>Tente novamente. </h1>
                 </a>
                 ';
         }

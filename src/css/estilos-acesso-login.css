@@ -1,4 +1,11 @@
+html, * {
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    background-image: url('../assets/imgs/background-img.png');
+    font-family: 'Poppins', sans-serif;
     align-items: center;
     display: flex;
     height: 100vh;
@@ -11,15 +18,21 @@ h1 {
     background-color: indianred;
     color: black;
     padding: 10px;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
 }
 
 h2 {
     background-color: #ccc;
     color: #000000c4;
     padding: 10px;
+    margin-top: 5px ;
 }
 
 h2 a {
-    color: blue;
+    color: indianred;
     text-decoration: none;
 }

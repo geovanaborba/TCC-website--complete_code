@@ -10,8 +10,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../../css/reset.css">
-    <link rel="stylesheet" href="../../css/scroll.css">
     <link rel="stylesheet" href="../../css/estilos-acesso-login.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,10 +62,7 @@
             }
         } else {
             echo '
-                <a href="../../../index.php">
-                    <h1>Login Inválido!</h1>
-                </a>
-                <br>
+                <h1>Login Inválido!</h1>
                 <h2>
                     Clique 
                     <a href="./login.php">aqui</a>

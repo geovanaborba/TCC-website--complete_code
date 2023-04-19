@@ -26,12 +26,9 @@
 
         <?php
         echo '
-                <a href="../../../index.php">
                     <h1>Acesso NEGADO!</h1>
-                    <br>
-                </a> 
                 <h2>
-                    É necessária a Realização do 
+                    É necessário a realização do 
                     <a href="../../../src/assets/pages/login.php">Login</a> ou 
                     <a href="../../../src/assets/pages/cadastro.php">Cadastro</a>!
                 </h2>

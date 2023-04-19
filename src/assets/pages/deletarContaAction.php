@@ -5,8 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="stylesheet" href="../../css/action.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Press+Start+2P&display=swap" rel="stylesheet">
+
     <title>Exclusão - MYSQLI</title>
 </head>
 
@@ -20,14 +25,15 @@
             $sql = "DELETE FROM cadastro WHERE usuario_id = '" . $_SESSION['id'] . "';";
                 if ($conexao->query($sql) === TRUE) {
                     echo ' 
-                        <a href="../../../index.php"> 
-                            <h1>Conta Excluída com sucesso! </h1> 
-                        </a> 
-                        ';
+                        <h1 class="titulo-ok">Conta Excluída com sucesso! &#9785; </h1> 
+                            <a href="../../../index.php"> 
+                                <button> OK </button>
+                            </a>
+                    ';
                 } else {
                     echo ' 
                         <a href="./alterarDados.php"> 
-                            <h1>ERRO! Tente Novamente.</h1> 
+                            <h1 class="titulo-erro">ERRO! Tente Novamente.</h1> 
                         </a> 
                         ';
                 }
