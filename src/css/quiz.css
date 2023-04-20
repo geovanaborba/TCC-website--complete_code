@@ -71,6 +71,7 @@ body {
     border-radius: 5px;
     background-color: #fff;
     cursor: pointer;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
 }
 
 .start_btn button:hover,
