@@ -49,7 +49,7 @@
                             <h3>
                             <?php
                                     $sql = "SELECT username, pontuacao
-                                    FROM score
+                                    FROM cadastro
                                     ORDER by pontuacao DESC
                                     LIMIT 1
                                     OFFSET 1 ";
@@ -66,7 +66,7 @@
                             <p>Melhor pontuação: <br>
                             <?php
                                     $sql = "SELECT username, pontuacao
-                                    FROM score
+                                    FROM cadastro
                                     ORDER by pontuacao DESC
                                     LIMIT 1
                                     OFFSET 1 ";
@@ -92,7 +92,10 @@
                             <i class="fa-solid fa-crown ouro"></i>
                             <h3>
                             <?php
-                                    $sql = "SELECT * FROM score WHERE pontuacao = (SELECT MAX(pontuacao) FROM score)";
+                                    $sql = "SELECT * FROM cadastro WHERE pontuacao = (SELECT MAX(pontuacao) FROM cadastro)
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 0";
                                     $resultado = $conexao->query($sql);
                                     if ($resultado != null)
                                         foreach ($resultado as $linha) {
@@ -106,7 +109,7 @@
                             <p>Melhor pontuação: <br>
                             <?php
                                     $sql = "SELECT username, pontuacao
-                                    FROM score
+                                    FROM cadastro
                                     ORDER by pontuacao DESC
                                     LIMIT 1
                                     OFFSET 0 ";
@@ -133,7 +136,7 @@
                             <h3>
                             <?php
                                     $sql = "SELECT username, pontuacao
-                                    FROM score
+                                    FROM cadastro
                                     ORDER by pontuacao DESC
                                     LIMIT 1
                                     OFFSET 2 ";
@@ -150,7 +153,7 @@
                             <p>Melhor pontuação: <br>
                             <?php
                                     $sql = "SELECT username, pontuacao
-                                    FROM score
+                                    FROM cadastro
                                     ORDER by pontuacao DESC
                                     LIMIT 1
                                     OFFSET 2 ";
@@ -182,7 +185,7 @@
                             <h3>
                             <?php
                                     $sql = "SELECT username, pontuacao
-                                    FROM score
+                                    FROM cadastro
                                     ORDER by pontuacao DESC
                                     LIMIT 1
                                     OFFSET 3 ";
@@ -201,7 +204,7 @@
                             <h3>
                             <?php
                                     $sql = "SELECT username, pontuacao
-                                    FROM score
+                                    FROM cadastro
                                     ORDER by pontuacao DESC
                                     LIMIT 1
                                     OFFSET 3 ";
@@ -226,7 +229,7 @@
                         <h3>
                             <?php
                                     $sql = "SELECT username, pontuacao
-                                    FROM score
+                                    FROM cadastro
                                     ORDER by pontuacao DESC
                                     LIMIT 1
                                     OFFSET 4 ";
@@ -245,7 +248,7 @@
                             <h3>
                             <?php
                                     $sql = "SELECT username, pontuacao
-                                    FROM score
+                                    FROM cadastro
                                     ORDER by pontuacao DESC
                                     LIMIT 1
                                     OFFSET 4 ";
@@ -270,7 +273,7 @@
                         <h3>
                             <?php
                                     $sql = "SELECT username, pontuacao
-                                    FROM score
+                                    FROM cadastro
                                     ORDER by pontuacao DESC
                                     LIMIT 1
                                     OFFSET 5 ";
@@ -289,7 +292,7 @@
                             <h3>
                             <?php
                                     $sql = "SELECT username, pontuacao
-                                    FROM score
+                                    FROM cadastro
                                     ORDER by pontuacao DESC
                                     LIMIT 1
                                     OFFSET 5 ";
@@ -314,7 +317,7 @@
                         <h3>
                             <?php
                                     $sql = "SELECT username, pontuacao
-                                    FROM score
+                                    FROM cadastro
                                     ORDER by pontuacao DESC
                                     LIMIT 1
                                     OFFSET 6 ";
@@ -333,7 +336,7 @@
                             <h3>
                             <?php
                                     $sql = "SELECT username, pontuacao
-                                    FROM score
+                                    FROM cadastro
                                     ORDER by pontuacao DESC
                                     LIMIT 1
                                     OFFSET 6 ";

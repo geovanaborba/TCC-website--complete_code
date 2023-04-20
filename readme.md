@@ -27,6 +27,9 @@ Você pode ver a página no link abaixo:
 <details>
 <summary><h2> ✔️ Fontes e Cores </h2></summary>
 
+<hr>
+<br><br>
+
 * [Poppins](https://fonts.google.com/specimen/Poppins?query=poppins)
 
 * [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P?query=press+start)
@@ -38,7 +41,10 @@ Você pode ver a página no link abaixo:
     --roxo: #6066D0;
     --cinza-escuro: #535050;
 
+<br>
+
 <hr>
+<br><br>
 
 </details>
 
@@ -47,11 +53,8 @@ Você pode ver a página no link abaixo:
 <details>
 <summary><h2> ✔️ Criação do Banco de Dados </h2></summary>
 
-<br>
-
 <hr>
-
-<br>
+<br><br>
 
 
 Inicialmente, para a fase de testes do banco de dados, foi utilizada a ferramenta **USBWebServer** para a criação do banco de dados. 
@@ -91,6 +94,7 @@ Dessa forma, as variáveis de conexão ficarão invisíveis por questões de seg
         username varchar (20) NOT NULL,
         email varchar (90) NOT NULL,
         senha varchar (30) NOT NULL,
+        pontuacao int(11) DEFAULT '0',
         constraint pk_cadastro primary key (usuario_id),
         constraint uk_cad_name unique key (username),
         constraint uk_cad_email unique key (email)
@@ -102,7 +106,11 @@ Dessa forma, as variáveis de conexão ficarão invisíveis por questões de seg
 
 <br>
 
-» Além disso, para cada usuário cadastrado é gerado um ID de usuário dentro do banco de dados, através do Auto_Increment. 
+» Além disso, para cada usuário cadastrado é gerado um ID de usuário dentro do banco de dados, através do Auto_Increment, para que cada usuário possa ser identificado por um código próprio. 
+
+<br>
+
+» A chave pontuacao servirá para que posteriormente, o usuário possa ser inserido no ranking do site. Conforme seus acertos no quiz, os pontos irão aumentando através de funções inseridas no código. O valor inicial de pontos ao criar a conta é '0'. 
 
 <br>
 
@@ -118,11 +126,11 @@ Dessa forma, as variáveis de conexão ficarão invisíveis por questões de seg
 
 <hr>
 
-<br>
+<br><br>
 
-### Banco de Dados em funcionamento 
+## Banco de Dados em funcionamento 
 
-<br>
+<br><br>
 
 <img src="./src/assets/imgs/readme/funcionamento-cadastro.png">
 
@@ -134,28 +142,13 @@ Dessa forma, as variáveis de conexão ficarão invisíveis por questões de seg
 
 *Img 3: Print do banco de dados, logo após o registro do usuário teste1.*
 
-<br>
+<br><br>
 
 <hr>
 
-<br>
-
-<br>
+<br><br>
 
 ## ✔️ Tabela de Pontuação e Adição de perguntas e alternativas no BD
-<br>
-
-<br>
----- Tabela para mostrar a pontuação do usuário após responder o quiz, tornando possível mostrá-la no ranking.
-
-    create table score (
-    pontuacao INT(11),
-    username VARCHAR(20) NOT NULL,
-    usuario_id int (10) NOT NULL AUTO_INCREMENT,
-    FOREIGN KEY (username) REFERENCES cadastro(username),
-    FOREIGN KEY (usuario_id) REFERENCES cadastro(usuario_id)
-    );
-
 <br>
 
 <br>
@@ -180,9 +173,10 @@ Dessa forma, as variáveis de conexão ficarão invisíveis por questões de seg
 	FOREIGN KEY (id_question) REFERENCES questions (id_question) 
     );
 
-<br>
+<br><br>
 
 <hr>
+<br><br>
 
 </details>
 
@@ -190,9 +184,8 @@ Dessa forma, as variáveis de conexão ficarão invisíveis por questões de seg
 <details>
 <summary><h2>✔️ Banco de Dados em nuvem - Amazon RDS </h2></summary>
 
-<br>
-
-<br>
+<hr>
+<br><br>
 
 Foi criada uma conta de nível gratuito na Amazon AWS (Amazon Web Services) para utilizarmos o banco de dados através do [Amazon RDS](https://aws.amazon.com/pt/rds/) (Relational Database Service). Com ele foi possível que todos do grupo tivessem acesso ao mesmo banco de dados ao mesmo tempo, para que fizessem alterações e complementos sem necessidade de criar um local em cada máquina dos integrantes. 
 
@@ -204,6 +197,7 @@ Conforme o próprio site diz em sua descrição sobre a plataforma, a AWS ajuda 
 <br>
 
 <hr>
+<br><br>
 
 </details>
 
@@ -211,7 +205,8 @@ Conforme o próprio site diz em sua descrição sobre a plataforma, a AWS ajuda 
 <details>
 <summary><h2>✔️ PHP DotEnv</h2></summary>
 
-<br>
+<hr>
+<br><br>
 
 Para a proteção de usuário e senha do banco de dados em nuvem, foi utilizado o [PHP dotenv](https://github.com/vlucas/phpdotenv). 
 Com ele, os dados sensíveis são armazenados dentro de variáveis, mas não uma variável qualquer como as criadas com ‘$’(cifrão) no início delas. Com o dotenv, ela se torna uma variável de ambiente, ou seja, ela será criada no ambiente onde o PHP está.
@@ -263,20 +258,18 @@ Obs.: O projeto estava sendo realizado através do USBWServer. Devido essa aplic
 <br>
 
 <hr>
-
-<br>
+<br><br>
 
 </details>
 
 
 <details>
-<summary><h2>✔️ Verificação de Acesso </h2></summary>
+<summary><h2>✔️Verificação de Acesso e Sessões </h2></summary>
 
-<br>
+<hr>
+<br><br>
 
-<br>
-
-Em todas as páginas dentro do site após o login, há um require_once para verificar Acesso do usuário. 
+Em todas as páginas há um require_once para verificar Acesso do usuário. Essa verificação se dá por meio de sessões. Cada coluna da tabela do banco de dados recebeu uma variável $_SESSION para que fossem utilizados os dados apenas do usuário logado.
 
 <br>
 
@@ -284,15 +277,54 @@ Em todas as páginas dentro do site após o login, há um require_once para veri
 
 <br>
 
+Sendo assim, para que o código funcione da maneira correta, foram criadas sessões a partir da variável $linha buscando os dados da tabela.
+
+Se a linha não for vazia e se essa linha for igual à senha inserida pelo usuário, então esse usuário terá permissão para ser conectado ao site. Ao mesmo tempo, serão criadas variáveis de sessão com os dados apenas desse usuário logado. 
+
+<br>
+
+<img src="./src/assets/imgs/readme/codigoSessao.jpg">
+
+<br>
+
 Caso o usuário tente acessar o site sem efetuar login, ele é redirecionado para a tela de 'Acesso Negado', solicitando o login e/ou cadastro do mesmo.
+
+<br>
 
 <img src="./src/assets/imgs/readme/acessoNegado.jpg">
 
+<br>
+
 Ao clicar no alerta, retorna-se à tela inicial do site. 
+
+Assim como uma tentativa de login incorreta, também emite um alerta indicando erro na tentativa.
+
+<br>
+
+<img src="./src/assets/imgs/readme/loginInvalido.jpg">
+
+<br><br>
+
+A verificação de sessão é extremamente importante, para que apenas os dados do usuário logado fossem exibidos e fosse realizado o logout do site com todas essas informações, como nome completo, nome de usuário e e-mail cadastrados.
+
+Exemplos:
+
+<br>
+
+<img src="./src/assets/imgs/readme/perfilSessao.jpg">
+
+*Imagem: Card de perfil exibindo o nome e username do usuário logado*
+
+<br><br>
+
+<img src="./src/assets/imgs/readme/infosSessao.jpg">
+
+*Imagem: Formulário na página Alterar Dados, puxando dados de sessão logada*
 
 <br>
 
 <hr>
+<br><br>
 
 </details>
 
@@ -300,28 +332,95 @@ Ao clicar no alerta, retorna-se à tela inicial do site.
 <details> 
 <summary><h2> ✔️ Acesso Administrativo </h2></summary>
 
-<br><br>
-
 <hr>
-
-<br>
+<br><br>
 
 </details>
 
 
 
 <details>
-<summary><h2> ✔️  </h2></summary>
+<summary><h2> ✔️ API Formspree </h2></summary>
+
+<hr>
+<br><br>
+
+Na página alterarDados.php foi adicionado o botão "Contatar Suporte". Ao clicar nele, o usuário será direcionado até a tela de contato, contendo um formulário que poderá ser enviado ao email de moderação.
+
+<br>
+
+Para envio desse formulário, foi utilizada a [API Formspree](https://formspree.io/).
+
+Para utilizá-la, basta definir o formulário action no html para o endpoint gerado pela API. Nenhum código de servidor é necessário.
+
+<br><br>
+<img src="./src/assets/imgs/readme/formspree.png">
+
+*Imagem: Tela de integração da API com instruções de uso*
 
 <br><br>
 
-<hr>
+Ao clicar no botão enviar, a API entra em funcionamento e envia o formulário para o email cadastrado no site.
+
+<br><br>
+<img src="./src/assets/imgs/readme/teste-contato.png" width="400">
+
+*Imagem: Texto utilizado no formulário para teste, ao enviar o email*
+<br><br>
+
+<img src="./src/assets/imgs/readme/retorno-teste.jpg">
+
+*Imagem: Conteúdo do formulário recebido por email pelo moderador do Progquiz
+
+<br><br>
+
+Infelizmente o FormSpree não tem tradução para português, nem permite personalização sem um plano pago, portanto, ele foi utilizado no projeto apenas para exemplificar o que pode ser feito futuramente com uma implementação melhor trabalhada.
+
+Além disso, a versão gratuita tem um limite mensal de 50 emails recebidos. Para um site de grande porte, essa opção de API se torna inviável, a menos que seja feito o upgrade na conta, para desbloquear as demais funcionalidades. 
 
 <br>
+
+<hr>
+<br><br>
 
 </details>
 
 
 
+<details>
+<summary><h2> ✔️ Aplicativo Mobile </h2></summary>
+
+<hr>
+<br><br>
+
+O principal objetivo da criação da aplicação mobile, inicialmente, seria a integração de dados do ranking para visualização dos usuários. A ideia seria que, os usuários do site, pudessem acompanhar as pontuações no ranking através do aplicativo de celular, sem necessitar fazer login no site via browser ou login via aplicativo. 
+
+Contudo, também é possível implementar o projeto completo, dando acesso a um aplicativo inteiro, totalmente baseado no site, com os mesmos dados de entrada criados no projeto do website. Para tanto, fica para uma implementação futura essa conexão.
+
+<br>
+Apenas a cargo de apresentação, foi criada a parte visual do projeto mobile utilizando a plataforma Kodular, a fim de exemplificar como poderia ser essa aplicação futura. 
+
+Essa parte visual foi totalmente baseada no site, utilizando-se do mesmo padrão de cores, bem como mesmo background, estilização e fontes. Como projeto base, foi criada uma tela principal, assim como no site, para apresentar a imagem característica do projeto, assim como o nome com fonte específica para o quiz, apresentando nela os principais links para as telas de ranking, login e cadastro. 
+
+<br>
+
+Como o ranking do app ainda não tem integração direta com o ranking do site, foi adicionado um pequeno quiz com TinyBD como protótipo, utilizando-se de banco de dados local, para adição de tabela no ranking mencionado. Para elaborar a codificação da tela do quiz, foram realizados alterações e complementos no código, com base no tutorial apresentado no canal APP Inventor Brasil, postado em 2016 no Youtube. 
+
+<br>
+
+**<h3> » Toda a documentação contendo os resultados visuais e códigos elaborados para o devido funcionamento do aplicativo pode ser lida » AQUI «</h3>** 
 
 
+<br><br>
+
+<img src="./src/assets/imgs/readme/mobile.jpg" width="300">
+
+*Imagem: Tela inicial do app mobile*
+
+<br>
+
+<hr>
+
+<br><br>
+
+</details>
