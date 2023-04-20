@@ -16,19 +16,17 @@
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/scroll.css">
 
-    <link rel="stylesheet" href="../../css/responsivo/menu_celular.css"
-    media="screen and (min-width: 0) and (max-width: 767px)">
-    <link rel="stylesheet" href="../../css/responsivo/menu_tablet.css"
-    media="screen and (min-width: 768px) and (max-width: 1000px)">
+    <link rel="stylesheet" href="../../css/responsivo/menu_celular.css" media="screen and (min-width: 0) and (max-width: 767px)">
+    <link rel="stylesheet" href="../../css/responsivo/menu_tablet.css" media="screen and (min-width: 768px) and (max-width: 1000px)">
 
     <title>ProgQuiz | Alterar Dados</title>
 
 </head>
 
 <body>
-<?php require_once ('./verificarAcesso.php');?>
-<?php require_once ('./nav.php');?>
-<?php require_once ('./conexao.php');?>
+    <?php require_once('./verificarAcesso.php'); ?>
+    <?php require_once('./nav.php'); ?>
+    <?php require_once('./conexao.php'); ?>
 
     <main>
 
@@ -42,31 +40,27 @@
                 <form action="./alterarDadosAction.php" method="post">
                     <fieldset class="campo">
 
-                    
-                    <label>Nome de Usuário</label>
-                    <div class="username">
-                        <input type="text" disabled name="txtUsername"
-                        value="<?php 
-                                        echo $_SESSION['logado'];
-                                ?>" ><span data-tooltip="Seu nome de usuário não pode ser alterado, a menos que faça uma solicitação ao suporte."><i class="fa-solid fa-question"></i></span>
-                    </div>
 
-                
-                        
+                        <label>Nome de Usuário</label>
+                        <div class="username">
+                            <input type="text" disabled name="txtUsername" value="<?php
+                                                                                    echo $_SESSION['logado'];
+                                                                                    ?>"><span data-tooltip="Seu nome de usuário não pode ser alterado, a menos que faça uma solicitação ao suporte."><i class="fa-solid fa-question"></i></span>
+                        </div>
+
+
+
 
                         <label>Alterar Nome </label>
-                        <input type="text" required name="txtNome" 
-                        value="<?php 
-                                    echo $_SESSION['nome'];
+                        <input type="text" required name="txtNome" value="<?php
+                                                                            echo $_SESSION['nome'];
 
-                                ?>"
-                        >
+                                                                            ?>">
 
                         <label>Alterar E-mail</label>
-                        <input type="text" required name="txtEmail" 
-                        value="<?php 
-                                    echo $_SESSION['email'];
-                                ?>">
+                        <input type="text" required name="txtEmail" value="<?php
+                                                                            echo $_SESSION['email'];
+                                                                            ?>">
 
 
                         <label>Alterar senha</label>
@@ -86,32 +80,41 @@
 
             </div>
 
+            <hr>
+
+            <div class="btn-deletar">
+                <!-- Trigger/Open The Modal -->
+                <button id="btn-modal">Deletar conta</button>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h1>Tem certeza que quer deletar sua conta?</h1>
+                        <br>
+                        <p>Depois de excluir sua conta, não há como voltar atrás. Por favor, tenha certeza ao fazer isso.</p>
+                        <p>Sentiremos sua falta! :( </p>
+                        <br>
+
+                        <a href="./deletarContaAction.php">
+                            <button class="custom-btn btn-Sim"><span>Adeus :( </span><span>Sim, tenho certeza.</span></button>
+                        </a>
+                    </div>
 
 
-            <!-- Trigger/Open The Modal -->
 
-            <button id="btn-modal">Deletar conta</button>
-
-            <!-- The Modal -->
-            <div id="myModal" class="modal">
-
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h1>Tem certeza que quer deletar sua conta?</h1>
-                    <br>
-                    <p>Depois de excluir sua conta, não há como voltar atrás. Por favor, tenha certeza ao fazer isso.</p>
-                    <p>Sentiremos sua falta! :( </p>
-                    <br>
-
-                    <a href="./deletarContaAction.php">
-                        <button class="custom-btn btn-Sim"><span>Adeus :( </span><span>Sim, tenho certeza.</span></button>
-                    </a>
                 </div>
+                <p class="frase">Depois de excluir sua conta, não há como voltar atrás. Por favor, tenha certeza ao fazer isso.</p>
             </div>
 
-            <p class="frase-deletar">Depois de excluir sua conta, não há como voltar atrás. Por favor, tenha certeza ao fazer isso.</p>
-
+            <div class="btn-contato">
+                <a href="./suporte.php">
+                    <button class="btn-suporte">Contatar Suporte</button>
+                </a>
+                <p class="frase"> Entre em contato com a moderação do site.
+            </div>
     </main>
 
     <script src="https://kit.fontawesome.com/5f56dfe06a.js" crossorigin="anonymous"></script>
