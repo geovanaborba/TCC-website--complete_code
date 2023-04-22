@@ -54,7 +54,7 @@
         <div class="info_box">
             <div class="info-title"><span>Regras do Quiz</span></div>
             <div class="info-list">
-                <div class="info">1. Você tem apenas <span>15 segundos</span> para responder cada questão.</div>
+                <div class="info">1. Você tem apenas <span>20 segundos</span> para responder cada questão.</div>
                 <div class="info">2. Uma vez respondida, a questão não pode ser respondida novamente.</div>
                 <div class="info">3. Você não deve sair do quiz enquanto o responde.</div>
                 <div class="info">4. A sua pontuação será com base no número de acertos.</div>
@@ -73,7 +73,7 @@
                 </div>
                 <div class="timer">
                     <div class="time_left_txt">Tempo restante</div>
-                    <div class="timer_sec">15</div>
+                    <div class="timer_sec">20</div>
                 </div>
                 <div class="time_line"></div>
             </header>
