@@ -1,4 +1,4 @@
-// creating an array and passing the number, questions, options, and answers
+// criando um array e passando o número, perguntas, opções e respostas
 let questions = [
     {
     numb: 1,
@@ -55,8 +55,8 @@ let questions = [
       "eXamine Multiple Language"
     ]
   },
-  // you can uncomment the below codes and make duplicate as more as you want to add question
-  // but remember you need to give the numb value serialize like 1,2,3,5,6,7,8,9.....
+  // você pode descomentar os códigos abaixo e duplicar quantas vezes quiser para adicionar perguntas
+  // mas lembre-se que você precisa alterar o valor numb como 1,2,3,5,6,7,8,9.....
 
   //   {
   //   numb: 6,

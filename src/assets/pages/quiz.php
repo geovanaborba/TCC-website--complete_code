@@ -21,6 +21,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Press+Start+2P&display=swap"
         rel="stylesheet">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
     <title>ProgQuiz - Questões</title>
 
 </head>
@@ -28,13 +30,11 @@
 <body>
 <?php require_once ('./verificarAcesso.php');?>
 <?php require_once ('./nav.php');?>
+<?php require_once ('./conexao.php');?> 
 
     <div class="margem">
 
         <!-- Created By CodingNepal - www.codingnepalweb.com  -->
-        <a href="./home.php">
-
-        </a>
 
         <!-- start Quiz button -->
         <div class="botoes_inicio">

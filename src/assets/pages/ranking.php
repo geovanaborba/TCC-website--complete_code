@@ -371,7 +371,6 @@
         </footer>
 
         <script src="https://kit.fontawesome.com/807636c401.js" crossorigin="anonymous"></script>
-        <script src="../../js/circular-progress.js"></script>
     </body>
 
 

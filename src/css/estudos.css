@@ -45,6 +45,7 @@ body {
 .estudos {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 25%;
   font-size: 20px;
   margin-top: 50px;
