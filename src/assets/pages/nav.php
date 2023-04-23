@@ -1,7 +1,9 @@
 <nav>
+    <a href="./home.php">
     <header>
         <h1>ProgQuiz</h1>
     </header>
+    </a>
 
     <div class="menu">
         <ul>
