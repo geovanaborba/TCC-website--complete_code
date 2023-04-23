@@ -119,7 +119,6 @@
 
     <script src="https://kit.fontawesome.com/5f56dfe06a.js" crossorigin="anonymous"></script>
     <script src="../../js/modal.js"></script>
-    <script src="../../js/mouse-over.js"></script>
 
 </body>
 

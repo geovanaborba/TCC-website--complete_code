@@ -48,7 +48,7 @@
 
             </p>
 
-            <form action= <?php $_ENV['FORM_LINK']; ?> method="POST">
+            <form action= "https://formspree.io/f/mjvdjgze" method="POST">
                 <fieldset class="campo">
 
                     <p class="nome-logado">Olá, <?php echo $_SESSION['logado'] ?> !!</p>
@@ -81,7 +81,7 @@
 
                 <div class="campo">
                     <br>
-                    <label>Por favor, nos explique sua situação, caso necessário.</label>
+                    <label>Por favor, nos explique sua situação:</label>
                     <textarea id="mensagem" name="mensagem"></textarea>
                 </div>
 
