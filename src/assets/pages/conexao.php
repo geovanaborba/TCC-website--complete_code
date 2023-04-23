@@ -10,6 +10,7 @@ $database = $_ENV['BANCO_NOME'];
 
 $conexao = new mysqli($servername, $username, $password, $database);
 
+$form = $_ENV['LINK_FORM'];
 
 	if ($conexao->connect_error) {
 		die("Falha ao conectar ao banco de dados: " . $conexao->connect_error);

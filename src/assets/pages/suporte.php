@@ -32,7 +32,6 @@
     require_once('./verificarAcesso.php');
     require_once('./nav.php');
     require_once('./conexao.php');
-    require_once('../../../global.php');
     ?>
 
     <section class="contato">
@@ -48,7 +47,7 @@
 
             </p>
 
-            <form action= "https://formspree.io/f/mjvdjgze" method="POST">
+            <form action= <?php echo $_ENV['LINK_FORM']; ?> method="POST">
                 <fieldset class="campo">
 
                     <p class="nome-logado">Olá, <?php echo $_SESSION['logado'] ?> !!</p>
