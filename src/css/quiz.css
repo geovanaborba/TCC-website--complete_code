@@ -370,6 +370,7 @@ footer button.show {
     margin: 10px 0;
     font-size: 18px;
     font-weight: 500;
+    align-items: center;
 }
 
 .result_box .score_text span p {

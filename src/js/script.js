@@ -37,6 +37,7 @@ let userScore = 0;
 let counter;
 let counterLine;
 let widthValue = 0;
+let points = 0;
 
 const restart_quiz = result_box.querySelector(".buttons .restart");
 const quit_quiz = result_box.querySelector(".buttons .quit");
@@ -50,6 +51,7 @@ restart_quiz.onclick = () => {
     que_numb = 1;
     userScore = 0;
     widthValue = 0;
+    points = 0;
     showQuestions(que_count); //chamando a função showQuestions
     queCounter(que_numb); //passando valor que_numb para queCounter
     clearInterval(counter); //limpa o contador
@@ -122,10 +124,12 @@ function optionSelected(answer) {
 
     if (userAns == correcAns) { //se a opção selecionada pelo usuário for igual à resposta correta do array
         userScore += 1; // atualizando o valor da pontuação com 1
+        userPoints = (userScore * 10); //se resposta certa, pontos do usuário multiplicado por 10 
         answer.classList.add("correct"); // adicionando cor verde para corrigir a opção selecionada
         answer.insertAdjacentHTML("beforeend", tickIconTag); //adicionando ícone de marca para corrigir a opção selecionada
         console.log("Correct Answer");
         console.log("Your correct answers = " + userScore);
+        console.log("Your points = " + userPoints);
     } else {
         answer.classList.add("incorrect"); // adicionando cor vermelha para corrigir a opção selecionada
         answer.insertAdjacentHTML("beforeend", crossIconTag); //adicionando ícone de cruz para corrigir a opção selecionada
@@ -152,16 +156,22 @@ function showResult() {
     const scoreText = result_box.querySelector(".score_text");
     if (userScore > 3) { // se o usuário marcou mais de 3
         //criando uma nova tag span e passando o número da pontuação do usuário e o número total da pergunta
-        let scoreTag = '<span>Parabéns! 🎉, você acertou <p>' + userScore + '</p> de <p>' + questions.length + '</p></span>';
-        scoreText.innerHTML = scoreTag;  //adicionando nova tag span dentro do score_Text
+        let reaction = '<span><center> Parabéns! 🎉😎 <center></span>';
+        let scoreTag = '<span>Você acertou <p>' + userScore + '</p> de <p>' + questions.length + '</p></span>';
+        let scorePoints = '<span>Pontuação final: <p>' + userPoints + '</p></span>';
+        scoreText.innerHTML = reaction + scoreTag + scorePoints;  //adicionando nova tag span dentro do score_Text
     }
-    else if (userScore > 1) { // se o usuário marcou mais de 1
-        let scoreTag = '<span>Parabéns! 😎 Você acertou <p>' + userScore + '</p> de <p>' + questions.length + '</p></span>';
-        scoreText.innerHTML = scoreTag;
+    else if (userScore >= 1) { // se o usuário marcou mais de 1
+        let reaction = '<span><center> Na média... 😬 <center></span>';
+        let scoreTag = '<span>Você acertou <p>' + userScore + '</p> de <p>' + questions.length + '</p></span>';
+        let scorePoints = '<span>Pontuação final: <p>' + userPoints + '</p></span>';
+        scoreText.innerHTML = reaction + scoreTag + scorePoints;
     }
     else { // se o usuário marcou menos de 1
-        let scoreTag = '<span>Opa... 😐 Parece que você acertou<p>' + userScore + '</p> de <p>' + questions.length + '</p></span>';
-        scoreText.innerHTML = scoreTag;
+        let reaction = '<span><center> Opa... 😐 <center></span>';
+        let scoreTag = '<span>Você acertou<p>' + userScore + '</p> de <p>' + questions.length + '</p></span>';
+        let scorePoints = '<span>Pontuação final: <p>' + points + '</p></span>';
+        scoreText.innerHTML = reaction + scoreTag + scorePoints;
     }
 }
 
