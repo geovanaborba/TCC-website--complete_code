@@ -36,7 +36,7 @@
 
         <!-- Created By CodingNepal - www.codingnepalweb.com  -->
 
-        <!-- start Quiz button -->
+        <!-- Botão de iniciar Quiz -->
         <div class="botoes_inicio">
             <div class="start_btn">
                 <button>Começar quiz
@@ -50,7 +50,7 @@
             </a>
         </div>
 
-        <!-- Info Box -->
+        <!-- Caixa de informação -->
         <div class="info_box">
             <div class="info-title"><span>Regras do Quiz</span></div>
             <div class="info-list">
@@ -65,7 +65,7 @@
             </div>
         </div>
 
-        <!-- Quiz Box -->
+        <!-- Caixa do Quiz -->
         <div class="quiz_box">
             <header>
                 <div class="title-box">
@@ -79,30 +79,30 @@
             </header>
             <section>
                 <div class="que_text">
-                    <!-- Here I've inserted question from JavaScript -->
+                    <!-- Aqui foi inserida a pergunta do JavaScript -->
                 </div>
                 <div class="option_list">
-                    <!-- Here I've inserted options from JavaScript -->
+                    <!-- Aqui foram inseridas as alternativas/opções do JavaScript -->
                 </div>
             </section>
 
-            <!-- footer of Quiz Box -->
+            <!-- Rodapé da caixa do Quiz -->
             <footer>
                 <div class="total_que">
-                    <!-- Here I've inserted Question Count Number from JavaScript -->
+                    <!-- Aqui foi inserido o número de contagem de perguntas do JavaScript -->
                 </div>
                 <button class="next_btn">Próximo</button>
             </footer>
         </div>
 
-        <!-- Result Box -->
+        <!-- Caixa com Resultado -->
         <div class="result_box">
             <div class="icon">
                 <i class="fas fa-crown"></i>
             </div>
             <div class="complete_text">Você completou o quiz!</div>
             <div class="score_text">
-                <!-- Here I've inserted Score Result from JavaScript -->
+                <!-- Aqui foi inserido o Resultado final do JavaScript (reação, nº de acertos e pontuação) -->
             </div>
             <div class="buttons">
                 <button class="restart">Jogar de Novo</button>
