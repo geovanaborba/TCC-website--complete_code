@@ -16,11 +16,28 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.titulo h1 {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 32px;
-    text-shadow: 2px 3px var(--lilas);
-    color: #000;
+  .boas-vindas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 160px;
+    font-size: 20px;
+    color: var(--roxo);
+  }
+
+  .boas-vindas h1{
+    margin: auto;
+  }
+  
+ #pontos {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+#pontos .p-pontos {
+    font-weight: bold;
+    padding-left: 5px;
 }
 
 ::selection {
@@ -426,6 +443,11 @@ footer button.show {
 
 /* Para telas menores: celulares até 767px */
 @media screen and (min-width: 0) and (max-width: 767px) {
+
+    .boas-vindas {
+        margin-top: 40px;
+    }
+    
     .info_box {
         width: 95%;
     }
@@ -485,3 +507,4 @@ footer button.show {
         justify-content: center;
     }
 }
+

@@ -94,7 +94,7 @@ Dessa forma, as variáveis de conexão ficarão invisíveis por questões de seg
         username varchar (20) NOT NULL,
         email varchar (90) NOT NULL,
         senha varchar (30) NOT NULL,
-        pontuacao int(11) DEFAULT '0',
+        pontuacao int(11) NOT NULL,
         constraint pk_cadastro primary key (usuario_id),
         constraint uk_cad_name unique key (username),
         constraint uk_cad_email unique key (email)

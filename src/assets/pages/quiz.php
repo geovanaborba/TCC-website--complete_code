@@ -11,15 +11,12 @@
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/scroll.css">
 
-    <link rel="stylesheet" href="../../css/responsivo/menu_celular.css"
-    media="screen and (min-width: 0) and (max-width: 767px)">
-    <link rel="stylesheet" href="../../css/responsivo/menu_tablet.css"
-    media="screen and (min-width: 768px) and (max-width: 1000px)">
+    <link rel="stylesheet" href="../../css/responsivo/menu_celular.css" media="screen and (min-width: 0) and (max-width: 767px)">
+    <link rel="stylesheet" href="../../css/responsivo/menu_tablet.css" media="screen and (min-width: 768px) and (max-width: 1000px)">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Press+Start+2P&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
@@ -28,14 +25,22 @@
 </head>
 
 <body>
-<?php require_once ('./verificarAcesso.php');?>
-<?php require_once ('./nav.php');?>
-<?php require_once ('./conexao.php');?> 
+    
+    <?php require_once('./verificarAcesso.php'); ?>
+    <?php require_once('./nav.php'); ?>
+    <?php require_once('./conexao.php'); ?>
 
     <div class="margem">
 
         <!-- Created By CodingNepal - www.codingnepalweb.com  -->
 
+        <div class="boas-vindas">
+            <h1>Olá, <?php echo $_SESSION['logado'] ?></h1>
+            <div id="pontos">
+                <p>Sua pontuação atual é:</p>
+                <p class="p-pontos"><?php echo $_SESSION['pontuacao']?></p>
+            </div>
+        </div>
         <!-- Botão de iniciar Quiz -->
         <div class="botoes_inicio">
             <div class="start_btn">
@@ -109,13 +114,11 @@
                 <button class="quit">Sair</button>
             </div>
         </div>
-
     </div>
 
     <script src="https://kit.fontawesome.com/5f56dfe06a.js" crossorigin="anonymous"></script>
     <script src="../../js/script.js"></script>
     <script src="../../js/questions.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </body>
 
 </html>

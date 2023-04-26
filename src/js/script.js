@@ -173,6 +173,7 @@ function showResult() {
         let scorePoints = '<span>Pontuação final: <p>' + points + '</p></span>';
         scoreText.innerHTML = reaction + scoreTag + scorePoints;
     }
+    sendPoints();
 }
 
 function startTimer(time) {
@@ -219,4 +220,26 @@ function queCounter(index) {
     //criando uma nova tag span e passando o número da pergunta e o total de perguntas
     let totalQueCounTag = '<span><p>' + index + '</p> de <p>' + questions.length + '</p> questões</span>';
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adicionando nova tag span dentro do bottom_ques_counter
+}
+
+// function sendPoints(userPoints) {
+//     $.ajax({
+//         url: '../pages/quiz.php', // your php file
+//         type: 'GET', // type of the HTTP request
+//         success: function (userPoints) {
+//             var pontuacao = jQuery.parseJSON(userPoints);
+//             console.log(pontuacao);
+//         }
+//     });
+// }
+
+function sendPoints() {
+    $.ajax({
+        url : ('../pages/quizAction.php'),
+        type : 'POST',
+        data: {"pontuacao": userPoints},
+        success: function(){
+        console.log("Pontuação enviada com sucesso: " + userPoints);
+        }
+     });
 }

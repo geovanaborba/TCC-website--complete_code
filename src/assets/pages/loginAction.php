@@ -44,6 +44,7 @@
                 $_SESSION['email'] = $linha['email'];
                 $_SESSION['nome'] = $linha['nome'];
                 $_SESSION['senha'] = $linha['senha'];
+                $_SESSION['pontuacao'] = $linha['pontuacao'];
 
 
             } else {
