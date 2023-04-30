@@ -49,7 +49,10 @@ button:hover {
 }
 /* Para telas menores: celulares até 767px */
 @media screen and (min-width: 0) and (max-width: 767px) {
-    .titulo-ok .titulo-erro {
+    .titulo-ok {
+        font-size: 20px;
+    }
+    .titulo-erro {
         font-size: 20px;
     }
 }    
