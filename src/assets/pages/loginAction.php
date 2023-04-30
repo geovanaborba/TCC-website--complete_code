@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../../css/estilos-acesso-login.css">
+    <link rel="stylesheet" href="../../css/action_error.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,27 +49,18 @@
 
             } else {
                 echo '
-                    <a href="../../../index.php">
-                        <h1>Login Inválido!</h1>
-                    </a>
-                    <br>
-                    <h2>
-                        Clique 
-                        <a href="./login.php">aqui</a>
-                         e tente novamente ou faça 
-                        <a href="../../../src/assets/pages/cadastro.php">cadastro.</a>
-                    </h2>
+                <h1 class="titulo-ok">Login Inválido!</h1> 
+                <a href="../../../index.php"> 
+                    <button> OK </button>
+                </a>
                 ';
             }
         } else {
             echo '
-                <h1>Login Inválido!</h1>
-                <h2>
-                    Clique 
-                    <a href="./login.php">aqui</a>
-                     e tente novamente ou faça 
-                    <a href="../../../src/assets/pages/cadastro.php">cadastro.</a>
-                </h2>
+            <h1 class="titulo-ok">Login Inválido!</h1> 
+            <a href="../../../index.php"> 
+                <button> OK </button>
+            </a>
             ';
         }
         $conexao->close();
