@@ -42,11 +42,10 @@
 
 
                         <label>Nome de Usuário</label>
-                        <div class="username">
-                            <input type="text" disabled name="txtUsername" value="<?php
-                                                                                    echo $_SESSION['logado'];
-                                                                                    ?>"><span data-tooltip="Seu nome de usuário não pode ser alterado, a menos que faça uma solicitação ao suporte."><i class="fa-solid fa-question"></i></span>
-                        </div>
+                        <input type="text" required name="txtUsername" value="<?php
+                                                                        echo $_SESSION['logado'];
+                                                                        ?>">
+
 
 
 
@@ -57,10 +56,12 @@
 
                                                                             ?>">
 
-                        <label>Alterar E-mail</label>
-                        <input type="text" required name="txtEmail" value="<?php
-                                                                            echo $_SESSION['email'];
-                                                                            ?>">
+                        <div class="email">
+                            <label>Alterar E-mail</label>
+                            <input type="text" disabled name="txtEmail" value="<?php
+                                                                                echo $_SESSION['email'];
+                                                                                ?>"><span data-tooltip="Seu e-mail não pode ser alterado, a menos que faça uma solicitação ao suporte."><i class="fa-solid fa-question"></i></span>
+                        </div>
 
 
                         <label>Alterar senha</label>

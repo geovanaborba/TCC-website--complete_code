@@ -37,12 +37,6 @@ main .container h1 {
     width: 40%;
 }
 
-.infos #username {
-    color: var(--laranja);
-    text-shadow: 0.5px 1px rgba(0, 0, 0, 0.6);
-    font-size: 11px;
-}
-
 /* Início de formulário */
 
 form {
@@ -133,13 +127,13 @@ fieldset .campo {
     cursor: pointer;
 }
 
-form .campo .username {
+form .campo .email {
     display: flex;
     flex-direction: row;
     gap: 5px;
 }
 
-.username i {
+.email i {
     position: relative;
     font-size: 15px;
     color: white;
