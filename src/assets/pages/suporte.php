@@ -61,7 +61,7 @@
                         <select id="mySelect" required name="problema">
                             <option value="" data-default disabled selected></option>
                             <option>Estou com problemas em alterar meus dados</option>
-                            <option>Quero trocar meu nome de usuário</option>
+                            <option>Quero trocar meu email cadastrado</option>
                             <option>Não consigo ver meu nome no ranking</option>
                             <option>Não recebo emails</option>
                             <option>Quero denunciar um perfil</option>
@@ -71,9 +71,9 @@
 
                     </div>
 
-                    <div id="novo-nome">
-                        <label> Insira o novo nome de usuário </label>
-                        <input type="text" name="novo-username">
+                    <div id="novo-email">
+                        <label> Insira o novo email desejado </label>
+                        <input type="text" name="email-novo">
                     </div>
 
                 </fieldset>
@@ -92,7 +92,7 @@
 
 
     <script src="https://kit.fontawesome.com/5f56dfe06a.js" crossorigin="anonymous"></script>
-    <script src="../../js/contato-nome.js"></script>
+    <script src="../../js/contato-email.js"></script>
 
 </body>
 

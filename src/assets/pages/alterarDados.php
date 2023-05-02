@@ -43,8 +43,8 @@
 
                         <label>Nome de Usuário</label>
                         <input type="text" required name="txtUsername" value="<?php
-                                                                        echo $_SESSION['logado'];
-                                                                        ?>">
+                                                                                echo $_SESSION['logado'];
+                                                                                ?>">
 
 
 
@@ -56,8 +56,8 @@
 
                                                                             ?>">
 
+                        <label>Alterar E-mail</label>
                         <div class="email">
-                            <label>Alterar E-mail</label>
                             <input type="text" disabled name="txtEmail" value="<?php
                                                                                 echo $_SESSION['email'];
                                                                                 ?>"><span data-tooltip="Seu e-mail não pode ser alterado, a menos que faça uma solicitação ao suporte."><i class="fa-solid fa-question"></i></span>
