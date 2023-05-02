@@ -23,21 +23,21 @@
         require_once './conexao.php';
         require_once './verificarAcesso.php';
 
-        $sql = "UPDATE cadastro SET nome = '" . $_POST['txtNome'] . "', email='" . $_POST['txtEmail'] . "' WHERE usuario_id =" . $_SESSION['id'] . ";";
+        $sql = "UPDATE cadastro SET nome = '" . $_POST['txtNome'] . "', username='" . $_POST['txtUsername'] . "' WHERE usuario_id =" . $_SESSION['id'] . ";";
 
 
         if ($conexao->query($sql) === TRUE) {
             echo '
                 <h1 class="titulo-ok">Dados atualizados com sucesso! <br> Faça login novamente para validar sua alteração. </h1>
                 <a href="./logoutAction.php">
-                    <button> Ok </button>
+                    <button class="btn-ok"> OK </button>
                 </a> 
             ';
         } else {
             echo '
                 <h1 class="titulo-erro">ERRO! Tente novamente.</h1>
                 <a href="./alterarDados.php">
-                    <button> Ok </button>
+                    <button class="btn-erro"> OK </button>
                 </a> 
             ';
         }
@@ -46,4 +46,5 @@
     </div>
 
 </body>
+
 </html>

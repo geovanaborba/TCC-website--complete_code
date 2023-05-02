@@ -19,25 +19,26 @@
 
     <div class="w3-padding w3-content w3-text-grey w3-third w3-display-middle">
         <?php
-        
-        require_once ('./conexao.php');
+
+        require_once('./conexao.php');
 
         $sql = "INSERT INTO cadastro (nome, username, email,senha)
-                VALUES ('".$_POST['txtNome']."', '".$_POST['txtUsername']."','".$_POST['txtEmail']."', '".$_POST['txtSenha']."')";
+                VALUES ('" . $_POST['txtNome'] . "', '" . $_POST['txtUsername'] . "','" . $_POST['txtEmail'] . "', '" . $_POST['txtSenha'] . "')";
 
-        if($conexao->query($sql) === TRUE) {
+        if ($conexao->query($sql) === TRUE) {
             echo '
                 <h1 class="titulo-ok">Cadastro Realizado! <br> Por favor, efetue o login para validar seus dados.</h1>
-                <a href="./login.php">
-                <button> OK </button>
-                </a>
-                ';
+                    <a href="./login.php">
+                        <button class="btn-ok"> OK </button>
+                    </a>
+            ';
         } else {
             echo '
-                <a href="./cadastro.php">
                 <h1 class="titulo-erro">ERRO! <br>Tente novamente. </h1>
-                </a>
-                ';
+                    <a href="./cadastro.php">
+                        <button class="btn-erro"> OK </button>
+                    </a>
+            ';
         }
 
         $conexao->close();

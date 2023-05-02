@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../../css/reset.css">
-    <link rel="stylesheet" href="../../css/action_error.css">
+    <link rel="stylesheet" href="../../css/action.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,13 +26,14 @@
 
         <?php
         echo '
-                <h1 class="titulo-ok">Acesso NEGADO!</h1> 
+                <h1 class="titulo-erro">Acesso NEGADO!</h1> 
                 <a href="../../../index.php"> 
-                    <button> OK </button>
+                    <button class="btn-erro">VOLTAR AO INÍCIO</button>
                 </a>
             ';
         ?>
     </div>
 
 </body>
+
 </html>

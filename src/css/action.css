@@ -1,4 +1,5 @@
-html, * {
+html,
+* {
     margin: 0;
     padding: 0;
 }
@@ -14,6 +15,10 @@ body {
     text-align: center;
 }
 
+a {
+    text-decoration: none;
+}
+
 .titulo-ok {
     color: green;
     padding: 30px;
@@ -22,17 +27,13 @@ body {
 }
 
 .titulo-erro {
-    color: indianred;
+    color: red;
     padding: 30px;
-    border-radius: 5px;
-    background-color:  indianred;
+    border-radius: 15px;
+    border: 4px solid red;
 }
 
-a {
-    text-decoration: none;
-}
-
-button {
+.btn-ok {
     margin-top: 15px;
     padding: 20px 40px;
     color: white;
@@ -40,19 +41,26 @@ button {
     border-radius: 15px;
     font-size: 15px;
     border: none;
-    box-shadow: 2px 2px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-button:hover {
+.btn-ok:hover {
     cursor: pointer;
     background-color: orange;
 }
-/* Para telas menores: celulares até 767px */
-@media screen and (min-width: 0) and (max-width: 767px) {
-    .titulo-ok {
-        font-size: 20px;
-    }
-    .titulo-erro {
-        font-size: 20px;
-    }
-}    
+
+.btn-erro {
+    margin-top: 15px;
+    padding: 20px 40px;
+    color: white;
+    background-color: red;
+    border-radius: 15px;
+    font-size: 15px;
+    border: none;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-erro:hover {
+    cursor: pointer;
+    background-color: indianred;
+}

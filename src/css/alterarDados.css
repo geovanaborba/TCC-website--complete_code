@@ -142,9 +142,9 @@ form .campo .email {
 [data-tooltip] {
     position: relative;
     font-weight: bold;
-  }
-  
-  [data-tooltip]:after {
+}
+
+[data-tooltip]:after {
     display: none;
     position: absolute;
     top: -5px;
@@ -155,17 +155,18 @@ form .campo .email {
     width: 200px;
     background-color: var(--roxo);
     color: White;
-  }
-  
-  [data-tooltip]:hover:after {
+}
+
+[data-tooltip]:hover:after {
     display: block;
-  }
+}
+
 /*Fim do formulário */
 
 
-/* Início botão deletar conta */
-
-.btn-deletar, .btn-contato {
+.btn-deletar,
+.btn-contato,
+.btn-moderacao {
     display: block;
     align-items: center;
 }
@@ -175,6 +176,8 @@ form .campo .email {
     font-size: 12px;
     margin-left: 10%;
 }
+
+/* Início botão deletar conta */
 
 #btn-modal {
     display: block;
@@ -263,11 +266,11 @@ form .campo .email {
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
-     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-     7px 7px 20px 0px rgba(0,0,0,.1),
-     4px 4px 5px 0px rgba(0,0,0,.1);
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
     outline: none;
-  }  
+}
 
 .btn-Sim {
     position: relative;
@@ -370,6 +373,27 @@ form .campo .email {
     cursor: pointer;
 }
 
+.btn-mod {
+    display: block;
+    border-radius: 2px;
+    font-size: 1.1em;
+    background: rgb(0, 128, 0);
+    color: #fff;
+    border: 0;
+    padding: 0.7em 1.7em;
+    margin: 80px 0 0 20%;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn-mod:hover {
+    background: var(--cinza-escuro);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: none;
+    cursor: pointer;
+}
+
 
 /*-------------------------------------------------------------*/
 
@@ -413,7 +437,9 @@ form .campo .email {
         top: -145px;
     }
 
-    #btn-modal, .btn-suporte {
+    #btn-modal,
+    .btn-suporte,
+    .btn-mod {
         margin: 20px auto;
         transform: none;
     }

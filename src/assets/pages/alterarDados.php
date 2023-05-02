@@ -53,7 +53,6 @@
                         <label>Alterar Nome </label>
                         <input type="text" required name="txtNome" value="<?php
                                                                             echo $_SESSION['nome'];
-
                                                                             ?>">
 
                         <label>Alterar E-mail</label>
@@ -114,8 +113,20 @@
                 <a href="./suporte.php">
                     <button class="btn-suporte">Contatar Suporte</button>
                 </a>
-                <p class="frase"> Entre em contato com a moderação do site.
+                <p class="frase"> Entre em contato com a moderação do site.</p>
             </div>
+
+            <?php
+            if ($_SESSION['id'] == 10) {
+                echo '
+                <div class="btn-moderacao">
+                    <a href="./listar.php">
+                        <button class="btn-mod">Acessar dados</button>
+                        <p class="frase"> Acessar todos os dados de usuários.</p>
+                    </a>
+                </div>';
+            }
+            ?>
     </main>
 
     <script src="https://kit.fontawesome.com/5f56dfe06a.js" crossorigin="anonymous"></script>

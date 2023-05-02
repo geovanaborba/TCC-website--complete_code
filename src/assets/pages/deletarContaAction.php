@@ -16,30 +16,32 @@
 </head>
 
 <body>
-    <div class="w3-padding w3-content w3-text-grey w3-third w3-display-middle" id="eProfissional"> 
-        
-        <?php
-            require_once ('./conexao.php');
-            require_once ('./verificarAcesso.php');
+    <div class="w3-padding w3-content w3-text-grey w3-third w3-display-middle" id="eProfissional">
 
-            $sql = "DELETE FROM cadastro WHERE usuario_id = '" . $_SESSION['id'] . "';";
-                if ($conexao->query($sql) === TRUE) {
-                    echo ' 
+        <?php
+        require_once('./conexao.php');
+        require_once('./verificarAcesso.php');
+
+        $sql = "DELETE FROM cadastro WHERE usuario_id = '" . $_SESSION['id'] . "';";
+        if ($conexao->query($sql) === TRUE) {
+            echo ' 
                         <h1 class="titulo-ok">Conta Excluída com sucesso! &#9785; </h1> 
                             <a href="../../../index.php"> 
-                                <button> OK </button>
+                                <button class="btn-ok"> OK </button>
                             </a>
                     ';
-                } else {
-                    echo ' 
+        } else {
+            echo ' 
+                        <h1 class="titulo-erro">ERRO! Tente Novamente.</h1> 
                         <a href="./alterarDados.php"> 
-                            <h1 class="titulo-erro">ERRO! Tente Novamente.</h1> 
+                            <button class="btn-erro"> OK </button>
                         </a> 
                         ';
-                }
-                    $conexao->close();
+        }
+        $conexao->close();
         ?>
     </div>
 
 </body>
+
 </html>
