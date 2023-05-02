@@ -38,7 +38,7 @@ nav li:hover ul,
 .li-dropdown:hover {
     background-color: var(--roxo);
     color: #fff;
-    width: 200px;
+    width: 90%;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 

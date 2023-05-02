@@ -381,6 +381,8 @@ form .campo .email {
     }
 
     .infos {
+        flex-direction: column;
+        gap: 5px;
         padding-top: 5px;
     }
 
@@ -402,12 +404,22 @@ form .campo .email {
     }
 
     .btn-alterar {
-        margin: 0px 0 0 65px;
+        margin: 0px 0px 30px 65px;
+        transform: none;
+    }
+
+    [data-tooltip]:after {
+        left: calc(100% + -171px);
+        top: -145px;
     }
 
     #btn-modal, .btn-suporte {
         margin: 20px auto;
         transform: none;
+    }
+
+    .modal {
+        overflow: hidden;
     }
 
     .frase {

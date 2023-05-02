@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../../css/reset.css">
-    <link rel="stylesheet" href="../../css/estilos-acesso-login.css">
+    <link rel="stylesheet" href="../../css/action_error.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,12 +26,10 @@
 
         <?php
         echo '
-                    <h1>Acesso NEGADO!</h1>
-                <h2>
-                    É necessário a realização do 
-                    <a href="../../../src/assets/pages/login.php">Login</a> ou 
-                    <a href="../../../src/assets/pages/cadastro.php">Cadastro</a>!
-                </h2>
+                <h1 class="titulo-ok">Acesso NEGADO!</h1> 
+                <a href="../../../index.php"> 
+                    <button> OK </button>
+                </a>
             ';
         ?>
     </div>

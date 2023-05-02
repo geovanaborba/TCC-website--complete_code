@@ -57,8 +57,7 @@
 }
 
 .lista {
-    justify-content: space-around;
-    padding: 10px 10px;
+    flex-direction: column;
 }
 
 .lista img {
@@ -66,6 +65,9 @@
 }
 
 .lista-quiz {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     width: auto;
 }
 

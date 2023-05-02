@@ -365,15 +365,25 @@ footer {
 
 /* Para telas menores: celulares até 767px */
 @media screen and (min-width: 0) and (max-width: 767px) {
+  .boas-vindas {
+    font-size: 15px;
+    margin-top: 40px;
+  }
+
+  .boas-vindas p {
+    font-size: 15px;
+    margin-top: 3rem;
+  }
+
   .estudos {
-      align-items: center;
-      flex-direction: column;
-      margin-top: 50px;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
   }
 
   .barras {
-      gap: 25%;
-      justify-content: space-around;
+    gap: 25%;
+    justify-content: space-around;
   }
 
   .estudar {
