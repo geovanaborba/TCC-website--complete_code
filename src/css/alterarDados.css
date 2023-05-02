@@ -414,6 +414,11 @@ form .campo .username {
         transform: none;
     }
 
+    [data-tooltip]:after {
+        left: calc(100% + -171px);
+        top: -145px;
+    }
+
     #btn-modal, .btn-suporte {
         margin: 20px auto;
         transform: none;
