@@ -40,19 +40,19 @@
                 <p>Sua pontuação atual é:</p>
                 <p class="p-pontos"><?php echo $_SESSION['pontuacao']?></p>
             </div>
-        </div>
-        <!-- Botão de iniciar Quiz -->
-        <div class="botoes_inicio">
-            <div class="start_btn">
-                <button>Começar quiz
-                </button>
-            </div>
 
-            <a href="./home.php">
-                <div class="voltar_btn">
-                    <button>Voltar ao Início</button>
+            <!-- Botão de iniciar Quiz -->
+            <div class="botoes_inicio">
+                <div class="start_btn">
+                    <button>Começar quiz
+                    </button>
                 </div>
-            </a>
+                <a href="./home.php">
+                    <div class="voltar_btn">
+                        <button>Voltar ao Início</button>
+                    </div>
+                </a>
+            </div>
         </div>
 
         <!-- Caixa de informação -->
