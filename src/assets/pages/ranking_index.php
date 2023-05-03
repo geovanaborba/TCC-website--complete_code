@@ -10,31 +10,34 @@
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/scroll.css">
 
-    <link rel="stylesheet" href="../../css/responsivo/ranking_celular.css"
-    media="screen and (min-width: 0) and (max-width: 767px)">
-    <link rel="stylesheet" href="../../css/responsivo/ranking_tablet.css"
-    media="screen and (min-width: 768px) and (max-width: 1000px)">
+    <link rel="stylesheet" href="../../css/responsivo/menu_celular.css" media="screen and (min-width: 0) and (max-width: 767px)">
+    <link rel="stylesheet" href="../../css/responsivo/menu_tablet.css" media="screen and (min-width: 768px) and (max-width: 1000px)">
+
+    <link rel="stylesheet" href="../../css/responsivo/ranking_celular.css" media="screen and (min-width: 0) and (max-width: 767px)">
+    <link rel="stylesheet" href="../../css/responsivo/ranking_tablet.css" media="screen and (min-width: 768px) and (max-width: 1000px)">
 
     <link rel="stylesheet" href="../../css/responsivo/footer.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Press+Start+2P&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <title>ProgQuiz - Ranking</title>
 </head>
 
 <body>
 
-    <div class="topo">
-        <a href="../../../index.php">
-            <header>
-                <h1>ProgQuiz</h1>
-            </header>
-        </a>
+    <?php require_once('./conexao.php'); ?>
+
+    <body>
 
         <nav>
+            <a href="../../../index.php">
+                <header>
+                    <h1>ProgQuiz</h1>
+                </header>
+            </a>
+
             <ul>
                 <a href="./login.php">
                     <li>Entrar</li>
@@ -44,108 +47,341 @@
                 </a>
             </ul>
         </nav>
-    </div>
 
-    <div class="margem">
-        <section class="top-3">
+        <div class="margem">
+            <section class="top-3">
 
-            <a href="#">
-                <div class="nome">
-                    <div class="card">
+                <a href="#">
+                    <div class="nome">
+                        <div class="card">
+                            <img src="../imgs/undraw_male_avatar_re_hguk.svg">
+                            <i class="fa-solid fa-crown prata"></i>
+                            <h3>
+                                <?php
+                                $sql = "SELECT username, pontuacao
+                                    FROM cadastro
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 1 ";
+                                $resultado = $conexao->query($sql);
+                                if ($resultado != null)
+                                    foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['username']  . '</td>';
+                                        echo '<td>
+                                        <p =' . '&username=' . $linha['username'] . '">
+                                        </td>';
+                                    }
+                                ?>
+                            </h3>
+                            <p>Melhor pontuação: <br>
+                                <?php
+                                $sql = "SELECT username, pontuacao
+                                    FROM cadastro
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 1 ";
+                                $resultado = $conexao->query($sql);
+                                if ($resultado != null)
+                                    foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['pontuacao']  . '</td>';
+                                        echo '<td>
+                                        <p =' . '&pontuacao=' . $linha['pontuacao'] . '">
+                                        </td>';
+                                    }
+                                ?>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+
+                <a href="#">
+                    <div class="nome">
+                        <div class="card-meio">
+                            <img src="../imgs/undraw_female_avatar_re_uk8y.svg">
+                            <i class="fa-solid fa-crown ouro"></i>
+                            <h3>
+                                <?php
+                                $sql = "SELECT * FROM cadastro WHERE pontuacao = (SELECT MAX(pontuacao) FROM cadastro)
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 0";
+                                $resultado = $conexao->query($sql);
+                                if ($resultado != null)
+                                    foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['username']  . '</td>';
+                                        echo '<td>
+                                        <p =' . '&username=' . $linha['username'] . '">
+                                        </td>';
+                                    }
+                                ?>
+                            </h3>
+                            <p>Melhor pontuação: <br>
+                                <?php
+                                $sql = "SELECT username, pontuacao
+                                    FROM cadastro
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 0 ";
+                                $resultado = $conexao->query($sql);
+                                if ($resultado != null)
+                                    foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['pontuacao']  . '</td>';
+                                        echo '<td>
+                                        <p =' . '&pontuacao=' . $linha['pontuacao'] . '">
+                                        </td>';
+                                    }
+                                ?>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+
+                <a href="#">
+                    <div class="nome">
+                        <div class="card">
+                            <img src="../imgs/undraw_profile_pic_re_upir.svg">
+                            <i class="fa-solid fa-crown bronze"></i>
+                            <h3>
+                                <?php
+                                $sql = "SELECT username, pontuacao
+                                    FROM cadastro
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 2 ";
+                                $resultado = $conexao->query($sql);
+                                if ($resultado != null)
+                                    foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['username']  . '</td>';
+                                        echo '<td>
+                                        <p =' . '&username=' . $linha['username'] . '">
+                                        </td>';
+                                    }
+                                ?>
+                            </h3>
+                            <p>Melhor pontuação: <br>
+                                <?php
+                                $sql = "SELECT username, pontuacao
+                                    FROM cadastro
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 2 ";
+                                $resultado = $conexao->query($sql);
+                                if ($resultado != null)
+                                    foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['pontuacao']  . '</td>';
+                                        echo '<td>
+                                        <p =' . '&pontuacao=' . $linha['pontuacao'] . '">
+                                        </td>';
+                                    }
+                                ?>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+            </section>
+
+
+            <section class="ranking">
+
+                <div class="lista-container">
+
+                    <div class="lista">
+                        <span class="lista-posicao">4th</span>
                         <img src="../imgs/undraw_male_avatar_re_hguk.svg">
-                        <i class="fa-solid fa-crown prata"></i>
-                        <h3>Pessoa de Araújo</h3>
-                        <p>Melhor pontuação: <br>
-                            870
-                        </p>
+                        <span class="lista-posicao">
+                            <h3>
+                                <?php
+                                $sql = "SELECT username, pontuacao
+                                    FROM cadastro
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 3 ";
+                                $resultado = $conexao->query($sql);
+                                if ($resultado != null)
+                                    foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['username']  . '</td>';
+                                        echo '<td>
+                                        <p =' . '&username=' . $linha['username'] . '">
+                                        </td>';
+                                    }
+                                ?>
+                            </h3>
+                        </span>
+                        <span class="lista-quiz">Melhor pontuação:
+                            <h3>
+                                <?php
+                                $sql = "SELECT username, pontuacao
+                                    FROM cadastro
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 3 ";
+                                $resultado = $conexao->query($sql);
+                                if ($resultado != null)
+                                    foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['pontuacao']  . '</td>';
+                                        echo '<td>
+                                        <p =' . '&pontuacao=' . $linha['pontuacao'] . '">
+                                        </td>';
+                                    }
+                                ?>
+                            </h3>
+                        </span>
+                        <button class="lista-botao">Ver perfil</button>
                     </div>
-                </div>
-            </a>
 
+                    <div class="lista">
+                        <span class="lista-posicao">5th</span>
+                        <img src="../imgs/undraw_male_avatar_re_hguk.svg">
+                        <span class="lista-posicao">
+                            <h3>
+                                <?php
+                                $sql = "SELECT username, pontuacao
+                                    FROM cadastro
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 4 ";
+                                $resultado = $conexao->query($sql);
+                                if ($resultado != null)
+                                    foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['username']  . '</td>';
+                                        echo '<td>
+                                        <p =' . '&username=' . $linha['username'] . '">
+                                        </td>';
+                                    }
+                                ?>
+                            </h3>
+                        </span>
+                        <span class="lista-quiz">Melhor pontuação:
+                            <h3>
+                                <?php
+                                $sql = "SELECT username, pontuacao
+                                    FROM cadastro
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 4 ";
+                                $resultado = $conexao->query($sql);
+                                if ($resultado != null)
+                                    foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['pontuacao']  . '</td>';
+                                        echo '<td>
+                                        <p =' . '&pontuacao=' . $linha['pontuacao'] . '">
+                                        </td>';
+                                    }
+                                ?>
+                            </h3>
+                        </span>
+                        <button class="lista-botao">Ver perfil</button>
+                    </div>
 
-            <a href="#">
-                <div class="nome">
-                    <div class="card-meio">
+                    <div class="lista">
+                        <span class="lista-posicao">6th</span>
                         <img src="../imgs/undraw_female_avatar_re_uk8y.svg">
-                        <i class="fa-solid fa-crown ouro"></i>
-                        <h3>Fulana da Silva</h3>
-                        <p>Melhor pontuação: <br>
-                            999
-                        </p>
+                        <span class="lista-posicao">
+                            <h3>
+                                <?php
+                                $sql = "SELECT username, pontuacao
+                                    FROM cadastro
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 5 ";
+                                $resultado = $conexao->query($sql);
+                                if ($resultado != null)
+                                    foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['username']  . '</td>';
+                                        echo '<td>
+                                        <p =' . '&username=' . $linha['username'] . '">
+                                        </td>';
+                                    }
+                                ?>
+                            </h3>
+                        </span>
+                        <span class="lista-quiz">Melhor pontuação:
+                            <h3>
+                                <?php
+                                $sql = "SELECT username, pontuacao
+                                    FROM cadastro
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 5 ";
+                                $resultado = $conexao->query($sql);
+                                if ($resultado != null)
+                                    foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['pontuacao']  . '</td>';
+                                        echo '<td>
+                                        <p =' . '&pontuacao=' . $linha['pontuacao'] . '">
+                                        </td>';
+                                    }
+                                ?>
+                            </h3>
+                        </span>
+                        <button class="lista-botao">Ver perfil</button>
                     </div>
-                </div>
-            </a>
 
-
-            <a href="#">
-                <div class="nome">
-                    <div class="card">
-                        <img src="../imgs/undraw_profile_pic_re_upir.svg">
-                        <i class="fa-solid fa-crown bronze"></i>
-                        <h3>Menina Santos</h3>
-                        <p>Melhor pontuação: <br>
-                            830
-                        </p>
+                    <div class="lista">
+                        <span class="lista-posicao">7th</span>
+                        <img src="../imgs/undraw_male_avatar_re_hguk.svg">
+                        <span class="lista-posicao">
+                            <h3>
+                                <?php
+                                $sql = "SELECT username, pontuacao
+                                    FROM cadastro
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 6 ";
+                                $resultado = $conexao->query($sql);
+                                if ($resultado != null)
+                                    foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['username']  . '</td>';
+                                        echo '<td>
+                                        <p =' . '&username=' . $linha['username'] . '">
+                                        </td>';
+                                    }
+                                ?>
+                            </h3>
+                        </span>
+                        <span class="lista-quiz">Melhor pontuação:
+                            <h3>
+                                <?php
+                                $sql = "SELECT username, pontuacao
+                                    FROM cadastro
+                                    ORDER by pontuacao DESC
+                                    LIMIT 1
+                                    OFFSET 6 ";
+                                $resultado = $conexao->query($sql);
+                                if ($resultado != null)
+                                    foreach ($resultado as $linha) {
+                                        echo '<td>' . $linha['pontuacao']  . '</td>';
+                                        echo '<td>
+                                        <p =' . '&pontuacao=' . $linha['pontuacao'] . '">
+                                        </td>';
+                                    }
+                                ?>
+                            </h3>
+                        </span>
+                        <button class="lista-botao">Ver perfil</button>
                     </div>
-                </div>
-            </a>
-
-        </section>
-
-
-        <section class="ranking">
-
-            <div class="lista-container">
-
-                <div class="lista">
-                    <span class="lista-posicao">4th</span>
-                    <img src="../imgs/undraw_profile_pic_re_upir.svg">
-                    <span class="lista-posicao">Joana Gonçalves</span>
-                    <span class="lista-quiz">Melhor pontuação: 800</span>
-                    <button class="lista-botao">Ver perfil</button>
-                </div>
-
-                <div class="lista">
-                    <span class="lista-posicao">5th</span>
-                    <img src="../imgs/undraw_male_avatar_re_hguk.svg">
-                    <span class="lista-posicao">Felipe Santana</span>
-                    <span class="lista-quiz">Melhor pontuação: 784</span>
-                    <button class="lista-botao">Ver perfil</button>
-                </div>
-
-                <div class="lista">
-                    <span class="lista-posicao">6th</span>
-                    <img src="../imgs/undraw_female_avatar_re_uk8y.svg">
-                    <span class="lista-posicao">Marina Sena</span>
-                    <span class="lista-quiz">Melhor pontuação: 725</span>
-                    <button class="lista-botao">Ver perfil</button>
-                </div>
-
-                <div class="lista">
-                    <span class="lista-posicao">7th</span>
-                    <img src="../imgs/undraw_male_avatar_re_hguk.svg">
-                    <span class="lista-posicao">Caio Dacielo</span>
-                    <span class="lista-quiz">Melhor pontuação: 679</span>
-                    <button class="lista-botao">Ver perfil</button>
-                </div>
 
 
 
-        </section>
+            </section>
 
-    </div>
+        </div>
 
 
 
-    <footer>
-        <p>Página criada como parte do Trabalho de Conclusão de Curso do curso técnico de Desenvolvimento de
-            Sistemas da
-            ETEC. </p>
-    </footer>
 
-    <script src="https://kit.fontawesome.com/807636c401.js" crossorigin="anonymous"></script>
-    <script src="../../js/circular-progress.js"></script>
-</body>
+
+        <footer>
+            <p>Página criada como parte do Trabalho de Conclusão de Curso do curso técnico de Desenvolvimento de
+                Sistemas da
+                ETEC. </p>
+        </footer>
+
+        <script src="https://kit.fontawesome.com/807636c401.js" crossorigin="anonymous"></script>
+    </body>
 
 
 </html>

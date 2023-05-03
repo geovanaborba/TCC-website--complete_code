@@ -335,6 +335,40 @@ Exemplos:
 <hr>
 <br><br>
 
+Pensando no acesso administrativo exclusivo de algumas contas, foi criada uma condição na página de alterar dados, fazendo com que apenas contas específicas possam visualizar o botão de Acessar Dados. 
+
+<br>
+
+<img src="./src/assets/imgs/readme/mod-cod.jpg">
+
+*Imagem: Condição criada para que a conta de moderador veja o botão*
+
+<br><br>
+
+Como mostra o código acima, apenas a conta de ID 10 terá acesso ao botão que leva à lista de moderação.
+
+<br>
+
+<img src="./src/assets/imgs/readme/btn-mod.jpg">
+
+*Imagem: Botão “Acessar dados” exclusivo para moderadores*
+
+<br><br>
+
+<img src="./src/assets/imgs/readme/lista-mod.jpg">
+
+*Imagem: Lista cadastral vista por moderadores*
+
+<br>
+
+Através desse botão, o moderador tem acesso a uma lista, contendo todos os dados cadastrados no site. Além de visualizar esses dados, também é possível excluir as contas ou alterar dados através dessa lista. 
+
+Ao clicar em Excluir ou Atualizar, o moderador será encaminhado para a tela de atualizar dados, mas invés de ir para a página de atualizar os dados da conta de moderação, os campos conterão os dados do usuário escolhido. O layout da página é o mesmo que seria para um usuário comum alterar dados. 
+
+
+<br><br>
+<hr>
+
 </details>
 
 
@@ -370,7 +404,17 @@ Ao clicar no botão enviar, a API entra em funcionamento e envia o formulário p
 
 <img src="./src/assets/imgs/readme/retorno-teste.jpg">
 
-*Imagem: Conteúdo do formulário recebido por email pelo moderador do Progquiz
+*Imagem: Conteúdo do formulário recebido por email pelo moderador do Progquiz*
+
+<br><br>
+
+No site da api é possível acompanhar gráficos e todos os dados presentes no formulário que foi criado, fazendo com que seja extremamente fácil para os moderadores realizarem as devidas alterações no cadastro do solicitante.
+
+<br>
+
+<img src="./src/assets/imgs/readme/form.jpg">
+
+*Imagem: Interface apresentada no site da API com todos os dados dos formulários preenchidos*
 
 <br><br>
 
