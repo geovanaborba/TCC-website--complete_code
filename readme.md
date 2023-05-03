@@ -418,9 +418,9 @@ No site da api é possível acompanhar gráficos e todos os dados presentes no f
 
 <br><br>
 
-    Infelizmente o FormSpree não tem tradução para português, nem permite personalização sem um plano pago, portanto, ele foi utilizado no projeto apenas para exemplificar o que pode ser feito futuramente com uma implementação melhor trabalhada.
+Infelizmente o FormSpree não tem tradução para português, nem permite personalização sem um plano pago, portanto, ele foi utilizado no projeto apenas para exemplificar o que pode ser feito futuramente com uma implementação melhor trabalhada.
 
-    Além disso, a versão gratuita tem um limite mensal de 50 emails recebidos. Para um site de grande porte, essa opção de API se torna inviável, a menos que seja feito o upgrade na conta, para desbloquear as demais funcionalidades. 
+Além disso, a versão gratuita tem um limite mensal de 50 emails recebidos. Para um site de grande porte, essa opção de API se torna inviável, a menos que seja feito o upgrade na conta, para desbloquear as demais funcionalidades. 
 
 <br>
 
