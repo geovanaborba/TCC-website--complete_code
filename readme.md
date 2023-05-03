@@ -404,13 +404,23 @@ Ao clicar no botão enviar, a API entra em funcionamento e envia o formulário p
 
 <img src="./src/assets/imgs/readme/retorno-teste.jpg">
 
-*Imagem: Conteúdo do formulário recebido por email pelo moderador do Progquiz
+*Imagem: Conteúdo do formulário recebido por email pelo moderador do Progquiz*
 
 <br><br>
 
-Infelizmente o FormSpree não tem tradução para português, nem permite personalização sem um plano pago, portanto, ele foi utilizado no projeto apenas para exemplificar o que pode ser feito futuramente com uma implementação melhor trabalhada.
+No site da api é possível acompanhar gráficos e todos os dados presentes no formulário que foi criado, fazendo com que seja extremamente fácil para os moderadores realizarem as devidas alterações no cadastro do solicitante.
 
-Além disso, a versão gratuita tem um limite mensal de 50 emails recebidos. Para um site de grande porte, essa opção de API se torna inviável, a menos que seja feito o upgrade na conta, para desbloquear as demais funcionalidades. 
+<br>
+
+<img src="./src/assets/imgs/readme/form.jpg">
+
+*Imagem: Interface apresentada no site da API com todos os dados dos formulários preenchidos*
+
+<br><br>
+
+    Infelizmente o FormSpree não tem tradução para português, nem permite personalização sem um plano pago, portanto, ele foi utilizado no projeto apenas para exemplificar o que pode ser feito futuramente com uma implementação melhor trabalhada.
+
+    Além disso, a versão gratuita tem um limite mensal de 50 emails recebidos. Para um site de grande porte, essa opção de API se torna inviável, a menos que seja feito o upgrade na conta, para desbloquear as demais funcionalidades. 
 
 <br>
 
