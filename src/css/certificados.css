@@ -17,7 +17,6 @@ body {
 .card-perfil {
   display: flex;
   flex-direction: column;
-  text-align: center;
   align-items: center;
   justify-content: center;
 }
@@ -31,7 +30,6 @@ img.avatar {
 
 .username {
   font-family: 'Roboto Mono', monospace;
-  opacity: 0.8;
   font-size: 18px;
 }
 
@@ -42,29 +40,42 @@ img.avatar {
   text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
 }
 
+.certificados {
+  background-color: rgba(10, 23, 55, 0.295);
+  border-radius: 10px;
+}
+
 .certificados .html h2,
 .certificados .css h2,
 .certificados .javascript h2,
 .certificados .php h2 {
   margin-top: 50px;
   color: #fff;
-  background-color: var(--roxo);
+  background-color: #7B55FE;
   padding: 5px 10px;
   font-size: 25px;
 }
 
+.certificados .html h2 {
+  border-radius: 10px 10px 0 0 ;
+}
+
+.certificados i {
+  padding: 0 15px;
+}
 
 .certificados .php p {
   text-align: center;
   color: white;
   font-weight: bold;
-  margin: 70px 0;
+  padding: 150px 0;
+  text-shadow: 2px 2px 7px rgba(0,0,0,1);
 }
 
 .certificados img {
   width: 30%;
-  margin: 30px 20px 0 0;
-  box-shadow: 2px 2px 12px rgba(0,0,0,1);
+  margin-top: 50px;
+  box-shadow: 2px 2px 7px rgba(0,0,0,1);
 }
 
 .html img:hover,
@@ -75,10 +86,16 @@ img.avatar {
   cursor: pointer;
 }
 
+.imagens {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
 footer {
   font-size: 12px;
   font-style: italic;
-  position: absolute;
+  justify-content: center;
 }
 
 /* Para telas menores: celulares até 767px */
