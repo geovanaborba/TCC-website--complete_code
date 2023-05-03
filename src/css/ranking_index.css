@@ -10,13 +10,17 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.topo {
-    display: flex;
-    justify-content: space-between;
+header {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 35px;
+    text-shadow: 2px 3px var(--lilas);
+    color: #000;
 }
 
 nav {
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav li {
@@ -29,7 +33,6 @@ nav li {
     width: 110px;
     padding: 3px 0px;
     text-align: center;
-    align-items: center;
     color: #fff;
     text-transform: uppercase;
 }
@@ -37,13 +40,6 @@ nav li {
 nav li:hover {
     background-color: var(--roxo);
     cursor: pointer;
-}
-
-header {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 25px;
-    text-shadow: 2px 3px var(--lilas);
-    color: #000;
 }
 
 .margem {
@@ -173,29 +169,4 @@ footer {
     font-style: italic;
     padding-top: 60px;
     bottom: 2%;
-}
-
-/* Para telas menores: celulares até 767px */
-@media screen and (min-width: 0) and (max-width: 767px) {
-    body {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .topo {
-        flex-direction: column-reverse;
-    }
-    
-    .topo a header h1 {
-        font-size: 40px;
-        margin: 20px;
-        text-align: center;
-    }
-}
-
-/* Para telas maiores: computadores/tablets 768px para cima */
-@media screen and (min-width: 768px) and (max-width: 1000px) {
-    .topo {
-        align-items: center;
-    }
 }
