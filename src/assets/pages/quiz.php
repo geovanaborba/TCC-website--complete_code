@@ -28,6 +28,12 @@
     <?php require_once('./verificarAcesso.php'); ?>
     <?php require_once('./nav.php'); ?>
     <?php require_once('./conexao.php'); ?>
+    <?php
+    $pontuacao = $_POST['userPoints'];
+    // $sql= "UPDATE pontuacao FROM cadastro SET pontuacao =" . $_POST['userPoints'] . ";";
+    $sql = "UPDATE cadastro SET pontuacao = ". $_POST['userPoints']." WHERE username =" . $_SESSION['logado'] . ";";
+    // $resultado = $conexao->query($sql);
+?>
 
     <div class="margem">
 

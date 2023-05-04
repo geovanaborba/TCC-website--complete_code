@@ -5,10 +5,8 @@
 <?php require_once('./conexao.php'); ?>
 
 <?php
-
     $pontuacao = $_POST['userPoints'];
-    $sql= "UPDATE pontuacao FROM cadastro SET pontuacao =" . $_POST['userPoints'] . ";";
-    // $sql = "UPDATE cadastro SET pontuacao -> ". $_POST['userPoints']." WHERE usuario_id = ".$_SESSION['id'].";";
+    // $sql= "UPDATE pontuacao FROM cadastro SET pontuacao =" . $_POST['userPoints'] . ";";
+    $sql = "UPDATE cadastro SET pontuacao = ". $_POST['userPoints']." WHERE usuario_id =" . $_SESSION['id'] . ";";
     $resultado = $conexao->query($sql);
-
 ?>
