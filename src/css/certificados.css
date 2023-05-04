@@ -43,6 +43,7 @@ img.avatar {
 .certificados {
   background-color: rgba(10, 23, 55, 0.295);
   border-radius: 10px;
+  text-align: center;
 }
 
 .certificados .html h2,
@@ -54,6 +55,7 @@ img.avatar {
   background-color: #7B55FE;
   padding: 5px 10px;
   font-size: 25px;
+  text-align: left;
 }
 
 .certificados .html h2 {
@@ -72,25 +74,93 @@ img.avatar {
   text-shadow: 2px 2px 7px rgba(0,0,0,1);
 }
 
-.certificados img {
-  width: 30%;
-  margin-top: 50px;
-  box-shadow: 2px 2px 7px rgba(0,0,0,1);
-}
-
-.html img:hover,
-.css img:hover,
-.javascript img:hover {
+.ul-galeria img:hover {
   transform: scale(1.1);
   transition: 0.3s;
   cursor: pointer;
 }
 
-.imagens {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+.ul-galeria img {
+  width: 80%;
+  margin-top: 50px;
+  box-shadow: 2px 2px 7px rgba(0,0,0,1);
 }
+
+/* CSS das imagens abertas*/
+ul {
+  width: 100%;
+  list-style:none;
+  display: flex;
+ }
+
+ .min{
+  padding: 10px;
+ }
+
+ .lbox{
+  display: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+  opacity: 0;
+ }
+
+ .lbox:target{
+  opacity: 1;
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  background: rgba(10,10,10,0.7);
+  position:fixed;
+  display: block;
+ }
+
+ .box_img {
+  width: 1000px;
+  margin: 0px auto;
+ }
+
+ .btn{
+  color: #fff;
+  font-family: 'Arial';
+  text-decoration: none;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  font-size: 40px;
+  text-align: center;
+ }
+
+ #prev {
+  left: 5%;
+  top: 45%;
+ }
+
+ #next {
+  right: 5%;
+  top: 45%;
+ }
+
+ #close {
+  right: 2%;
+  top: 2%;
+ }
+
+ .box_img img{
+  opacity: 0;
+ }
+
+ .lbox:target .box_img img{
+  width: 100%;
+  margin-top: 30px;
+  opacity: 1;
+  transition: opacity .4s linear;
+ }
+
+ /*FIM CSS IMAGENS ABERTAS*/ 
 
 footer {
   font-size: 12px;

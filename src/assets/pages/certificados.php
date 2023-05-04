@@ -38,30 +38,116 @@
         <div class="certificados">
             <div class="html">
                 <h2> <i class="fa-brands fa-html5"></i> HTML</h2>
-                <div class="imagens">
-                    <img src="../imgs/cert-html.jpg" alt="certificado de html">
-                    <img src="../imgs/cert-html.jpg" alt="certificado de html">
-                    <img src="../imgs/cert-html.jpg" alt="certificado de html">
+
+                <ul class="ul-galeria">
+                    <li><a href="#img1"><img src="../imgs/cert-html.jpg" alt="certificado de html" class="min"></a></li>
+                    <li><a href="#img2"><img src="../imgs/cert-html-2.jpg" alt="certificado de html" class="min"></a></li>
+                    <li><a href="#img3"><img src="../imgs/cert-html-3.jpg" alt="certificado de html" class="min"></a></li>
+                </ul>
+
+
+                <div class="lbox" id="img1">
+                    <div class="box_img">
+                        <a href="#img10" class="btn" id="prev">&#171;</a>
+                        <a href="" class="btn" id="close">X</a>
+                        <img src="../imgs/cert-html.jpg">
+                        <a href="#img2" class="btn" id="next">&#187;</a>
+                    </div>
                 </div>
+
+                <div class="lbox" id="img2">
+                    <div class="box_img">
+                        <a href="#img1" class="btn" id="prev">&#171;</a>
+                        <a href="" class="btn" id="close">X</a>
+                        <img src="../imgs/cert-html-2.jpg">
+                        <a href="#img3" class="btn" id="next">&#187;</a>
+                    </div>
+                </div>
+
+                <div class="lbox" id="img3">
+                    <div class="box_img">
+                        <a href="#img2" class="btn" id="prev">&#171;</a>
+                        <a href="" class="btn" id="close">X</a>
+                        <img src="../imgs/cert-html-3.jpg">
+                        <a href="#img4" class="btn" id="next">&#187;</a>
+                    </div>
+                </div>
+
             </div>
 
             <div class="css">
                 <h2><i class="fa-brands fa-css3-alt"></i> CSS</h2>
-                <div class="imagens">
-                    <img src="../imgs/cert-css.jpg" alt="certificado de css">
-                    <img src="../imgs/cert-css.jpg" alt="certificado de css">
-                    <img src="../imgs/cert-css.jpg" alt="certificado de css">
+                <ul class="ul-galeria">
+                    <li><a href="#img4"><img src="../imgs/cert-css.jpg" alt="certificado de css" class="min"></a></li>
+                    <li><a href="#img5"><img src="../imgs/cert-css-2.jpg" alt="certificado de css" class="min"></a></li>
+                    <li><a href="#img6"><img src="../imgs/cert-css-3.jpg" alt="certificado de css" class="min"></a></li>
+                </ul>
+
+
+                <div class="lbox" id="img4">
+                    <div class="box_img">
+                        <a href="#img3" class="btn" id="prev">&#171;</a>
+                        <a href="" class="btn" id="close">X</a>
+                        <img src="../imgs/cert-css.jpg">
+                        <a href="#img5" class="btn" id="next">&#187;</a>
+                    </div>
+                </div>
+
+                <div class="lbox" id="img5">
+                    <div class="box_img">
+                        <a href="#img4" class="btn" id="prev">&#171;</a>
+                        <a href="" class="btn" id="close">X</a>
+                        <img src="../imgs/cert-css-2.jpg">
+                        <a href="#img6" class="btn" id="next">&#187;</a>
+                    </div>
+                </div>
+
+                <div class="lbox" id="img6">
+                    <div class="box_img">
+                        <a href="#img5" class="btn" id="prev">&#171;</a>
+                        <a href="" class="btn" id="close">X</a>
+                        <img src="../imgs/cert-css-3.jpg">
+                        <a href="#img7" class="btn" id="next">&#187;</a>
+                    </div>
                 </div>
             </div>
 
             <div class="javascript">
                 <h2><i class="fa-brands fa-square-js"></i> JAVASCRIPT</h2>
-                <div class="imagens">
-                    <img src="../imgs/cert-js.jpg" alt="certificado de javascript">
-                    <img src="../imgs/cert-js.jpg" alt="certificado de javascript">
-                    <img src="../imgs/cert-js.jpg" alt="certificado de javascript">
-                    <img src="../imgs/cert-js.jpg" alt="certificado de javascript">
+                <ul class="ul-galeria">
+                    <li><a href="#img7"><img src="../imgs/cert-js.jpg" alt="certificado de js" class="min"></a></li>
+                    <li><a href="#img8"><img src="../imgs/cert-js-2.jpg" alt="certificado de js" class="min"></a></li>
+                    <li><a href="#img9"><img src="../imgs/cert-js-3.jpg" alt="certificado de js" class="min"></a></li>
+                </ul>
+
+
+                <div class="lbox" id="img7">
+                    <div class="box_img">
+                        <a href="#img6" class="btn" id="prev">&#171;</a>
+                        <a href="" class="btn" id="close">X</a>
+                        <img src="../imgs/cert-js.jpg">
+                        <a href="#img8" class="btn" id="next">&#187;</a>
+                    </div>
                 </div>
+
+                <div class="lbox" id="img8">
+                    <div class="box_img">
+                        <a href="#img7" class="btn" id="prev">&#171;</a>
+                        <a href="" class="btn" id="close">X</a>
+                        <img src="../imgs/cert-js-2.jpg">
+                        <a href="#img9" class="btn" id="next">&#187;</a>
+                    </div>
+                </div>
+
+                <div class="lbox" id="img9">
+                    <div class="box_img">
+                        <a href="#img8" class="btn" id="prev">&#171;</a>
+                        <a href="" class="btn" id="close">X</a>
+                        <img src="../imgs/cert-js-3.jpg">
+                        <a href="#img1" class="btn" id="next">&#187;</a>
+                    </div>
+                </div>
+
             </div>
 
             <div class="php">
