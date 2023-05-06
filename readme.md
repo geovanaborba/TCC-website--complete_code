@@ -1,16 +1,26 @@
-# Trabalho de Conclusão de Curso | ETEC - Projeto completo 
+<center>
+
+# Trabalho de Conclusão de Curso | ETEC 2023
+
+## ProgQuiz - Projeto completo 
 
 <br>
 
-<center><img src="./src/assets/imgs/readme/green.svg"></center>
+<img src="./src/assets/imgs/readme/green.svg">
+
+</center>
 
 <br><br>
 
-Além desse repositório, também foi criado um para mostrar a parte visual do site no GitHub Pages, tornando possível que o professor acompanhasse o progresso do trabalho mais facilmente, durante as entregas das documentações do TCC no penúltimo semestre do curso, enquanto era criada a parte de front-end do site.
+Além desse repositório, também foi criado um para mostrar a parte visual do site no GitHub Pages, tornando possível que o professor acompanhasse o progresso do trabalho mais facilmente, durante as entregas das documentações do TCC a partir do penúltimo semestre do curso, quando foi iniciado o front-end do site.
 
 Você pode ver a página no link abaixo: 
 
-[⇒ Parte visual da página no GitHub Pages.](https://geovanaborba.github.io/TCC-website/)
+<br>
+
+## [⇒ Parte visual da página no GitHub Pages.](https://geovanaborba.github.io/TCC-website/)
+
+*Obs.: Para realizar a entrada no site, basta clicar no botão "Entrar" no canto direito superior da página principal e após, no botão "entrar" da página de login*
 
 <center><img src="./src/assets/imgs/readme/gif_index.gif"></center>
 
@@ -20,7 +30,7 @@ Você pode ver a página no link abaixo:
 
 <br><br>
 
-# 📂 Documentação 
+# 📂 Documentação do projeto
 
 <br>
 
