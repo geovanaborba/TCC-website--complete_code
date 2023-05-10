@@ -38,7 +38,7 @@
         <div class="boas-vindas">
             <h1>Olá, <?php echo $_SESSION['logado'] ?></h1>
             <div id="pontos">
-                <p>Sua pontuação atual é:</p>
+                <p>Sua maior pontuação é:</p>
                 <p class="p-pontos">
                     <?php 
                         $sql = "SELECT pontuacao FROM cadastro WHERE usuario_id =" . $_SESSION['id'] . ";";
