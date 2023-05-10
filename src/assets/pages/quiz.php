@@ -25,15 +25,11 @@
 
 <body>
     
-    <?php require_once('./verificarAcesso.php'); ?>
-    <?php require_once('./nav.php'); ?>
-    <?php require_once('./conexao.php'); ?>
-    <?php
-    $pontuacao = $_POST['userPoints'];
-    // $sql= "UPDATE pontuacao FROM cadastro SET pontuacao =" . $_POST['userPoints'] . ";";
-    $sql = "UPDATE cadastro SET pontuacao = ". $_POST['userPoints']." WHERE username =" . $_SESSION['logado'] . ";";
-    // $resultado = $conexao->query($sql);
-?>
+    <?php 
+        require_once('./verificarAcesso.php'); 
+        require_once('./nav.php'); 
+        require_once('./conexao.php'); 
+    ?>
 
     <div class="margem">
 
@@ -43,7 +39,17 @@
             <h1>Olá, <?php echo $_SESSION['logado'] ?></h1>
             <div id="pontos">
                 <p>Sua pontuação atual é:</p>
-                <p class="p-pontos"><?php echo $_SESSION['pontuacao']?></p>
+                <p class="p-pontos">
+                    <?php 
+                        $sql = "SELECT pontuacao FROM cadastro WHERE usuario_id =" . $_SESSION['id'] . ";";
+                        $resultado = $conexao->query($sql);
+                        if ($resultado != null)
+                            foreach ($resultado as $linha) {
+                                echo '<td>' . $linha['pontuacao']  . '</td>';
+                                echo '<td> <p ='. '&pontuacao=' . $linha['pontuacao'] . '"></td>';
+                            }
+                    ?>
+                </p>
             </div>
 
             <!-- Botão de iniciar Quiz -->

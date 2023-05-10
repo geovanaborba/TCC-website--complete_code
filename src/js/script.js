@@ -235,7 +235,7 @@ function queCounter(index) {
 
 function sendPoints() {
     $.ajax({
-        url : ('../pages/quiz.php'),
+        url : ('../pages/quizAction.php'),
         type : 'POST',
         data: {"pontuacao": userPoints},
         success: function(){
