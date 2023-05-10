@@ -3,7 +3,7 @@ let questions = [
   {
     numb: 1,
     question: "O que significa Html?",
-    answer: "Hyper Text Markup Language",
+    answer: "Hyper Text Markup Language", //também funciona colocando o número da array sem aspas, iniciando por 0. Nesse exemplo seria 1.
     options: [
       "Hyper Text Preprocessor",
       "Hyper Text Markup Language",
@@ -206,9 +206,7 @@ let questions = [
   //   answer: "Certo",
   //   options: [
   //     "Certo", 
-  //     "Errado",
-  //     "",
-  //     ""
+  //     "Errado"
   //   ]
   // },
 
