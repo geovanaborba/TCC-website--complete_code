@@ -9,13 +9,18 @@ require_once('./verificarAcesso.php');
 
 $pontuacao = $_REQUEST['pontuacao']; //request recebe post e get
 
-$sql = "UPDATE cadastro SET pontuacao = '$pontuacao' WHERE usuario_id =" . $_SESSION['id'] . ";";
+$sql = "UPDATE cadastro SET pontuacao = GREATEST(pontuacao, $pontuacao) WHERE usuario_id =" . $_SESSION['id'] . ";"; //greatest retorna o maior valor entre os dois parâmetros
 
-// código abaixo cria um arquivo .txt para mostrar possíveis erros:
-// $arquivo = "meu_arquivo.txt";
-// $fp = fopen($arquivo, "a+");
-// fwrite($fp, $sql);
-// fclose($fp);
+/* 
+Código abaixo cria um arquivo .txt para mostrar possíveis erros:
+$arquivo = "meu_arquivo.txt";
+$fp = fopen($arquivo, "a+");
+fwrite($fp, $sql);
+fclose($fp);
+*/
+
 $resultado = $conexao->query($sql);
 
 ?>
+
+
