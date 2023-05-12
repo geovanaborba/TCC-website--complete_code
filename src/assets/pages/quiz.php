@@ -70,11 +70,11 @@
         <div class="info_box">
             <div class="info-title"><span>Regras do Quiz</span></div>
             <div class="info-list">
-                <div class="info"><span>1. O quiz é composto por 25 questões. </span>Reserve um tempo para respondê-las.</div>
+                <div class="info">1. O quiz é composto por <span> 25 questões. </span>Reserve um tempo para respondê-las.</div>
                 <div class="info">2. Você tem apenas <span>20 segundos</span> para responder cada questão.</div>
-                <div class="info">3. Uma vez respondida, a questão não pode ser respondida novamente.</div>
-                <div class="info">4. Você não deve sair do quiz enquanto o responde.</div>
-                <div class="info">5. A sua pontuação será com base no número de acertos.<span>Cada acerto lhe dá 10 pontos.</span> </div>
+                <div class="info">3. Você não deve sair do quiz enquanto o responde.</div>
+                <div class="info">4. Cada <span>acerto</span> lhe dá <span>10 pontos.</span> </div>
+                <div class="info">5. BÔNUS: O tempo de resposta lhe confere <span>pontos extras</span>. Quanto mais rápido, mais pontos. </div>
             </div>
             <div class="buttons">
                 <button class="quit">Sair</button>
