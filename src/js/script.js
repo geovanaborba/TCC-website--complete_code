@@ -37,7 +37,7 @@ let userScore = 0;
 let counter;
 let counterLine;
 let widthValue = 0;
-let points = 0;
+let bonusPoints;
 
 const restart_quiz = result_box.querySelector(".buttons .restart");
 const quit_quiz = result_box.querySelector(".buttons .quit");
@@ -51,7 +51,7 @@ restart_quiz.onclick = () => {
     que_numb = 1;
     userScore = 0;
     widthValue = 0;
-    points = 0;
+    bonusPoints = 0;
     showQuestions(que_count); //chamando a função showQuestions
     queCounter(que_numb); //passando valor que_numb para queCounter
     clearInterval(counter); //limpa o contador
@@ -129,7 +129,9 @@ function optionSelected(answer) {
         answer.insertAdjacentHTML("beforeend", tickIconTag); //adicionando ícone de marca para corrigir a opção selecionada
         console.log("Correct Answer");
         console.log("Your correct answers = " + userScore);
+        console.log("Bonus points = " + bonusPoints);
         console.log("Your points = " + userPoints);
+        console.log("Total points = " + (userPoints + bonusPoints));
     } else {
         answer.classList.add("incorrect"); // adicionando cor vermelha para corrigir a opção selecionada
         answer.insertAdjacentHTML("beforeend", crossIconTag); //adicionando ícone de cruz para corrigir a opção selecionada
@@ -181,7 +183,14 @@ function startTimer(time) {
     function timer() {
         timeCount.textContent = time; //alterando o valor de timeCount com valor de tempo
         time--; // decrementa o valor do tempo
+
+        if (time >= 15) {
+            bonusPoints = (+10)
+        } if (time < 15) {
+            bonusPoints = (+5)
+        }
         if (time < 9) { //se o timer for menor que 9
+            bonusPoints = (+0);
             let addZero = timeCount.textContent;
             timeCount.textContent = "0" + addZero; //adiciona um 0 antes do valor do tempo
         }
@@ -222,16 +231,6 @@ function queCounter(index) {
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adicionando nova tag span dentro do bottom_ques_counter
 }
 
-// function sendPoints(userPoints) {
-//     $.ajax({
-//         url: '../pages/quiz.php', // your php file
-//         type: 'GET', // type of the HTTP request
-//         success: function (userPoints) {
-//             var pontuacao = jQuery.parseJSON(userPoints);
-//             console.log(pontuacao);
-//         }
-//     });
-// }
 
 function sendPoints() {
     $.ajax({
