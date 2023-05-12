@@ -70,7 +70,7 @@
         <div class="info_box">
             <div class="info-title"><span>Regras do Quiz</span></div>
             <div class="info-list">
-                <div class="info"><span>1. O quiz é composto por 25 questões. </span><br>Reserve um tempo para respondê-las.</div>
+                <div class="info"><span>1. O quiz é composto por 25 questões. </span>Reserve um tempo para respondê-las.</div>
                 <div class="info">2. Você tem apenas <span>20 segundos</span> para responder cada questão.</div>
                 <div class="info">3. Uma vez respondida, a questão não pode ser respondida novamente.</div>
                 <div class="info">4. Você não deve sair do quiz enquanto o responde.</div>
