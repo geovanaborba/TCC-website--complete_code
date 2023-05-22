@@ -37,8 +37,6 @@ let userScore = 0;
 let counter;
 let counterLine;
 let widthValue = 0;
-let bonusPoints;
-
 const restart_quiz = result_box.querySelector(".buttons .restart");
 const quit_quiz = result_box.querySelector(".buttons .quit");
 
@@ -51,7 +49,6 @@ restart_quiz.onclick = () => {
     que_numb = 1;
     userScore = 0;
     widthValue = 0;
-    bonusPoints = 0;
     showQuestions(que_count); //chamando a função showQuestions
     queCounter(que_numb); //passando valor que_numb para queCounter
     clearInterval(counter); //limpa o contador
@@ -129,9 +126,7 @@ function optionSelected(answer) {
         answer.insertAdjacentHTML("beforeend", tickIconTag); //adicionando ícone de marca para corrigir a opção selecionada
         console.log("Correct Answer");
         console.log("Your correct answers = " + userScore);
-        console.log("Bonus points = " + bonusPoints);
         console.log("Your points = " + userPoints);
-        console.log("Total points = " + (userPoints + bonusPoints));
     } else {
         answer.classList.add("incorrect"); // adicionando cor vermelha para corrigir a opção selecionada
         answer.insertAdjacentHTML("beforeend", crossIconTag); //adicionando ícone de cruz para corrigir a opção selecionada
@@ -172,7 +167,7 @@ function showResult() {
     else { // se o usuário marcou menos de 1
         let reaction = '<span><center> Opa... 😐 <center></span>';
         let scoreTag = '<span>Você acertou<p>' + userScore + '</p> de <p>' + questions.length + '</p></span>';
-        let scorePoints = '<span>Pontuação final: <p>' + points + '</p></span>';
+        let scorePoints = '<span>Pontuação final: <p>' + userPoints + '</p></span>';
         scoreText.innerHTML = reaction + scoreTag + scorePoints;
     }
     sendPoints();
@@ -183,14 +178,7 @@ function startTimer(time) {
     function timer() {
         timeCount.textContent = time; //alterando o valor de timeCount com valor de tempo
         time--; // decrementa o valor do tempo
-
-        if (time >= 15) {
-            bonusPoints = (+10)
-        } if (time < 15) {
-            bonusPoints = (+5)
-        }
         if (time < 9) { //se o timer for menor que 9
-            bonusPoints = (+0);
             let addZero = timeCount.textContent;
             timeCount.textContent = "0" + addZero; //adiciona um 0 antes do valor do tempo
         }
@@ -234,11 +222,11 @@ function queCounter(index) {
 
 function sendPoints() {
     $.ajax({
-        url : ('../pages/quizAction.php'),
-        type : 'POST',
-        data: {"pontuacao": userPoints},
-        success: function(){
-        console.log("Pontuação enviada com sucesso: " + userPoints);
+        url: ('../pages/quizAction.php'),
+        type: 'POST',
+        data: { "pontuacao": userPoints },
+        success: function () {
+            console.log("Pontuação enviada com sucesso: " + userPoints);
         }
-     });
+    });
 }

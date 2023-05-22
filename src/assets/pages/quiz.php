@@ -74,7 +74,7 @@
                 <div class="info">2. Você tem apenas <span>20 segundos</span> para responder cada questão.</div>
                 <div class="info">3. Você não deve sair do quiz enquanto o responde.</div>
                 <div class="info">4. Cada <span>acerto</span> lhe dá <span>10 pontos.</span> </div>
-                <div class="info">5. BÔNUS: O tempo de resposta lhe confere <span>pontos extras</span>. Quanto mais rápido, mais pontos. </div>
+                <!-- <div class="info">5. BÔNUS: O tempo de resposta lhe confere <span>pontos extras</span>. Quanto mais rápido, mais pontos. </div> -->
             </div>
             <div class="buttons">
                 <button class="quit">Sair</button>
