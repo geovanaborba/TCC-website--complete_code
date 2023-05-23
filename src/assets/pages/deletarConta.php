@@ -7,44 +7,81 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="../../css/nav.css">
+    <link rel="stylesheet" href="../../css/deletarConta.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/scroll.css">
 
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Press+Start+2P&display=swap" rel="stylesheet">
+
     <title>Excluir - MYSQLI</title>
 </head>
 
 <body>
-<?php require_once ('./verificarAcesso.php');?>
-<?php require_once ('./nav.php');?>
 
-    <a href="./alterarDados.php" class="w3-display-topmiddle w3-red w3-center w3-padding w3-button" style="text-decoration:none; ">
-        <i class="fa fa-ban" style="font-size:5em"></i>
-        <p style="font-weight:bold;">CANCELAR EXCLUSÃO</p>
-    </a>
+    <?php
+    require_once('./verificarAcesso.php');
+    require_once('./nav.php');
+    ?>
 
-    <div class="w3-padding w3-content w3-text-grey w3-third w3-margin w3-display-middle">
 
-        <h1 class="w3-center w3-teal w3-round-large w3-margin">EXCLUIR - ID: <?php echo " " . $_GET['id']?> </h1>
+    <div class="margem">
 
-        <form action="./deletarContaAction.php" class="w3-container w" method='post'>
+        <div class="formulario">
 
-            <input name="txtID" class="w3-input w3-grey w3-border" type="hidden" value="<?php echo $_GET['id']?>">
-            <br>
+            <button class="btn-cancelar">
+                <a href="./listar.php">
+                    <i class="fa fa-ban"></i>
+                    <p>CANCELAR EXCLUSÃO</p>
+                </a>
+            </button>
 
-            <label class="w3-text-teal" style="font-weight: bold;">Nome</label>
-            <input name="txtNome" class="w3-input w3-border w3-grey" disabled value="<?php echo $_GET['nome']?>"> <br>
+            <form action="./deletarContaModAction.php" method='POST'>
 
-            <label class="w3-text-teal" style="font-weight: bold;">Nome de Usuário</label>
-            <input name="txtUsername" class="w3-input w3-border w3-grey" disabled value="<?php echo $_GET['username']?>">
-            <br>
+                <h1 class="id">EXCLUIR - ID: <?php echo " " . $_GET['id'] ?> </h1>
 
-            <label class="w3-text-teal" style="font-weight: bold;">Email</label>
-            <input name="txtEmail" class="w3-input w3-border w3-grey" disabled value="<?php echo $_GET['email']?>">
-            <br>
-            <button name="btnExcuir" class="w3-button w3-teal w3-cell w3-round-large w3-right">
-                <i class="w3-xxlarge fa fa-check"></i> Confirmar Exclusão. </button>
-        </form>
+                <input name="txtID" type="hidden" value="<?php echo $_GET['id'] ?>">
+
+                <label>Nome</label>
+                <input name="txtNome" disabled value="<?php echo $_GET['nome'] ?>">
+
+                <label>Nome de Usuário</label>
+                <input name="txtUsername" disabled value="<?php echo $_GET['username'] ?>">
+
+                <label>Email</label>
+                <input name="txtEmail" disabled value="<?php echo $_GET['email'] ?>">
+            </form>
+
+            <!-- Trigger/Open The Modal -->
+            <button id="btn-modal"><i class="w3-xxlarge fa fa-check"></i> Confirmar Exclusão</button>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Tem certeza que quer excluir essa conta?</h2>
+                    <form action="./deletarContaModAction.php" method='POST'>
+                        <input name="txtID" type="hidden" value="<?php echo $_GET['id'] ?>">
+                    <br>
+                    <p>Depois de excluir, não há como voltar atrás. Por favor, tenha certeza ao fazer isso.</p>
+                    <br>
+
+                    <a href="./deletarContaModAction.php">
+                        <button class="custom-btn btn-Sim"><span>Excluir</span><span>Sim, tenho certeza.</span></button>
+                    </a>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
     </div>
+
+    <script src="https://kit.fontawesome.com/5f56dfe06a.js" crossorigin="anonymous"></script>
+    <script src="../../js/modal.js"></script>
 </body>
 
 </html>
