@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/scroll.css">
 
-
+    <link rel="stylesheet" href="../../css/responsivo/menu_celular.css"
+    media="screen and (min-width: 0) and (max-width: 767px)">
+    <link rel="stylesheet" href="../../css/responsivo/menu_tablet.css"
+    media="screen and (min-width: 768px) and (max-width: 1000px)">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -25,7 +29,6 @@
     require_once('./verificarAcesso.php');
     require_once('./nav.php');
     ?>
-
 
     <div class="margem">
 
