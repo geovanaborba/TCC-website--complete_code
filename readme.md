@@ -40,7 +40,7 @@ Você pode ver a página no link abaixo:
 
 <br>
 
-* [Video Apresentação do projeto: <br><br> <img src="./src/assets/imgs/readme/mini-youtube.jpg">](https://youtu.be/1Eu8CQ3AOLA)
+* [Video Apresentação do projeto: <br><br> <img src="./src/assets/imgs/readme/mini-youtube.jpg">](https://youtu.be/sGnpqwmx0FU)
 
 <br>
 </h3>
