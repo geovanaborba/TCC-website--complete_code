@@ -1,20 +1,20 @@
-<svg width="213" height="20" viewBox="0 0 2130 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-label="STATUS: EM DESENVOLVIMENTO">
-  <title>STATUS: EM DESENVOLVIMENTO</title>
+<svg width="148.5" height="20" viewBox="0 0 1485 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-label="STATUS: CONCLUÍDO">
+  <title>STATUS: CONCLUÍDO</title>
   <linearGradient id="a" x2="0" y2="100%">
     <stop offset="0" stop-opacity=".1" stop-color="#EEE"/>
     <stop offset="1" stop-opacity=".1"/>
   </linearGradient>
-  <mask id="m"><rect width="2130" height="200" rx="30" fill="#FFF"/></mask>
+  <mask id="m"><rect width="1485" height="200" rx="30" fill="#FFF"/></mask>
   <g mask="url(#m)">
     <rect width="702" height="200" fill="#555"/>
-    <rect width="1428" height="200" fill="#3C1" x="702"/>
-    <rect width="2130" height="200" fill="url(#a)"/>
+    <rect width="783" height="200" fill="#3C1" x="702"/>
+    <rect width="1485" height="200" fill="url(#a)"/>
   </g>
   <g aria-hidden="true" fill="#fff" text-anchor="start" font-family="Verdana,DejaVu Sans,sans-serif" font-size="110">
     <text x="220" y="148" textLength="442" fill="#000" opacity="0.25">STATUS</text>
     <text x="210" y="138" textLength="442">STATUS</text>
-    <text x="757" y="148" textLength="1328" fill="#000" opacity="0.25">EM DESENVOLVIMENTO</text>
-    <text x="747" y="138" textLength="1328">EM DESENVOLVIMENTO</text>
+    <text x="757" y="148" textLength="683" fill="#000" opacity="0.25">CONCLUÍDO</text>
+    <text x="747" y="138" textLength="683">CONCLUÍDO</text>
   </g>
   <image x="40" y="35" width="130" height="130" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgNTAwIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiNmZmZmZmUiIGQ9Ik00OTYgMTg1Yy02LTM2LTI2LTU5LTQ2LTczLTIxLTE1LTQ2LTIyLTcxLTIySDE5QzYgOTAgMSAxMDIgMSAxMDh2NGwxIDI0NWMzIDUwIDUzIDUwIDUzIDUwbDI0NC0xIDExLTFjNDQtMTEgNDktNTMgNDktNzYgOTAgNSAxNTMtNTkgMTM3LTE0NG0tMTAxIDgzYy0xOSAyLTM1IDEtMzUgMVYxNTFoMjRjMTYgMCAzMSA2IDQxIDE4IDcgOCAxMyAyMCAxMyAzNiAwIDQwLTIxIDU2LTQzIDYzIi8+PHBhdGggZmlsbD0iI2UwNTk1OCIgZD0iTTE3NyAzNDFjNCAyIDcgMCA3IDBzNTctNTMgODMtODNjMjMtMjcgMjQtNzItMTUtODlzLTcyIDIwLTcyIDIwYy0yOC0zMS03MS0zMC05MC05LTIwIDIxLTEzIDU3IDIgNzcgMTMgMTkgNzQgNzMgODMgODJsMiAyIi8+PC9nPjwvc3ZnPgo="/>
 </svg>

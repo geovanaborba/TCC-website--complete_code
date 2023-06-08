@@ -30,9 +30,26 @@ Você pode ver a página no link abaixo:
 
 <br><br>
 
-# 📂 Documentação do projeto
+# 📂 Documentação
 
 <br>
+
+<h3>
+
+* [Documentação completa em PDF](https://github.com/geovanaborba/TCC-website--complete_code/blob/main/src/assets/TCC-2023_ETEC_Desenv_de_Sistemas.pdf)
+
+<br>
+
+* [Video Apresentação do projeto: <br><br> <img src="./src/assets/imgs/readme/mini-youtube.jpg">](https://youtu.be/1Eu8CQ3AOLA)
+
+<br>
+</h3>
+
+<hr>
+<br><br>
+
+</details> 
+
 
 <details>
 <summary><h2> ✔️ Fontes e Cores </h2></summary>
@@ -462,7 +479,7 @@ Como o ranking do app ainda não tem integração direta com o ranking do site, 
 
 <br>
 
-**<h3> » Toda a documentação contendo os resultados visuais e códigos elaborados para o devido funcionamento do aplicativo pode ser lida » AQUI «</h3>** 
+**<h3> » Veja a documentação e códigos do projeto mobile [» CLICANDO AQUI «](https://github.com/geovanaborba/TCC-website--complete_code/tree/main/src/assets/mobile) </h3>** 
 
 
 <br><br>
