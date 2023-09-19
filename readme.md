@@ -8,7 +8,6 @@
 
 ## Desenvolvido por
 
-
 ### • [Arthur Luna](https://www.linkedin.com/in/arthur-luna-155580228/)
 
 ### • [Eduardo Guerts](https://github.com/EduardoGuerts)
@@ -17,15 +16,21 @@
 
 <br>
 
+### Website
+
 <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white">
+
+### Mobile 
+
+<img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white"> ![Static Badge](https://img.shields.io/badge/KODULAR-purple) ![Static Badge](https://img.shields.io/badge/TinyDB-aqua)
+
+<br>
 
 <hr>
 
-Além desse repositório, também foi criado um para mostrar a parte visual do site no GitHub Pages, tornando possível que o professor acompanhasse o progresso do trabalho mais facilmente, durante as entregas das documentações do TCC a partir do penúltimo semestre do curso, quando foi iniciado o front-end do site.
+Além desse repositório, também foi criado um para mostrar a parte visual do site em HTML, tornando possível que o professor acompanhasse o progresso do projeto mais facilmente, durante as entregas das documentações do TCC a partir do penúltimo semestre do curso, quando foi iniciado o Front-End do site.
 
 Você pode ver a página no link abaixo: 
-
-<br>
 
 ## [⇒ Parte visual da página](https://geovanaborba.github.io/TCC-website/)
 
