@@ -1,16 +1,35 @@
-<center>
-
 # Trabalho de Conclusão de Curso | ETEC 2023
 
 ## ProgQuiz - Projeto completo 
 
+![Static Badge](https://img.shields.io/badge/STATUS-CONCLU%C3%8DDO-green)
+
+<hr>
+
 <br>
 
-<img src="./src/assets/imgs/readme/green.svg">
+## Desenvolvido por
 
-</center>
 
-<br><br>
+### • [Arthur Luna](https://www.linkedin.com/in/arthur-luna-155580228/)
+
+### • [Eduardo Guerts](https://github.com/EduardoGuerts)
+
+### • [Geovana Borba](https://www.linkedin.com/in/geovanaborba/)
+
+<br>
+
+<img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white">
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+<img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white">
+<img src="https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white">
+<img src="">
+
+
+
+<hr>
 
 Além desse repositório, também foi criado um para mostrar a parte visual do site no GitHub Pages, tornando possível que o professor acompanhasse o progresso do trabalho mais facilmente, durante as entregas das documentações do TCC a partir do penúltimo semestre do curso, quando foi iniciado o front-end do site.
 
@@ -18,7 +37,7 @@ Você pode ver a página no link abaixo:
 
 <br>
 
-## [⇒ Parte visual da página no GitHub Pages.](https://geovanaborba.github.io/TCC-website/)
+## [⇒ Parte visual da página](https://geovanaborba.github.io/TCC-website/)
 
 *Obs.: Para realizar a entrada no site, basta clicar no botão "Entrar" no canto direito superior da página principal e após, no botão "entrar" da página de login*
 
